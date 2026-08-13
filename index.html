@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Player-safe campaign reference for Echoes of the Deep">
+  <title>Echoes of the Deep · Player Wiki</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero"><div class="hero-mark">✦</div><p class="eyebrow">A player’s guide to the campaign</p><h1>Echoes of the Deep</h1><p class="subtitle">Known places, familiar faces, discoveries, and stories carried back from the dark.</p></header>
+  <nav class="wiki-nav" aria-label="Wiki sections"><a href="#home" class="active">Home</a><a href="#locations">Locations</a><a href="#npcs">NPCs</a><a href="#factions">Factions</a><a href="#lore">Lore</a><a href="#quests">Quests</a><a href="#items">Items</a><a href="#recaps">Recaps</a></nav>
+  <main>
+    <section class="tools"><label class="search"><span>Search the known world</span><input id="searchInput" type="search" placeholder="Search people, places, lore…"></label><p id="resultCount" aria-live="polite"></p></section>
+    <section id="welcome" class="welcome"><p class="eyebrow">Campaign archive</p><h2>What the party knows</h2><p>This archive grows as the party explores. Everything here is safe for players to read.</p></section>
+    <section id="entryGrid" class="entry-grid" aria-live="polite"></section>
+    <section id="emptyState" class="empty hidden"><h2>Nothing discovered yet</h2><p>Try another search or return to the full archive.</p></section>
+  </main>
+  <dialog id="entryDialog"><button id="closeDialog" class="close" aria-label="Close">×</button><div id="dialogContent"></div></dialog>
+  <footer>Echoes of the Deep · Player Reference</footer>
+  <script src="data/wiki-data.js"></script><script src="app.js"></script>
+</body></html>
