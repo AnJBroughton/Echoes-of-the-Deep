@@ -10,7 +10,7 @@ The site reads `data/wiki-data.js`. Only entries with `published: true` appear.
 
 ## Sections
 
-Locations, NPCs, Factions, Lore, Quests, Items, and Session Recaps.
+Memories, Locations, NPCs, Factions, Lore, Quests, Items, and Session Recaps.
 
 ## Images
 
