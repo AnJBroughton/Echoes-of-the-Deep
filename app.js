@@ -6,7 +6,7 @@ const search = document.querySelector('#searchInput');
 const count = document.querySelector('#resultCount');
 const dialog = document.querySelector('#entryDialog');
 const dialogContent = document.querySelector('#dialogContent');
-const labels = { location: 'Location', npc: 'NPC', faction: 'Faction', lore: 'Lore', quest: 'Quest', item: 'Item', recap: 'Recap' };
+const labels = { memory: 'Memory', location: 'Location', npc: 'NPC', faction: 'Faction', lore: 'Lore', quest: 'Quest', item: 'Item', recap: 'Recap' };
 let section = (location.hash.slice(1) || 'home').toLowerCase();
 
 function safe(value = '') {
@@ -15,7 +15,7 @@ function safe(value = '') {
 function published() { return data.entries.filter(entry => entry.published); }
 function filtered() {
   const query = search.value.trim().toLowerCase();
-  const type = section === 'home' ? '' : section.replace(/s$/, '');
+  const type = section === 'home' ? '' : section === 'memories' ? 'memory' : section.replace(/s$/, '');
   return published().filter(entry => (!type || entry.type === type) && (!query || [entry.title, entry.summary, entry.content, entry.type].join(' ').toLowerCase().includes(query)));
 }
 function findEntry(id) { return published().find(entry => entry.id === id); }
