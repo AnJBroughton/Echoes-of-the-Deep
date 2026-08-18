@@ -19,7 +19,7 @@ function filtered() {
   return published().filter(entry => (!type || entry.type === type) && (!query || [entry.title, entry.summary, entry.content, entry.type].join(' ').toLowerCase().includes(query)));
 }
 function findEntry(id) { return published().find(entry => entry.id === id); }
-function imageMarkup(entry) { return entry.image ? `<img src="${safe(entry.image)}" alt="${safe(entry.title)}" style="display:block;width:100%;height:100%;object-fit:cover">` : '✦'; }
+function imageMarkup(entry) { return entry.image ? `<img src="${safe(entry.image)}" alt="${safe(entry.title)}" style="display:block;width:100%;height:100%;object-fit:contain;background:#081014">` : '✦'; }
 function render() {
   document.querySelectorAll('.wiki-nav a').forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${section}`));
   welcome.classList.toggle('hidden', section !== 'home' || Boolean(search.value));
