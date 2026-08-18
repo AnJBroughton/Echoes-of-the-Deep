@@ -5,7 +5,7 @@ window.WIKI_DATA = {
     id: "welcome-to-the-archive", type: "lore", title: "The Chronicle Begins",
     summary: "This archive will grow with the party’s discoveries.",
     content: "Locations, people, factions, treasures, quests, and session histories will appear here when they become known to the party.",
-    image: "", links: [], published: true, updatedAt: "2026-08-13"
+    image: "assets/images/echoes-of-the-deep-banner.png?v=20260818", links: [], published: true, updatedAt: "2026-08-18"
   }, {
     id: "v-stone-giant-blood-wolf-mask", type: "item", title: "V — Stone Giant / Blood-Wolf Mask",
     summary: "A mask divided between stone-giant artistry and a blood-red wolf.",
