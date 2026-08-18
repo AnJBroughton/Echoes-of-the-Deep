@@ -31,5 +31,84 @@ window.WIKI_DATA = {
     summary: "A powerful, blue-lit mask that reflects a Quaggoth rather than the elf Deren expected.",
     content: "Deren requested something elven, but Seraph’s creation bears broad cheekbones, a strong face, and a faint bluish glow unmistakably resembling a Quaggoth. It seems to reflect what he is rather than what he believes himself to be, visibly unsettling him.",
     image: "assets/images/gala-masks/derendils Gala. Mask.png?v=full-20260818", links: [], published: true, updatedAt: "2026-08-18"
-  }]
+  },
+    {
+      "id": "73b9a360-d853-4664-8d54-fbffc02de78e",
+      "type": "npc",
+      "title": "Seraph Vaelor",
+      "summary": "Curator of Masks · Mantol Derith",
+      "image": "",
+      "content": "The party met Seraph while seeking access to the Centennial Gala. Not much is known about him. He is very beautiful and has a warm presence. Friend of Quibble. Encouraged Helexis that he could remove the curse at the Gala.",
+      "links": [
+  
+      ],
+      "published": true,
+      "updatedAt": "2026-08-18"
+    },
+    {
+      "id": "f2166daf-02ac-422f-aff8-752c200f1d3f",
+      "type": "npc",
+      "title": "Rystia Zav",
+      "summary": "Elf traveler · Outside Mantol-Derith",
+      "image": "",
+      "content": "Ran into Rystia on the way into Mantol Derith. She aided the party in getting into the Black Market and informed them of the Centennial Gala.",
+      "links": [
+  
+      ],
+      "published": true,
+      "updatedAt": "2026-08-18"
+    },
+    {
+      "id": "8881a396-957f-4a40-8708-4aea4499c7ca",
+      "type": "recap",
+      "title": "Session 27 - The Curator of Everything",
+      "summary": "The Party receives their invites and masks",
+      "image": "",
+      "content": "Upon gaining entry to the duergar forge known as the Flagon and Fist in the Underdark city of Mantle Dareth, the heroes were met by Balfry Colthum, a stern and imposing foreman. He greeted them with suspicion, questioning their purpose and their desire to attend the gala of the Council of Spiders. One by one, the adventurers introduced themselves: Halexus Petna, a former drow; Biscuit, a harengon of the wandering shell clan; V, a goliath raised by stone giants; Nari, a woman of unknown origin; and Prince Daryndil, a firbolg seeking his past.\nBalfry’s interrogation was interrupted by the frenetic arrival of Dern “Lucky Pick” Colthum, a much smaller and more excitable duergar who seemed to be Balfry's foil. Dern, despite his clumsiness, insisted on giving the visitors a tour. Balfry reluctantly led them through the heart of the forge, a cavernous space filled with the din of hammers and the heat of countless fires, explaining the forge's creed: \"The forge runs on order, not on luck.\" Halexus recounted their harrowing journey, touching upon their pursuit of the chaotic myconid, Droki, and their encounters with demons and warped time. As Biscuit kindly helped Dern gather his dropped tools, he mentioned a past encounter with a duergar named Thaldren Vainwhisper.\nThe name caused a dramatic shift. Dern dropped a precious anvil in shock, and Balfry’s stern demeanor cracked. They revealed that Thaldren Vainwhisper was a legendary, long-dead inventor. As Biscuit described the time-warping phenomena surrounding their meeting, Dern recalled a prophecy: when dragons are released and demons drum, time itself will unravel, heralding a great darkness. Convinced of the party's importance, Balfry instructed them to seek the gala's gatekeeper, Seraph, while he considered how to help them secure an invitation. Biscuit offered a word of encouragement to the anxious Dern, and the party returned to the main market to resupply.\nWith a plan forged from urgency, the group split up in the bustling market. Biscuit, Halexus, and Nari entered The Crooked Wand, a magic shop run by a hard-eyed halfling. Biscuit led a tense and theatrical negotiation for a powerful wand, flinging treasures across the counter—moonstone, potions, and even a peculiar “turtle cannon.” Barter turned to brinkmanship, with Biscuit threatening the shopkeeper's life. Halexus de-escalated the situation, and after a sharp-tongued exchange, a deal was struck for a three-slot wand for 1100 gold and 500 gold worth of precious stones.\nMeanwhile, V visited Hex and Hearth, an apothecary run by a cheerful elf named Marta Hexwhistle, seeking drow poison and healing potions. V also scouted several unique concoctions, including a Potion of Mind Reading, a Potion of Gaseous Form, and an Elixir of Stone Blood. Later, the artificer of the party met a disturbingly skinny alchemist in a back-room lab, purchasing a potent poison, the Potion of Mind Reading, and a Superior Healing Draught for 850 gold. Elsewhere, Alexis entered \"Mashup,\" a cluttered armor shop run by Vela, a boisterous hill dwarf. After considering a magical cloak, Alexis purchased a magnificent Ceremonial Shield of darksteel, trading in his old one for a small discount. The group also took stock of their existing drow-poisoned bolts and arrows.\nTheir shopping complete, the party strode to a modest storefront marked “Mask Curation” to find Seraph Veylor, the famed curator. A vision in purple, Seraph revealed their invitation had already been granted by Shadrach, a notoriously picky halfling tinkerer. With a clap, the shop's walls fell away to reveal a cathedral of masks. Seraph declared that while their attire would match their patron's faction, their mask must reflect their soul. One by one, they described their desired visages: V, a duality of stone giant and wolf; Biscuit, a tortle-dragon hybrid; Nari, a face of midnight and starlight. Alexis requested a golden coin, prompting Seraph to note a faint curse upon him, placed by the dryder Quibble, which could only be lifted by performance at the gala. Daryndil, seeking an elven mask, was unsettled to receive a Quaggoth-like one instead.\nWith their identities forged, Seraph explained the Gala’s rules—no fighting, no bloodshed, magic suppressed—and instructed them to don their masks. As they did, green smoke swirled and darkness pressed in. Seraph’s distant, alarmed voice cried, “Oh no, this is not—”, and the party found themselves not in a courtyard, but in a grand theater. Before them was a stage, tables, an enigmatic piano, and a regal figure presiding as a narrator’s voice intoned a thesis on thought shaping reality. A diversion, a test, or a trap had been sprung. The curtain had risen on a performance they had not planned to join.",
+      "links": [
+  
+      ],
+      "published": true,
+      "updatedAt": "2026-08-18"
+    },
+    {
+      "id": "7992bf23-0550-4dfd-9808-e15b46e1411d",
+      "type": "item",
+      "title": "Boon of the Hardshell Candy",
+      "summary": "Boon · Vjorn",
+      "image": "",
+      "content": "When you are hit by an attack, you can use your reaction to harden like struck stone.\nReduce the damage by 1d8 + your Constitution modifier.\nUntil the start of your next turn, you have advantage on Strength checks and Strength saving throws.",
+      "links": [
+  
+      ],
+      "published": true,
+      "updatedAt": "2026-08-18"
+    },
+    {
+      "id": "17ef26ce-5e99-4033-a1ed-005529f3a127",
+      "type": "item",
+      "title": "Boon of the Refined Sip",
+      "summary": "Boon · Nari",
+      "image": "",
+      "content": "When you cast a spell, you can reroll one damage or healing die.\nYou must use the new result.",
+      "links": [
+  
+      ],
+      "published": true,
+      "updatedAt": "2026-08-18"
+    },
+    {
+      "id": "9fdc334c-3ade-4656-9f8e-6475e26e9a3a",
+      "type": "item",
+      "title": "Boon of the Wooden Spoon",
+      "summary": "Boon · Biscuit",
+      "image": "",
+      "content": "Once per long rest, as a bonus action, you can analyze a creature or object.\n\nYou gain advantage on your next attack roll or ability check against it.",
+      "links": [
+  
+      ],
+      "published": true,
+      "updatedAt": "2026-08-18"
+    }
+  ]
 };
