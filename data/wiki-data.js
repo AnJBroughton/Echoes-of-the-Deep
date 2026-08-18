@@ -30,6 +30,6 @@ window.WIKI_DATA = {
     id: "prince-derendil-quaggoth-mask", type: "item", title: "Prince Derendil — The Quaggoth Mask",
     summary: "A powerful, blue-lit mask that reflects a Quaggoth rather than the elf Deren expected.",
     content: "Deren requested something elven, but Seraph’s creation bears broad cheekbones, a strong face, and a faint bluish glow unmistakably resembling a Quaggoth. It seems to reflect what he is rather than what he believes himself to be, visibly unsettling him.",
-    image: "assets/images/gala-masks/derendil-gala-mask.png", links: [], published: true, updatedAt: "2026-08-18"
+    image: "assets/images/gala-masks/derendils Gala. Mask.png", links: [], published: true, updatedAt: "2026-08-18"
   }]
 };
