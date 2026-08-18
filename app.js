@@ -19,13 +19,13 @@ function filtered() {
   return published().filter(entry => (!type || entry.type === type) && (!query || [entry.title, entry.summary, entry.content, entry.type].join(' ').toLowerCase().includes(query)));
 }
 function findEntry(id) { return published().find(entry => entry.id === id); }
-function imageStyle(entry) { return entry.image ? `style="background-image:url('${safe(entry.image)}')"` : ''; }
+function imageMarkup(entry) { return entry.image ? `<img src="${safe(entry.image)}" alt="${safe(entry.title)}" style="display:block;width:100%;height:100%;object-fit:cover">` : '✦'; }
 function render() {
   document.querySelectorAll('.wiki-nav a').forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${section}`));
   welcome.classList.toggle('hidden', section !== 'home' || Boolean(search.value));
   const entries = filtered();
   count.textContent = `${entries.length} ${entries.length === 1 ? 'entry' : 'entries'}`;
-  grid.innerHTML = entries.map(entry => `<article class="entry" tabindex="0" role="button" data-id="${safe(entry.id)}"><div class="entry-image" ${imageStyle(entry)}>${entry.image ? '' : '✦'}</div><div class="entry-body"><span class="tag">${safe(labels[entry.type] || entry.type)}</span><h2>${safe(entry.title)}</h2><p>${safe(entry.summary || entry.content)}</p><span class="open">Read entry →</span></div></article>`).join('');
+  grid.innerHTML = entries.map(entry => `<article class="entry" tabindex="0" role="button" data-id="${safe(entry.id)}"><div class="entry-image">${imageMarkup(entry)}</div><div class="entry-body"><span class="tag">${safe(labels[entry.type] || entry.type)}</span><h2>${safe(entry.title)}</h2><p>${safe(entry.summary || entry.content)}</p><span class="open">Read entry →</span></div></article>`).join('');
   empty.classList.toggle('hidden', entries.length > 0);
   grid.querySelectorAll('.entry').forEach(card => {
     card.onclick = () => openEntry(card.dataset.id);
@@ -35,7 +35,7 @@ function render() {
 function openEntry(id) {
   const entry = findEntry(id); if (!entry) return;
   const related = (entry.links || []).map(findEntry).filter(Boolean);
-  dialogContent.innerHTML = `<div class="dialog-image" ${imageStyle(entry)}></div><div class="dialog-body"><span class="tag">${safe(labels[entry.type] || entry.type)}</span><h2>${safe(entry.title)}</h2><p class="summary">${safe(entry.summary)}</p><div class="content">${safe(entry.content)}</div>${related.length ? `<div class="links">${related.map(item => `<button data-link="${safe(item.id)}">${safe(item.title)}</button>`).join('')}</div>` : ''}</div>`;
+  dialogContent.innerHTML = `<div class="dialog-image">${imageMarkup(entry)}</div><div class="dialog-body"><span class="tag">${safe(labels[entry.type] || entry.type)}</span><h2>${safe(entry.title)}</h2><p class="summary">${safe(entry.summary)}</p><div class="content">${safe(entry.content)}</div>${related.length ? `<div class="links">${related.map(item => `<button data-link="${safe(item.id)}">${safe(item.title)}</button>`).join('')}</div>` : ''}</div>`;
   dialogContent.querySelectorAll('[data-link]').forEach(button => button.onclick = () => openEntry(button.dataset.link));
   dialog.showModal();
 }
