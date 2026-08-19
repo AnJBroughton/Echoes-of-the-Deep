@@ -20,6 +20,10 @@ function filtered() {
 }
 function findEntry(id) { return published().find(entry => entry.id === id); }
 function imageMarkup(entry) { return entry.image ? `<img src="${safe(entry.image)}" alt="${safe(entry.title)}" style="display:block;width:100%;height:100%;object-fit:contain;background:#081014">` : '✦'; }
+function galleryMarkup(entry) {
+  const images = Array.isArray(entry.images) ? entry.images.filter(Boolean) : [];
+  return images.length ? `<div style="display:grid;gap:14px;margin-top:24px">${images.map((image, index) => `<img src="${safe(image)}" alt="${safe(entry.title)} map ${index + 2}" style="display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:10px;background:#081014">`).join('')}</div>` : '';
+}
 function render() {
   document.querySelectorAll('.wiki-nav a').forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${section}`));
   welcome.classList.toggle('hidden', section !== 'home' || Boolean(search.value));
@@ -35,7 +39,7 @@ function render() {
 function openEntry(id) {
   const entry = findEntry(id); if (!entry) return;
   const related = (entry.links || []).map(findEntry).filter(Boolean);
-  dialogContent.innerHTML = `<div class="dialog-image" style="height:auto;aspect-ratio:3/2;overflow:hidden">${imageMarkup(entry)}</div><div class="dialog-body"><span class="tag">${safe(labels[entry.type] || entry.type)}</span><h2>${safe(entry.title)}</h2><p class="summary">${safe(entry.summary)}</p><div class="content">${safe(entry.content)}</div>${related.length ? `<div class="links">${related.map(item => `<button data-link="${safe(item.id)}">${safe(item.title)}</button>`).join('')}</div>` : ''}</div>`;
+  dialogContent.innerHTML = `<div class="dialog-image" style="height:auto;aspect-ratio:3/2;overflow:hidden">${imageMarkup(entry)}</div><div class="dialog-body"><span class="tag">${safe(labels[entry.type] || entry.type)}</span><h2>${safe(entry.title)}</h2><p class="summary">${safe(entry.summary)}</p><div class="content">${safe(entry.content)}</div>${galleryMarkup(entry)}${related.length ? `<div class="links">${related.map(item => `<button data-link="${safe(item.id)}">${safe(item.title)}</button>`).join('')}</div>` : ''}</div>`;
   dialogContent.querySelectorAll('[data-link]').forEach(button => button.onclick = () => openEntry(button.dataset.link));
   dialog.showModal();
 }
