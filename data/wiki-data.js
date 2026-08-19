@@ -7,6 +7,13 @@ window.WIKI_DATA = {
     content: "Locations, people, factions, treasures, quests, and session histories will appear here when they become known to the party.",
     image: "assets/images/echoes-of-the-deep-banner.png?v=20260818", links: [], published: true, updatedAt: "2026-08-18"
   }, {
+    id: "ruby-in-the-rough", type: "location", title: "Ruby in the Rough",
+    summary: "A ruined sacred district of Blingdenstone, divided between forgotten crypts and the Pudding King’s corruption.",
+    content: "Ruby in the Rough is an abandoned sacred district of Blingdenstone that has fallen into ruin and corruption. What was once a place where deep gnomes honored their dead and preserved their history has become a dangerous stretch of broken tunnels, forgotten graves, and ooze-infested chambers.\n\nA single cavern path eventually reaches a distinct fork. Broken burial stones have been dragged from their resting places, while trails of slime cross the stone and disappear into the darkness.\n\nThe left path leads to the old crypts: a sprawling burial complex of shattered headstones, collapsed tombs, catacombs, and forgotten chambers. Wererats and other Underdark scavengers have moved among the graves, while something has disturbed places meant to remain sealed.\n\nThe right path leads toward the Pudding King. The remains of an old deep gnome structure are littered with debris and trails of ooze. Stairs rise into a ruined dining hall where a massive table remains covered with abandoned plates and rotting food, watched over by four statues of deep gnome knights. Beyond it lies the Pudding King’s throne room, a vast chamber of towering pillars and a broken raised throne where the strange ooze infestation reaches its source.\n\nThe crypts and the Pudding King’s corruption are connected: the dead have been disturbed, sacred places violated, and pieces of Blingdenstone’s past are being consumed. For Biscuit, Nari, Helexisys, V, and Deren, Ruby in the Rough is an opportunity to reclaim a small piece of Blingdenstone for the people who once called it sacred.",
+    image: "assets/images/ruby-in-the-rough-map.png?v=20260818",
+    images: ["assets/images/ruby-in-the-rough-approach-map.png?v=20260818"],
+    links: [], published: true, updatedAt: "2026-08-18"
+  }, {
     id: "v-stone-giant-blood-wolf-mask", type: "item", title: "V — Stone Giant / Blood-Wolf Mask",
     summary: "A mask divided between stone-giant artistry and a blood-red wolf.",
     content: "The stone half bears ornate carvings and gem inlays honoring the stone giants who raised V. The vivid red wolf half represents his fiercer, more primal nature.",
@@ -37,11 +44,22 @@ window.WIKI_DATA = {
       "type": "npc",
       "title": "Seraph Vaelor",
       "summary": "Curator of Masks · Mantol Derith",
-      "image": "",
+      "image": "assets/images/seraph-vaelor-session-27.png?v=20260818",
       "content": "The party met Seraph while seeking access to the Centennial Gala. Not much is known about him. He is very beautiful and has a warm presence. Friend of Quibble. Encouraged Helexis that he could remove the curse at the Gala.",
       "links": [
   
       ],
+      "published": true,
+      "updatedAt": "2026-08-18"
+    },
+    {
+      "id": "quibble-sloprin",
+      "type": "npc",
+      "title": "Quibble Sloprin",
+      "summary": "Extravagantly dressed drider",
+      "image": "assets/images/quibble-sloprin.png?v=20260818",
+      "content": "Quibble Sloprin is an extravagantly dressed drider, his powerful spider body supporting the elegant upper form of a drow. His skin is deep violet-gray, framed by swept-back white hair and sharp elven features. Bright, unsettling eyes sit above a smile that always seems just a little too enthusiastic.",
+      "links": [],
       "published": true,
       "updatedAt": "2026-08-18"
     },
@@ -63,7 +81,7 @@ window.WIKI_DATA = {
       "type": "recap",
       "title": "Session 27 - The Curator of Everything",
       "summary": "The Party receives their invites and masks",
-      "image": "",
+      "image": "assets/images/seraph-vaelor-session-27.png?v=20260818",
       "content": "Upon gaining entry to the duergar forge known as the Flagon and Fist in the Underdark city of Mantle Dareth, the heroes were met by Balfry Colthum, a stern and imposing foreman. He greeted them with suspicion, questioning their purpose and their desire to attend the gala of the Council of Spiders. One by one, the adventurers introduced themselves: Halexus Petna, a former drow; Biscuit, a harengon of the wandering shell clan; V, a goliath raised by stone giants; Nari, a woman of unknown origin; and Prince Daryndil, a firbolg seeking his past.\nBalfry’s interrogation was interrupted by the frenetic arrival of Dern “Lucky Pick” Colthum, a much smaller and more excitable duergar who seemed to be Balfry's foil. Dern, despite his clumsiness, insisted on giving the visitors a tour. Balfry reluctantly led them through the heart of the forge, a cavernous space filled with the din of hammers and the heat of countless fires, explaining the forge's creed: \"The forge runs on order, not on luck.\" Halexus recounted their harrowing journey, touching upon their pursuit of the chaotic myconid, Droki, and their encounters with demons and warped time. As Biscuit kindly helped Dern gather his dropped tools, he mentioned a past encounter with a duergar named Thaldren Vainwhisper.\nThe name caused a dramatic shift. Dern dropped a precious anvil in shock, and Balfry’s stern demeanor cracked. They revealed that Thaldren Vainwhisper was a legendary, long-dead inventor. As Biscuit described the time-warping phenomena surrounding their meeting, Dern recalled a prophecy: when dragons are released and demons drum, time itself will unravel, heralding a great darkness. Convinced of the party's importance, Balfry instructed them to seek the gala's gatekeeper, Seraph, while he considered how to help them secure an invitation. Biscuit offered a word of encouragement to the anxious Dern, and the party returned to the main market to resupply.\nWith a plan forged from urgency, the group split up in the bustling market. Biscuit, Halexus, and Nari entered The Crooked Wand, a magic shop run by a hard-eyed halfling. Biscuit led a tense and theatrical negotiation for a powerful wand, flinging treasures across the counter—moonstone, potions, and even a peculiar “turtle cannon.” Barter turned to brinkmanship, with Biscuit threatening the shopkeeper's life. Halexus de-escalated the situation, and after a sharp-tongued exchange, a deal was struck for a three-slot wand for 1100 gold and 500 gold worth of precious stones.\nMeanwhile, V visited Hex and Hearth, an apothecary run by a cheerful elf named Marta Hexwhistle, seeking drow poison and healing potions. V also scouted several unique concoctions, including a Potion of Mind Reading, a Potion of Gaseous Form, and an Elixir of Stone Blood. Later, the artificer of the party met a disturbingly skinny alchemist in a back-room lab, purchasing a potent poison, the Potion of Mind Reading, and a Superior Healing Draught for 850 gold. Elsewhere, Alexis entered \"Mashup,\" a cluttered armor shop run by Vela, a boisterous hill dwarf. After considering a magical cloak, Alexis purchased a magnificent Ceremonial Shield of darksteel, trading in his old one for a small discount. The group also took stock of their existing drow-poisoned bolts and arrows.\nTheir shopping complete, the party strode to a modest storefront marked “Mask Curation” to find Seraph Veylor, the famed curator. A vision in purple, Seraph revealed their invitation had already been granted by Shadrach, a notoriously picky halfling tinkerer. With a clap, the shop's walls fell away to reveal a cathedral of masks. Seraph declared that while their attire would match their patron's faction, their mask must reflect their soul. One by one, they described their desired visages: V, a duality of stone giant and wolf; Biscuit, a tortle-dragon hybrid; Nari, a face of midnight and starlight. Alexis requested a golden coin, prompting Seraph to note a faint curse upon him, placed by the dryder Quibble, which could only be lifted by performance at the gala. Daryndil, seeking an elven mask, was unsettled to receive a Quaggoth-like one instead.\nWith their identities forged, Seraph explained the Gala’s rules—no fighting, no bloodshed, magic suppressed—and instructed them to don their masks. As they did, green smoke swirled and darkness pressed in. Seraph’s distant, alarmed voice cried, “Oh no, this is not—”, and the party found themselves not in a courtyard, but in a grand theater. Before them was a stage, tables, an enigmatic piano, and a regal figure presiding as a narrator’s voice intoned a thesis on thought shaping reality. A diversion, a test, or a trap had been sprung. The curtain had risen on a performance they had not planned to join.",
       "links": [
   
