@@ -1,6 +1,17 @@
 // PLAYER-SAFE DATA ONLY. Never add DM secrets to this file.
 window.WIKI_DATA = {
-  campaign: { title: "Echoes of the Deep", subtitle: "A player’s guide to the known world" },
+  campaign: {
+    title: "Echoes of the Deep",
+    subtitle: "A player’s guide to the known world",
+    home: {
+      currentEntryId: "8881a396-957f-4a40-8708-4aea4499c7ca",
+      currentEyebrow: "Current chapter · The Centennial Gala",
+      currentObjective: "Follow the masks into the unexpected theater and discover who has drawn the party into the performance.",
+      priorityIds: ["ruby-in-the-rough", "73b9a360-d853-4664-8d54-fbffc02de78e", "quibble-sloprin"],
+      recentLimit: 6,
+      timelineLimit: 3
+    }
+  },
   entries: [{
     id: "welcome-to-the-archive", type: "lore", title: "The Chronicle Begins",
     summary: "This archive will grow with the party’s discoveries.",
@@ -12,7 +23,7 @@ window.WIKI_DATA = {
     content: "Ruby in the Rough is an abandoned sacred district of Blingdenstone that has fallen into ruin and corruption. What was once a place where deep gnomes honored their dead and preserved their history has become a dangerous stretch of broken tunnels, forgotten graves, and ooze-infested chambers.\n\nA single cavern path eventually reaches a distinct fork. Broken burial stones have been dragged from their resting places, while trails of slime cross the stone and disappear into the darkness.\n\nThe left path leads to the old crypts: a sprawling burial complex of shattered headstones, collapsed tombs, catacombs, and forgotten chambers. Wererats and other Underdark scavengers have moved among the graves, while something has disturbed places meant to remain sealed.\n\nThe right path leads toward the Pudding King. The remains of an old deep gnome structure are littered with debris and trails of ooze. Stairs rise into a ruined dining hall where a massive table remains covered with abandoned plates and rotting food, watched over by four statues of deep gnome knights. Beyond it lies the Pudding King’s throne room, a vast chamber of towering pillars and a broken raised throne where the strange ooze infestation reaches its source.\n\nThe crypts and the Pudding King’s corruption are connected: the dead have been disturbed, sacred places violated, and pieces of Blingdenstone’s past are being consumed. For Biscuit, Nari, Helexisys, V, and Deren, Ruby in the Rough is an opportunity to reclaim a small piece of Blingdenstone for the people who once called it sacred.",
     image: "assets/images/ruby-in-the-rough-map.png?v=20260818",
     images: ["assets/images/ruby-in-the-rough-approach-map.png?v=20260818"],
-    links: [], published: true, updatedAt: "2026-08-18"
+    links: [], published: true, updatedAt: "2026-08-18T20:40:00-05:00"
   }, {
     id: "v-stone-giant-blood-wolf-mask", type: "item", title: "V — Stone Giant / Blood-Wolf Mask",
     summary: "A mask divided between stone-giant artistry and a blood-red wolf.",
@@ -50,7 +61,7 @@ window.WIKI_DATA = {
   
       ],
       "published": true,
-      "updatedAt": "2026-08-18"
+      "updatedAt": "2026-08-18T20:20:00-05:00"
     },
     {
       "id": "quibble-sloprin",
@@ -61,7 +72,7 @@ window.WIKI_DATA = {
       "content": "Quibble Sloprin is an extravagantly dressed drider, his powerful spider body supporting the elegant upper form of a drow. His skin is deep violet-gray, framed by swept-back white hair and sharp elven features. Bright, unsettling eyes sit above a smile that always seems just a little too enthusiastic.",
       "links": [],
       "published": true,
-      "updatedAt": "2026-08-18"
+      "updatedAt": "2026-08-18T20:35:00-05:00"
     },
     {
       "id": "f2166daf-02ac-422f-aff8-752c200f1d3f",
@@ -74,7 +85,7 @@ window.WIKI_DATA = {
   
       ],
       "published": true,
-      "updatedAt": "2026-08-18"
+      "updatedAt": "2026-08-18T20:15:00-05:00"
     },
     {
       "id": "8881a396-957f-4a40-8708-4aea4499c7ca",
