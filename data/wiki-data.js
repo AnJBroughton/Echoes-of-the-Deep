@@ -75,6 +75,17 @@ window.WIKI_DATA = {
       "updatedAt": "2026-08-18T20:35:00-05:00"
     },
     {
+      "id": "horgar-steelshadow",
+      "type": "npc",
+      "title": "Horgar Steelshadow",
+      "summary": "Duergar patriarch · Droki’s father",
+      "image": "assets/images/horgar-steelshadow.png?v=20260820",
+      "content": "Horgar Steelshadow is an elderly duergar patriarch with a broad, powerful build. His stern, deeply lined face, piercing pale eyes, long white beard, and sweeping mustache give him an immediately commanding presence. A tall, angular crown of black iron rises above his head.\n\nHe dresses in a massive mantle of dark blue-gray Underdark fur over heavy crimson ceremonial robes trimmed in gold, and carries a long, dark ceremonial staff. He moves slowly and deliberately, projecting authority rather than aggression.\n\nHorgar rarely smiles. His expression is usually cold and contemplative, and he speaks in a deep, measured voice that he seldom raises. Everything about him suggests wealth, tradition, and political power—an aging patriarch who still expects the room to obey him.",
+      "links": [],
+      "published": true,
+      "updatedAt": "2026-08-20T12:00:00-05:00"
+    },
+    {
       "id": "f2166daf-02ac-422f-aff8-752c200f1d3f",
       "type": "npc",
       "title": "Rystia Zav",
