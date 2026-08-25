@@ -160,6 +160,17 @@ window.WIKI_DATA = {
       ],
       "published": true,
       "updatedAt": "2026-08-18"
+    },
+    {
+      "id": "curse-of-the-unsavory",
+      "type": "curse",
+      "title": "Curse of the Unsavory",
+      "summary": "Lingering curse · Helexis",
+      "image": "",
+      "content": "Helexis is under this lingering curse.\n\nCombat Effect\nThe first time each combat that Helexis deals damage, he takes 1d12 psychic damage. This damage cannot be reduced. His hit point maximum is reduced by the amount of psychic damage taken until he completes a long rest or the curse is removed.\n\nLifting the Curse\nThe curse can be lifted if Helexis willingly takes part in a performance, feast, or ritual as an active participant rather than an observer.\n\nAlternatively, he may sacrifice precious food or drink worth more than 25 gp at a temple or sanctuary and recite: “I renounce my prideful ways and seek forgiveness for my refraining to participate in the feast.”\n\nHelexis may also make amends at the discretion of the one who cursed him.",
+      "links": ["quibble-sloprin"],
+      "published": true,
+      "updatedAt": "2026-08-25"
     }
   ]
 };
