@@ -7,7 +7,7 @@ const search = document.querySelector('#searchInput');
 const count = document.querySelector('#resultCount');
 const dialog = document.querySelector('#entryDialog');
 const dialogContent = document.querySelector('#dialogContent');
-const labels = { memory: 'Memory', location: 'Location', npc: 'NPC', faction: 'Faction', lore: 'Lore', quest: 'Quest', item: 'Item', recap: 'Recap' };
+const labels = { memory: 'Memory', location: 'Location', npc: 'NPC', faction: 'Faction', lore: 'Lore', quest: 'Quest', item: 'Item', boon: 'Boon', curse: 'Curse', recap: 'Recap' };
 let section = (location.hash.slice(1) || 'home').toLowerCase();
 
 function safe(value = '') {
@@ -16,8 +16,8 @@ function safe(value = '') {
 function published() { return data.entries.filter(entry => entry.published); }
 function filtered() {
   const query = search.value.trim().toLowerCase();
-  const type = section === 'home' ? '' : section === 'memories' ? 'memory' : section.replace(/s$/, '');
-  return published().filter(entry => (!type || entry.type === type) && (!query || [entry.title, entry.summary, entry.content, entry.type].join(' ').toLowerCase().includes(query)));
+  const types = section === 'home' ? [] : section === 'memories' ? ['memory'] : section === 'boons-curses' ? ['boon', 'curse'] : [section.replace(/s$/, '')];
+  return published().filter(entry => (!types.length || types.includes(entry.type)) && (!query || [entry.title, entry.summary, entry.content, entry.type].join(' ').toLowerCase().includes(query)));
 }
 function findEntry(id) { return published().find(entry => entry.id === id); }
 function imageMarkup(entry) { return entry.image ? `<img src="${safe(entry.image)}" alt="${safe(entry.title)}" style="display:block;width:100%;height:100%;object-fit:contain;background:#081014">` : '✦'; }
@@ -37,7 +37,7 @@ function renderHome() {
   const priorities = (config.priorityIds || []).map(findEntry).filter(Boolean);
   const recent = newest(entries.filter(entry => entry !== current), config.recentLimit || 6);
   const timeline = newest(entries.filter(entry => entry.type === 'recap'), config.timelineLimit || 3);
-  homeDashboard.innerHTML = `${current ? `<section class="home-current"><div class="home-current-image">${imageMarkup(current)}</div><div class="home-current-copy"><p class="eyebrow">${safe(config.currentEyebrow || 'Current chapter')}</p><h2>${safe(current.title)}</h2><p>${safe(current.summary || '')}</p><p class="objective"><strong>What comes next</strong><br>${safe(config.currentObjective || '')}</p><button class="button" type="button" data-home-id="${safe(current.id)}">Read the latest recap</button></div></section>` : ''}<section class="home-section"><h2>Latest discoveries</h2><div class="home-cards">${recent.map(homeCard).join('')}</div></section>${priorities.length ? `<section class="home-section"><h2>Party priorities</h2><div class="home-cards">${priorities.map(homeCard).join('')}</div></section>` : ''}<section class="home-section"><h2>Explore the archive</h2><div class="home-categories"><a href="#locations">Locations</a><a href="#npcs">NPCs</a><a href="#recaps">Session Recaps</a><a href="#quests">Quests</a><a href="#items">Items</a><a href="#lore">Lore</a><a href="#factions">Factions</a><a href="#memories">Memories</a></div></section>${timeline.length ? `<section class="home-section"><h2>Campaign timeline</h2><div class="home-cards">${timeline.map(homeCard).join('')}</div></section>` : ''}`;
+  homeDashboard.innerHTML = `${current ? `<section class="home-current"><div class="home-current-image">${imageMarkup(current)}</div><div class="home-current-copy"><p class="eyebrow">${safe(config.currentEyebrow || 'Current chapter')}</p><h2>${safe(current.title)}</h2><p>${safe(current.summary || '')}</p><p class="objective"><strong>What comes next</strong><br>${safe(config.currentObjective || '')}</p><button class="button" type="button" data-home-id="${safe(current.id)}">Read the latest recap</button></div></section>` : ''}<section class="home-section"><h2>Latest discoveries</h2><div class="home-cards">${recent.map(homeCard).join('')}</div></section>${priorities.length ? `<section class="home-section"><h2>Party priorities</h2><div class="home-cards">${priorities.map(homeCard).join('')}</div></section>` : ''}<section class="home-section"><h2>Explore the archive</h2><div class="home-categories"><a href="#locations">Locations</a><a href="#npcs">NPCs</a><a href="#recaps">Session Recaps</a><a href="#quests">Quests</a><a href="#items">Items</a><a href="#boons-curses">Boons &amp; Curses</a><a href="#factions">Factions</a><a href="#memories">Memories</a></div></section>${timeline.length ? `<section class="home-section"><h2>Campaign timeline</h2><div class="home-cards">${timeline.map(homeCard).join('')}</div></section>` : ''}`;
   homeDashboard.querySelectorAll('[data-home-id]').forEach(card => card.onclick = () => openEntry(card.dataset.homeId));
 }
 function render() {
