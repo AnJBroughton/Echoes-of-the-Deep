@@ -124,7 +124,7 @@ window.WIKI_DATA = {
     },
     {
       "id": "7992bf23-0550-4dfd-9808-e15b46e1411d",
-      "type": "item",
+      "type": "boon",
       "title": "Boon of the Hardshell Candy",
       "summary": "Boon · Vjorn",
       "image": "",
@@ -137,7 +137,7 @@ window.WIKI_DATA = {
     },
     {
       "id": "17ef26ce-5e99-4033-a1ed-005529f3a127",
-      "type": "item",
+      "type": "boon",
       "title": "Boon of the Refined Sip",
       "summary": "Boon · Nari",
       "image": "",
@@ -150,7 +150,7 @@ window.WIKI_DATA = {
     },
     {
       "id": "9fdc334c-3ade-4656-9f8e-6475e26e9a3a",
-      "type": "item",
+      "type": "boon",
       "title": "Boon of the Wooden Spoon",
       "summary": "Boon · Biscuit",
       "image": "",
