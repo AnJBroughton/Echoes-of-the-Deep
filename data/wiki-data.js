@@ -4,9 +4,9 @@ window.WIKI_DATA = {
     title: "Echoes of the Deep",
     subtitle: "A player’s guide to the known world",
     home: {
-      currentEntryId: "8881a396-957f-4a40-8708-4aea4499c7ca",
-      currentEyebrow: "Current chapter · The Centennial Gala",
-      currentObjective: "Follow the masks into the unexpected theater and discover who has drawn the party into the performance.",
+      currentEntryId: "session-28-murder-at-the-gala",
+      currentEyebrow: "Current chapter · Murder at the Centennial Gala",
+      currentObjective: "Find Val Tyrion’s killer, uncover who is controlling Droki, and keep the investigation from collapsing into chaos.",
       priorityIds: ["ruby-in-the-rough", "73b9a360-d853-4664-8d54-fbffc02de78e", "quibble-sloprin"],
       recentLimit: 6,
       timelineLimit: 3
@@ -110,6 +110,17 @@ window.WIKI_DATA = {
       ],
       "published": true,
       "updatedAt": "2026-08-18"
+    },
+    {
+      "id": "session-28-murder-at-the-gala",
+      "type": "recap",
+      "title": "Session 28 — Murder at the Gala",
+      "summary": "A murdered composer, a stolen artifact, and signs that Droki is being controlled by an unseen hand.",
+      "image": "",
+      "content": "The night began not beneath the glittering chandeliers of the Gala, but in a forgotten rehearsal hall where a somber melody drifted from the keys of a lonely piano. There, Maestro Severin Vale revealed the terrible secret threatening the celebration: the legendary elven composer Val Tyrion had been murdered, his body hastily hidden away before panic could spread. Someone had killed him for a mysterious magical artifact and vanished into the gathering. With magic forbidden, weapons restricted, and enemies from across the Underdark gathered beneath a fragile banner of peace, the party was given a dangerous task—find the killer before the Gala truly began. Their first clues seemed almost too familiar: a short, hooded figure, hurried movements, and whispers of someone gathering magical objects. Everything pointed toward Droki.\n\nTheir investigation carried them through the magnificent halls of the Gala, where every conversation seemed to add another layer to the mystery. A flamboyant countess offered gossip of nervous servants and secret meetings in the garden. A frightened plasmoid servant revealed that the killer had fled toward the grand staircase before seemingly vanishing into thin air, while V’s enchanted coin confirmed powerful magic surrounding the sealed upper floor. Then, inside the smoke-filled lounge, they encountered the legendary dragonborn hero Dramaden Vale, the Ashen Shield. Drink loosened the old warrior’s tongue, and what he muttered changed everything: Droki may have stolen the artifact, but Droki was not acting alone. Something—or someone—was controlling him. Someone else was moving the wand. Someone else was controlling the music.\n\nThe trail eventually led into the Gala’s strange gallery, where heroes were depicted falling rather than triumphing and where an eccentric half-orc offered the party a ridiculous bargain involving Gloamberries, revenge, and the public humiliation of Lord Hadrick Vale. But beneath the disguise waited an old enemy: Quibble. His feud with Helexisys immediately reignited, and while the two traded threats, Biscuit did what Biscuit does best—he ate the berries. Then he ate another. His fur turned brilliant blue, melancholy swallowed him, and the magic of the berries began preventing his body from properly healing. Quibble offered to undo everything if Helexisys would simply participate in his petty revenge. Helexisys answered by summoning his blade.\n\nNow, with forbidden magic drawn in the middle of the Gala, Biscuit reaching for yet another berry, Droki possibly being manipulated by an unseen master, and a murderer still somewhere among the guests, the investigation stands on the edge of becoming something far more dangerous.",
+      "links": ["quibble-sloprin"],
+      "published": true,
+      "updatedAt": "2026-08-24T12:00:00-05:00"
     },
     {
       "id": "7992bf23-0550-4dfd-9808-e15b46e1411d",
