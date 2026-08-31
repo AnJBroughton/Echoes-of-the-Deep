@@ -4,9 +4,9 @@ window.WIKI_DATA = {
     title: "Echoes of the Deep",
     subtitle: "A player’s guide to the known world",
     home: {
-      currentEntryId: "session-28-murder-at-the-gala",
-      currentEyebrow: "Current chapter · Murder at the Centennial Gala",
-      currentObjective: "Find Val Tyrion’s killer, uncover who is controlling Droki, and keep the investigation from collapsing into chaos.",
+      currentEntryId: "session-29-masks-fall",
+      currentEyebrow: "Current chapter · The masks fall",
+      currentObjective: "Protect the wounded Droki and survive the battle against the evil that was hiding behind the Gala.",
       priorityIds: ["ruby-in-the-rough", "73b9a360-d853-4664-8d54-fbffc02de78e", "quibble-sloprin"],
       recentLimit: 6,
       timelineLimit: 3
@@ -121,6 +121,17 @@ window.WIKI_DATA = {
       "links": ["quibble-sloprin"],
       "published": true,
       "updatedAt": "2026-08-24T12:00:00-05:00"
+    },
+    {
+      "id": "session-29-masks-fall",
+      "type": "recap",
+      "title": "Session 29 — The Masks Fall",
+      "summary": "The Gala’s illusion collapses, Droki names the murderer, and Fraz-Urb’luu is revealed among the guests.",
+      "image": "assets/images/session-28-quibble-disguise.png?v=20260824",
+      "content": "The evening’s carefully maintained elegance began to fracture when Quibble, still hidden beneath his magical disguise, confronted the party over their increasingly reckless behavior. Biscuit’s third Gloamberry had transformed him into a glowing purple spectacle with heavy, moss-covered ears, while Helexisys’s use of magic drew Quibble’s ire—and ultimately a challenge to a midnight duel. When Derendil recognized Biscuit’s condition as poison, Helexisys called upon his divine power to purge it from the harengon, but the magic immediately drew the attention of the Gala’s guards. With footsteps closing in, Nari discovered a hidden servants’ passage, allowing the party to disappear from the gallery moments before they were caught.\n\nThe twisting corridors carried them into the strange serenity of the Moonless Garden, where a sorrowful woman named Lady Sorrowmere waited beside a fountain. She begged the adventurers to reunite her with her lost love, the towering firbolg Grubus Clattergut, but offered something even more valuable than a reward: she had seen a strange figure race through the garden and somehow appear upon a second-floor balcony. The hunt for Droki had found its trail again.\n\nThe party divided to follow it. Biscuit and Helexisys scaled the exterior of the mansion, eventually gaining entrance through the balcony with the help of Silith of the Nine Scales, a poetry-obsessed yuan-ti whose peculiar company included the elderly kenku Pip Pip. Inside, Biscuit discovered a scattered trail of chipped jewels—small fragments confirming that Droki had passed this way.\n\nMeanwhile, V, Nari, and Derendil entered the Gala through considerably more respectable means, though respectability did not survive long. V engineered a perfectly timed accident involving a rock gnome waiter and slipped a Gloamberry into the drink of an arrogant dragonborn noble. Once reunited, the party entered the impossibly vast ballroom, where music, masks, magic, and hundreds of guests pressed in from every direction. They found Grubus at the bar, but V’s attempts to lure the suspicious firbolg into the garden only convinced him that something was terribly wrong. Another unfortunate noble nearly collapsed at the mere mention of Lady Sorrowmere, terrified that the legendary embodiment of unrequited love had finally come for him. Beneath the absurdity, however, the party continued watching the Maestro—and the Gala itself—for the truth hiding behind the spectacle.\n\nThen the performance shattered. Hadrick Vale, humiliated and tarnished by the party’s prank, stormed onto the stage in a fury, breathing fire and accusing the Maestro of treachery. Somewhere amid the chaos, Quibble honored his promise and lifted the curse from Helexisys. But before anyone could regain control, Droki swung dramatically onto the stage and accused the Maestro of murder.\n\nThe accusation tore away more than civility. The magnificent Gala dissolved around them as its illusion collapsed, exposing the nightmare concealed beneath the celebration—and among the guests stood the lesser demon lord Fraz-Urb’luu. The Maestro struck Droki down, leaving him injured and helpless as battle erupted. Nari summoned the power of the stars. Helexisys vanished onto the stage in a flash of magic and drove divine fury into the Maestro, while Biscuit called forth an Earth Elemental to crash into the revealed demon lord.\n\nThe night that began as an investigation had become something far darker. The masks were gone, Droki lay wounded upon the stage, and the party now stood face-to-face with the evil that had been hiding in plain sight.",
+      "links": ["quibble-sloprin", "curse-of-the-unsavory-hunger"],
+      "published": true,
+      "updatedAt": "2026-08-31T12:00:00-05:00"
     },
     {
       "id": "7992bf23-0550-4dfd-9808-e15b46e1411d",
