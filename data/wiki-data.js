@@ -176,12 +176,12 @@ window.WIKI_DATA = {
       "id": "curse-of-the-unsavory-hunger",
       "type": "curse",
       "title": "Curse of the Unsavory Hunger",
-      "summary": "Lingering curse · Helexis",
+      "summary": "Removed by Quibble · Helexis",
       "image": "",
-      "content": "Helexis is under this lingering curse.\n\nCombat Effect\nThe first time each combat that Helexis deals damage, he takes 1d12 psychic damage. This damage cannot be reduced. His hit point maximum is reduced by the amount of psychic damage taken until he completes a long rest or the curse is removed.\n\nLifting the Curse\nThe curse can be lifted if Helexis willingly takes part in a performance, feast, or ritual as an active participant rather than an observer.\n\nAlternatively, he may sacrifice precious food or drink worth more than 25 gp at a temple or sanctuary and recite: “I renounce my prideful ways and seek forgiveness for my refraining to participate in the feast.”\n\nHelexis may also make amends at the discretion of the one who cursed him.",
+      "content": "Status: Removed\nQuibble removed the Curse of the Unsavory Hunger from Helexis during the chaos at the Gala. Helexis is no longer affected by it.\n\nFormer Combat Effect\nThe first time each combat that Helexis dealt damage, he took 1d12 psychic damage. This damage could not be reduced. His hit point maximum was reduced by the amount of psychic damage taken until he completed a long rest or the curse was removed.\n\nKnown Ways to Lift the Curse\nThe curse could be lifted if Helexis willingly took part in a performance, feast, or ritual as an active participant rather than an observer.\n\nAlternatively, he could sacrifice precious food or drink worth more than 25 gp at a temple or sanctuary and recite: “I renounce my prideful ways and seek forgiveness for my refraining to participate in the feast.”\n\nThe cursed individual could also make amends at the discretion of the one who placed the curse.",
       "links": ["quibble-sloprin"],
       "published": true,
-      "updatedAt": "2026-08-25"
+      "updatedAt": "2026-08-31"
     }
   ]
 };
