@@ -17,6 +17,10 @@ window.WIKI_DATA = {
       "id": "last-breath-reliquary",
       "type": "item",
       "title": "The Last Breath Reliquary",
+      "effect": {
+        "rarity": "Rare consumable",
+        "text": "As an action, shatter the vial to cast Speak with Dead on any corpse within 30 ft. The corpse answers 5 questions truthfully even if it would normally refuse or recognize you as an enemy."
+      },
       "summary": "A crystal vial holding a captured final breath.",
       "image": "assets/images/last-breath-reliquary.png?v=20260903",
       "content": "A narrow crystal vial wrapped in tarnished silver wire. Inside swirls a pale mist—the captured final breath of someone the necromancer considered important. Occasionally, a face presses against the inside of the glass.",
