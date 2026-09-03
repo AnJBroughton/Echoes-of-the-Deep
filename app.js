@@ -60,6 +60,9 @@ function openEntry(id) {
   const entry = findEntry(id); if (!entry) return;
   const related = (entry.links || []).map(findEntry).filter(Boolean);
   dialogContent.innerHTML = `<div class="dialog-image" style="height:auto;aspect-ratio:3/2;overflow:hidden">${imageMarkup(entry)}</div><div class="dialog-body"><span class="tag">${safe(labels[entry.type] || entry.type)}</span><h2>${safe(entry.title)}</h2><p class="summary">${safe(entry.summary)}</p><div class="content">${safe(entry.content)}</div>${galleryMarkup(entry)}${related.length ? `<div class="links">${related.map(item => `<button data-link="${safe(item.id)}">${safe(item.title)}</button>`).join('')}</div>` : ''}</div>`;
+  if (entry.effect) {
+    dialogContent.querySelector('.content').insertAdjacentHTML('afterend', `<section class="item-effect" aria-label="Effect"><h3>Effect</h3><p class="effect-rarity">${safe(entry.effect.rarity)}</p><p>${safe(entry.effect.text)}</p></section>`);
+  }
   dialogContent.querySelectorAll('[data-link]').forEach(button => button.onclick = () => openEntry(button.dataset.link));
   dialog.showModal();
 }
