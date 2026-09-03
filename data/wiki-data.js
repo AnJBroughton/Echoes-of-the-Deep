@@ -14,6 +14,17 @@ window.WIKI_DATA = {
   },
   entries: [
     {
+      "id": "last-breath-reliquary",
+      "type": "item",
+      "title": "The Last Breath Reliquary",
+      "summary": "A crystal vial holding a captured final breath.",
+      "image": "assets/images/last-breath-reliquary.png?v=20260903",
+      "content": "A narrow crystal vial wrapped in tarnished silver wire. Inside swirls a pale mist—the captured final breath of someone the necromancer considered important. Occasionally, a face presses against the inside of the glass.",
+      "links": ["session-30-only-the-opening-act"],
+      "published": true,
+      "updatedAt": "2026-09-03"
+    },
+    {
       "id": "session-30-only-the-opening-act",
       "type": "recap",
       "title": "Session 30 — Only the Opening Act",
