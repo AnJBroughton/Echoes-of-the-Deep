@@ -4,15 +4,29 @@ window.WIKI_DATA = {
     title: "Echoes of the Deep",
     subtitle: "A player’s guide to the known world",
     home: {
-      currentEntryId: "session-29-masks-fall",
-      currentEyebrow: "Current chapter · The masks fall",
-      currentObjective: "Protect the wounded Droki and survive the battle against the evil that was hiding behind the Gala.",
+      currentEntryId: "session-30-only-the-opening-act",
+      currentEyebrow: "Current chapter · Only the opening act",
+      currentObjective: "Decide Droki’s fate and uncover the greater threat behind the Maestro and Frazzulbu.",
       priorityIds: ["ruby-in-the-rough", "73b9a360-d853-4664-8d54-fbffc02de78e", "quibble-sloprin"],
       recentLimit: 6,
       timelineLimit: 3
     }
   },
-  entries: [{
+  entries: [
+    {
+      "id": "session-30-only-the-opening-act",
+      "type": "recap",
+      "title": "Session 30 — Only the Opening Act",
+      "summary": "The Maestro and Frazzulbu fall, Droki warns of greater horrors, and the party reaches Level 12.",
+      "image": "assets/images/session-30-drokis-capture.png?v=20260903",
+      "content": "The gala’s splendor collapsed into blood, fire, and shattered stone as the party continued their battle against the Maestro and the lesser demon lord Frazzulbu. Darrendill hurled himself into the fight in a feral rage, calling the hunt and lending strength to his companions, while V used a potion of mind reading to pry into the Maestro’s thoughts. What he discovered was more troubling than the battle itself: the Maestro was frustrated because whatever plan he had constructed around Droki and the demon was unraveling. Hellexis answered the necromancer’s schemes with overwhelming force, nearly cutting him down in a brutal opening assault, but the Maestro wrapped himself in magic that rendered him immune to radiant power. Biscuit maneuvered allies across the battlefield while his Earth Elemental battered the demon, and Nari finally tore apart the Maestro’s defenses with a Grasping Vine, dragging him helplessly back within reach of Hellexis.\n\nWith his protection broken, the Maestro’s final performance became desperate. He unleashed a devastating Circle of Death across the hall, but Hellexis pressed forward and drove Umbral Edge through him, ending the necromancer in a burst of radiant fury. Even in death, however, the Maestro offered one last revelation: he had never been the true architect of what was happening. He was merely a subordinate who had spectacularly failed his task. Frazzulbu then transformed the ruined gala into something closer to a vision of the Abyss—lightning ignited the room, stained glass exploded through the air, and psychic screams dragged V into a nightmare shaped from his own fears. Nari was knocked unconscious amid the destruction, only for Darrendill to abandon his rage long enough to stabilize her. When she rose again, she answered with waves of healing magic that restored the battered party and allowed them to make one final coordinated assault. Steel, radiant magic, thunder, claws, and elemental fists crashed into Frazzulbu until Biscuit’s Earth Elemental delivered the final crushing blow and the demon lord fell.\n\nSilence settled over a ballroom left burning and broken, but victory brought little comfort. Among the bodies the party recovered strange treasures: the Maestro carried a Last Breath Reliquary capable of questioning the dead, while Frazzulbu left behind a Phantasmal Heart, the Crown of the Lesser Tyrant, and an iron coffer overflowing with ancient wealth that Nari suspected carried a terrible curse. Biscuit quietly pocketed the Maestro’s Grave Silver Signet Ring without the others noticing. Their attention then returned to Droki, still alive and tied to a piano. Hellexis restored just enough of his strength for him to speak, and Droki immediately begged for mercy, insisting that the things he had done were not entirely his own. Voices had overwhelmed him. Something far greater was moving behind everything they had witnessed. His final warning hung over the exhausted party: “They’re coming. There’s more. We have to stop them.” With Droki’s fate unresolved, a dead necromancer revealed as nothing more than a pawn, and Frazzulbu’s own thoughts suggesting that the entire battle had merely been a distraction, the party reached Level 12 knowing that the horrors they had just defeated were not the culmination of their journey—they were only the opening act.",
+      "links": [
+        "session-29-masks-fall"
+      ],
+      "published": true,
+      "updatedAt": "2026-09-03"
+    },
+  {
     id: "welcome-to-the-archive", type: "lore", title: "The Chronicle Begins",
     summary: "This archive will grow with the party’s discoveries.",
     content: "Locations, people, factions, treasures, quests, and session histories will appear here when they become known to the party.",
