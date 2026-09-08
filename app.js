@@ -5,10 +5,12 @@ const welcome = document.querySelector('#welcome');
 const homeDashboard = document.querySelector('#homeDashboard');
 const search = document.querySelector('#searchInput');
 const count = document.querySelector('#resultCount');
+const itemFilters = document.querySelector('#itemFilters');
 const dialog = document.querySelector('#entryDialog');
 const dialogContent = document.querySelector('#dialogContent');
 const labels = { memory: 'Memory', location: 'Location', npc: 'NPC', faction: 'Faction', lore: 'Lore', quest: 'Quest', item: 'Item', boon: 'Boon', curse: 'Curse', recap: 'Recap' };
 let section = (location.hash.slice(1) || 'home').toLowerCase();
+let itemCategory = 'all';
 
 function safe(value = '') {
   return String(value).replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
@@ -17,7 +19,7 @@ function published() { return data.entries.filter(entry => entry.published); }
 function filtered() {
   const query = search.value.trim().toLowerCase();
   const types = section === 'home' ? [] : section === 'memories' ? ['memory'] : section === 'boons-curses' ? ['boon', 'curse'] : [section.replace(/s$/, '')];
-  return published().filter(entry => (!types.length || types.includes(entry.type)) && (!query || [entry.title, entry.summary, entry.content, entry.type].join(' ').toLowerCase().includes(query)));
+  return published().filter(entry => (!types.length || types.includes(entry.type)) && (section !== 'items' || itemCategory === 'all' || entry.category === itemCategory) && (!query || [entry.title, entry.summary, entry.content, entry.type, entry.category].join(' ').toLowerCase().includes(query)));
 }
 function findEntry(id) { return published().find(entry => entry.id === id); }
 function imageMarkup(entry) { return entry.image ? `<img src="${safe(entry.image)}" alt="${safe(entry.title)}" style="display:block;width:100%;height:100%;object-fit:contain;background:#081014">` : '✦'; }
@@ -44,6 +46,7 @@ function render() {
   document.querySelectorAll('.wiki-nav a').forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${section}`));
   const dashboardMode = section === 'home' && !search.value;
   welcome.classList.add('hidden');
+  itemFilters.classList.toggle('hidden', section !== 'items');
   homeDashboard.classList.toggle('hidden', !dashboardMode);
   grid.classList.toggle('hidden', dashboardMode);
   if (dashboardMode) renderHome();
@@ -68,6 +71,13 @@ function openEntry(id) {
 }
 window.addEventListener('hashchange', () => { section = (location.hash.slice(1) || 'home').toLowerCase(); render(); });
 search.addEventListener('input', render);
+itemFilters.querySelectorAll('[data-item-category]').forEach(button => {
+  button.onclick = () => {
+    itemCategory = button.dataset.itemCategory;
+    itemFilters.querySelectorAll('[data-item-category]').forEach(option => option.classList.toggle('active', option === button));
+    render();
+  };
+});
 document.querySelector('#closeDialog').onclick = () => dialog.close();
 dialog.onclick = event => { if (event.target === dialog) dialog.close(); };
 render();
