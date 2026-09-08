@@ -14,6 +14,21 @@ window.WIKI_DATA = {
   },
   entries: [
     {
+      "id": "gravesilver-signet",
+      "type": "item",
+      "title": "Gravesilver Signet",
+      "effect": {
+        "rarity": "Grave Debt · Worth 1,200 gp",
+        "text": "Once per long rest, when the signet prevents you from dropping to 0 HP but not being killed outright, you can drop to 1 HP instead. When this happens, roll one of your Hit Dice. Your hit point maximum is reduced by the number rolled until you finish a long rest."
+      },
+      "summary": "A skull-faced silver signet that trades borrowed life for a grave debt.",
+      "image": "assets/images/gravesilver-signet.png?v=20260907",
+      "content": "A heavy silver ring engraved with an ornate skull whose mouth has been sewn shut with impossibly fine gold thread. An eight-pointed star and curling funerary filigree decorate its broad band, while hundreds of tiny names are engraved along the inside.\n\n“Some debts are not paid in gold, but in breath.”",
+      "links": ["session-30-only-the-opening-act"],
+      "published": true,
+      "updatedAt": "2026-09-07"
+    },
+    {
       "id": "last-breath-reliquary",
       "type": "item",
       "title": "The Last Breath Reliquary",
