@@ -14,6 +14,22 @@ window.WIKI_DATA = {
   },
   entries: [
     {
+      "id": "phantasmal-heart",
+      "type": "item",
+      "category": "relic",
+      "title": "Phantasmal Heart",
+      "effect": {
+        "rarity": "Once per long rest",
+        "text": "The bearer can cast Major Image without components. The illusion occasionally whispers in Abyssal after the spell ends."
+      },
+      "summary": "A crystalline heart that gives form to haunting illusions.",
+      "image": "assets/images/phantasmal-heart.png?v=20260908",
+      "content": "A jagged, heart-shaped mass of black crystal shot through with veins of vivid crimson light. Deep within its fractured facets, a spectral heart appears to twist and pulse as though something alive—or nearly alive—remains trapped inside.",
+      "links": ["session-30-only-the-opening-act"],
+      "published": true,
+      "updatedAt": "2026-09-08"
+    },
+    {
       "id": "gravesilver-signet",
       "type": "item",
       "category": "equipment",
