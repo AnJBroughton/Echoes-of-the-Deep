@@ -39,8 +39,9 @@ function ledgerTable(entries) {
 }
 function renderItemLedger(entries) {
   const used = entries.filter(entry => ['used', 'consumed', 'expended'].includes(String(entry.status || '').toLowerCase()));
-  const active = entries.filter(entry => !used.includes(entry));
-  itemLedger.innerHTML = `<div class="ledger-heading"><p class="eyebrow">Party inventory</p><h2>The Adventurers’ Ledger</h2><p>Practical records for treasures carried, spent, and survived.</p></div><section class="ledger-section"><h3>Active Inventory</h3>${ledgerTable(active)}</section><section class="ledger-section ledger-used"><h3>Used &amp; Expended</h3>${ledgerTable(used)}</section><h3 class="featured-heading">Featured Item Cards</h3>`;
+  const archived = entries.filter(entry => ['archived', 'keepsake', 'past gear'].includes(String(entry.status || '').toLowerCase()));
+  const active = entries.filter(entry => !used.includes(entry) && !archived.includes(entry));
+  itemLedger.innerHTML = `<div class="ledger-heading"><p class="eyebrow">Party inventory</p><h2>The Adventurers’ Ledger</h2><p>Practical records for treasures carried, spent, and survived.</p></div><section class="ledger-section"><h3>Active Inventory</h3>${ledgerTable(active)}</section><section class="ledger-section ledger-archive"><h3>Keepsakes &amp; Past Gear</h3>${ledgerTable(archived)}</section><section class="ledger-section ledger-used"><h3>Used &amp; Expended</h3>${ledgerTable(used)}</section><h3 class="featured-heading">Featured Item Cards</h3>`;
   itemLedger.querySelectorAll('[data-ledger-id]').forEach(button => button.onclick = () => openEntry(button.dataset.ledgerId));
 }
 function renderHome() {
