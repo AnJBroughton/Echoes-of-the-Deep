@@ -4,15 +4,25 @@ window.WIKI_DATA = {
     title: "Echoes of the Deep",
     subtitle: "A player’s guide to the known world",
     home: {
-      currentEntryId: "session-30-only-the-opening-act",
-      currentEyebrow: "Current chapter · Only the opening act",
-      currentObjective: "Decide Droki’s fate and uncover the greater threat behind the Maestro and Frazzulbu.",
+      currentEntryId: "session-31-toward-the-tower-of-vengeance",
+      currentEyebrow: "Current chapter · Toward the Tower of Vengeance",
+      currentObjective: "Cross the Darklake aboard the Wayward Gull and reach Eras’s Tower before the demon lords do.",
       priorityIds: ["ruby-in-the-rough", "73b9a360-d853-4664-8d54-fbffc02de78e", "quibble-sloprin"],
       recentLimit: 6,
       timelineLimit: 3
     }
   },
   entries: [
+    {
+      id: "session-31-toward-the-tower-of-vengeance",
+      type: "recap",
+      title: "Session 31 — Toward the Tower of Vengeance",
+      summary: "Droki’s final confession reveals a war against the demon lords, and the party secures passage across the Darklake aboard the Wayward Gull.",
+      content: "The curtain had fallen on the Gala, but the answers were only beginning to crawl from the wreckage. Bound to a shattered piano and barely clinging to life, Droki finally confessed that the strange moonstones had never simply been treasure. Voices had spoken through them—first kindly, then commandingly—pulling him deeper into deeds he could scarcely remember. The party soon realized that Droki had been a victim himself, his battered body sustained by a terrible necromantic power long after he should have died. With his final breath, Droki begged them to tell his father, Steel Shadow, that he had not been a bad son. Then black smoke poured from his body, the magic holding him together vanished, and centuries of suffering seemed to catch up with him all at once. Droki was gone, leaving behind only his battered hat and the warning that somewhere beyond the Darklake stood an archmage feared by the very demons now clawing their way into the Underdark.\n\nBut one corpse still had secrets to tell. Biscuit poured the Last Breath Reliquary over the fallen Maestro and, for five precious questions, dragged the smug conspirator back from beyond the grave. The answers were infuriating, evasive—and horrifying. The Maestro revealed that he and his allies had not served the demon lords; they had opened the gates for them. Baphomet. Demogorgon. Graz'zt. Juiblex. Orcus. Yeenoghu. Zuggtmoy. Ancient names once relegated to nightmare and legend were now loose—or coming loose—throughout the Underdark. Some had already scattered toward places such as the Labyrinth and Menzoberranzan, but Biscuit's final question uncovered the enemy's next move: they were heading for Eras's Tower, the so-called Tower of Vengeance, because its reclusive archmage reportedly possessed the knowledge necessary to destroy or banish them. With the trail suddenly clear, the party left the ruined Gala behind and descended toward the rotting docks of the Darklake.\n\nThere, amid crooked timbers and sickly green lanterns, they met the eccentric old satyr captain Thymbris “Bent Mast” Bramblehorn, survivor of shipwrecks, mutinies, marriage, and at least one creature he refused to name. Three vessels awaited them, but the party chose speed over safety and secured the Wayward Gull, convincing Thymbris to return to the lake as their captain with the promise of one last adventure—and a moonstone. Before departure, however, there was time for one gloriously questionable shopping expedition through Mantol Derith's Crooked Exchange. Biscuit purchased a Scroll of Gale Burst, Helexisys walked away with two Scrolls of Water Walking, V found a mysterious marble game set, and the party acquired a magical statue honoring the legendary goblin Glack. Then came the explosives: a Goblin Thunderpot, Deepfire Charge, and Cavebreaker Satchel, handed over freely on one sacred condition—whenever something exploded, Biscuit must shout, “YOU JUST GOT SKRITCHED!” Now armed, provisioned, captained, and perhaps considerably more dangerous to nearby architecture, the party returns to the waiting Wayward Gull. Somewhere beyond the black waters lies the Tower of Vengeance—and perhaps the only person capable of stopping the demon lords before the Underdark, and everything above it, falls.",
+      links: ["session-30-only-the-opening-act", "last-breath-reliquary"],
+      published: true,
+      updatedAt: "2026-09-09"
+    },
     {
       "id": "phantasmal-heart",
       "type": "item",
