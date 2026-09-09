@@ -6,6 +6,7 @@ const homeDashboard = document.querySelector('#homeDashboard');
 const search = document.querySelector('#searchInput');
 const count = document.querySelector('#resultCount');
 const itemFilters = document.querySelector('#itemFilters');
+const itemLedger = document.querySelector('#itemLedger');
 const dialog = document.querySelector('#entryDialog');
 const dialogContent = document.querySelector('#dialogContent');
 const labels = { memory: 'Memory', location: 'Location', npc: 'NPC', faction: 'Faction', lore: 'Lore', quest: 'Quest', item: 'Item', boon: 'Boon', curse: 'Curse', recap: 'Recap' };
@@ -32,6 +33,16 @@ function newest(entries, limit) { return [...entries].sort((a, b) => entryDate(b
 function homeCard(entry) {
   return `<button class="home-card" type="button" data-home-id="${safe(entry.id)}">${entry.image ? `<img src="${safe(entry.image)}" alt="">` : ''}<span class="home-card-copy"><span class="tag">${safe(labels[entry.type] || entry.type)}</span><strong>${safe(entry.title)}</strong><small>${safe(entry.summary || '')}</small></span></button>`;
 }
+function ledgerTable(entries) {
+  if (!entries.length) return '<p class="ledger-empty">No items in this section.</p>';
+  return `<div class="ledger-scroll"><table class="ledger-table"><thead><tr><th>Item</th><th>Holder</th><th>Type</th><th>Uses</th><th>Quick Effect</th><th>Status</th></tr></thead><tbody>${entries.map(entry => `<tr><td><button type="button" data-ledger-id="${safe(entry.id)}">${safe(entry.title)}</button></td><td>${safe(entry.holder || 'Party')}</td><td>${safe(entry.category || 'Other')}</td><td>${safe(entry.uses || '—')}</td><td>${safe(entry.effect?.text || entry.summary || '—')}</td><td><span class="ledger-status">${safe(entry.status || 'Available')}</span></td></tr>`).join('')}</tbody></table></div>`;
+}
+function renderItemLedger(entries) {
+  const used = entries.filter(entry => ['used', 'consumed', 'expended'].includes(String(entry.status || '').toLowerCase()));
+  const active = entries.filter(entry => !used.includes(entry));
+  itemLedger.innerHTML = `<div class="ledger-heading"><p class="eyebrow">Party inventory</p><h2>The Adventurers’ Ledger</h2><p>Practical records for treasures carried, spent, and survived.</p></div><section class="ledger-section"><h3>Active Inventory</h3>${ledgerTable(active)}</section><section class="ledger-section ledger-used"><h3>Used &amp; Expended</h3>${ledgerTable(used)}</section><h3 class="featured-heading">Featured Item Cards</h3>`;
+  itemLedger.querySelectorAll('[data-ledger-id]').forEach(button => button.onclick = () => openEntry(button.dataset.ledgerId));
+}
 function renderHome() {
   const config = data.campaign?.home || {};
   const entries = published().filter(entry => entry.id !== 'welcome-to-the-archive');
@@ -47,10 +58,12 @@ function render() {
   const dashboardMode = section === 'home' && !search.value;
   welcome.classList.add('hidden');
   itemFilters.classList.toggle('hidden', section !== 'items');
+  itemLedger.classList.toggle('hidden', section !== 'items');
   homeDashboard.classList.toggle('hidden', !dashboardMode);
   grid.classList.toggle('hidden', dashboardMode);
   if (dashboardMode) renderHome();
   const entries = filtered();
+  if (section === 'items') renderItemLedger(entries);
   count.textContent = `${entries.length} ${entries.length === 1 ? 'entry' : 'entries'}`;
   grid.innerHTML = entries.map(entry => `<article class="entry" tabindex="0" role="button" data-id="${safe(entry.id)}"><div class="entry-image" style="height:auto;aspect-ratio:3/2;overflow:hidden">${imageMarkup(entry)}</div><div class="entry-body"><span class="tag">${safe(labels[entry.type] || entry.type)}</span><h2>${safe(entry.title)}</h2><p>${safe(entry.summary || entry.content)}</p><span class="open">Read entry →</span></div></article>`).join('');
   empty.classList.toggle('hidden', entries.length > 0);
