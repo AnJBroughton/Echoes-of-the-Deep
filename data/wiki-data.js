@@ -247,8 +247,117 @@ window.WIKI_DATA = {
     image: "assets/images/gala-masks/derendils Gala. Mask.png?v=full-20260818", links: [], published: true, updatedAt: "2026-08-18"
   },
     {
+      id: "thymbris-bent-mast-bramblehorn", type: "npc", npcStatus: "active",
+      place: "The Wayward Gull · Darklake docks", role: "Satyr captain", relationship: "Ally", lastSeen: "Session 31",
+      title: "Thymbris “Bent Mast” Bramblehorn",
+      summary: "An eccentric old satyr captain tempted back onto the Darklake by one final adventure.",
+      content: "A weathered satyr sailor and survivor of shipwrecks, mutinies, marriage, and at least one creature he refuses to name. The party persuaded Thymbris to captain the Wayward Gull across the Darklake with the promise of adventure—and a moonstone.",
+      links: ["session-31-toward-the-tower-of-vengeance", "wayward-gull"], published: true, updatedAt: "2026-09-17"
+    },
+    {
+      id: "droki", type: "npc", npcStatus: "deceased",
+      place: "Ruined Centennial Gala", role: "Derro courier · Manipulated pawn", relationship: "Sympathetic", lastSeen: "Session 31",
+      title: "Droki",
+      summary: "A tormented derro controlled through the moonstones, whose final thoughts were of his father.",
+      content: "Once pursued as a thief and conspirator, Droki was ultimately revealed as a victim of voices speaking through the moonstones. Necromantic power had sustained his battered body far beyond its natural life. Before dying, he begged the party to tell his father, Steel Shadow, that he had not been a bad son.",
+      links: ["session-31-toward-the-tower-of-vengeance", "drokis-hat"], published: true, updatedAt: "2026-09-17"
+    },
+    {
+      id: "maestro-severin-vale", type: "npc", npcStatus: "deceased",
+      place: "Ruined Centennial Gala", role: "Maestro · Necromancer · Conspirator", relationship: "Hostile", lastSeen: "Session 30",
+      title: "Maestro Severin Vale",
+      summary: "The Gala’s murderous maestro, exposed as a subordinate in a far greater conspiracy.",
+      content: "Severin Vale enlisted the party to investigate Val Tyrion’s murder while concealing his own role in the conspiracy. He struck Droki down and fought the party after the Gala’s illusion collapsed. Helexisys killed him with Umbral Edge, and the Last Breath Reliquary later forced his corpse to reveal that the conspirators had opened the gates for the demon lords.",
+      links: ["session-28-murder-at-the-gala", "session-30-only-the-opening-act", "session-31-toward-the-tower-of-vengeance"], published: true, updatedAt: "2026-09-17"
+    },
+    {
+      id: "fraz-urbluu", type: "npc", npcStatus: "deceased",
+      place: "Ruined Centennial Gala", role: "Lesser demon lord", relationship: "Hostile", lastSeen: "Session 30",
+      title: "Fraz-Urb’luu",
+      summary: "A lesser demon lord hidden among the Gala’s guests and defeated when the illusion fell.",
+      content: "Fraz-Urb’luu concealed himself within the Centennial Gala until Droki’s accusation shattered the evening’s illusion. He transformed the ballroom into an Abyssal nightmare of lightning, shattered glass, and psychic terror before Biscuit’s Earth Elemental delivered the final crushing blow.",
+      links: ["session-29-masks-fall", "session-30-only-the-opening-act"], published: true, updatedAt: "2026-09-17"
+    },
+    {
+      id: "val-tyrion", type: "npc", npcStatus: "deceased",
+      place: "Centennial Gala", role: "Legendary elven composer", relationship: "Victim", lastSeen: "Session 28",
+      title: "Val Tyrion",
+      summary: "A legendary composer murdered for a mysterious magical artifact before the Gala began.",
+      content: "Val Tyrion’s murder launched the party’s investigation at the Centennial Gala. His body had been hidden to prevent panic, while the killer and the stolen artifact disappeared into the gathering.",
+      links: ["session-28-murder-at-the-gala"], published: true, updatedAt: "2026-09-17"
+    },
+    {
+      id: "dramaden-vale", type: "npc", npcStatus: "active",
+      place: "Centennial Gala · Mantol Derith", role: "Dragonborn hero · The Ashen Shield", relationship: "Helpful", lastSeen: "Session 28",
+      title: "Dramaden Vale, the Ashen Shield",
+      summary: "A legendary dragonborn hero whose drunken warning revealed that Droki was being controlled.",
+      content: "The party met Dramaden in the Gala’s smoke-filled lounge. Drink loosened the old warrior’s tongue, and he warned that Droki had not acted alone: someone else was moving the wand and controlling the music.",
+      links: ["session-28-murder-at-the-gala"], published: true, updatedAt: "2026-09-17"
+    },
+    {
+      id: "lady-sorrowmere", type: "npc", npcStatus: "active",
+      place: "Moonless Garden · Centennial Gala", role: "Sorrowful noblewoman", relationship: "Friendly", lastSeen: "Session 29",
+      title: "Lady Sorrowmere",
+      summary: "A sorrowful woman seeking her lost love, Grubus Clattergut.",
+      content: "Lady Sorrowmere waited beside the Moonless Garden’s fountain and asked the party to reunite her with Grubus. She also provided a crucial clue, having seen a strange figure race through the garden and somehow appear on a second-floor balcony.",
+      links: ["session-29-masks-fall", "grubus-clattergut"], published: true, updatedAt: "2026-09-17"
+    },
+    {
+      id: "grubus-clattergut", type: "npc", npcStatus: "active",
+      place: "Centennial Gala ballroom", role: "Firbolg guest", relationship: "Wary", lastSeen: "Session 29",
+      title: "Grubus Clattergut",
+      summary: "A towering, suspicious firbolg and the lost love sought by Lady Sorrowmere.",
+      content: "The party found Grubus at the ballroom bar. V’s efforts to lure him into the Moonless Garden only convinced the suspicious firbolg that something was terribly wrong.",
+      links: ["session-29-masks-fall", "lady-sorrowmere"], published: true, updatedAt: "2026-09-17"
+    },
+    {
+      id: "silith-of-the-nine-scales", type: "npc", npcStatus: "active",
+      place: "Centennial Gala", role: "Yuan-ti poet", relationship: "Helpful", lastSeen: "Session 29",
+      title: "Silith of the Nine Scales",
+      summary: "A poetry-obsessed yuan-ti who helped Biscuit and Helexisys enter through the balcony.",
+      content: "Silith welcomed Biscuit and Helexisys from the Gala’s balcony and helped them gain entry after their climb up the mansion’s exterior. The eccentric yuan-ti traveled in the company of the elderly kenku Pip Pip.",
+      links: ["session-29-masks-fall", "pip-pip"], published: true, updatedAt: "2026-09-17"
+    },
+    {
+      id: "pip-pip", type: "npc", npcStatus: "active",
+      place: "Centennial Gala", role: "Elderly kenku guest", relationship: "Neutral", lastSeen: "Session 29",
+      title: "Pip Pip",
+      summary: "An elderly kenku seen in the peculiar company of Silith of the Nine Scales.",
+      content: "Pip Pip was present with Silith when Biscuit and Helexisys entered the Gala through the upper balcony. Little else is currently known about the elderly kenku.",
+      links: ["session-29-masks-fall", "silith-of-the-nine-scales"], published: true, updatedAt: "2026-09-17"
+    },
+    {
+      id: "hadrick-vale", type: "npc", npcStatus: "active",
+      place: "Centennial Gala", role: "Dragonborn noble", relationship: "Hostile", lastSeen: "Session 29",
+      title: "Hadrick Vale",
+      summary: "A proud dragonborn noble whose public humiliation ended in fire and accusations.",
+      content: "After becoming the target of Quibble’s revenge and the party’s Gloamberry prank, Hadrick stormed onto the Gala stage in a fury. Tarnished and humiliated, he breathed fire and accused the Maestro of treachery moments before the illusion collapsed.",
+      links: ["session-28-murder-at-the-gala", "session-29-masks-fall"], published: true, updatedAt: "2026-09-17"
+    },
+    {
+      id: "balfry-colthum", type: "npc", npcStatus: "active",
+      place: "Flagon and Fist · Mantol Derith", role: "Duergar forge foreman", relationship: "Helpful", lastSeen: "Session 27",
+      title: "Balfry Colthum",
+      summary: "A stern duergar foreman who helped direct the party toward the Centennial Gala.",
+      content: "Balfry runs the Flagon and Fist with discipline and suspicion, insisting that the forge runs on order, not luck. The party’s story of warped time and demons convinced him of their importance, and he directed them to Seraph while considering further aid.",
+      links: ["8881a396-957f-4a40-8708-e15b46e1411d", "dern-lucky-pick-colthum"], published: true, updatedAt: "2026-09-17"
+    },
+    {
+      id: "dern-lucky-pick-colthum", type: "npc", npcStatus: "active",
+      place: "Flagon and Fist · Mantol Derith", role: "Duergar smith and guide", relationship: "Friendly", lastSeen: "Session 27",
+      title: "Dern “Lucky Pick” Colthum",
+      summary: "A frenetic, good-hearted duergar whose enthusiasm constantly challenges Balfry’s order.",
+      content: "Dern enthusiastically offered the party a tour of the Flagon and Fist despite Balfry’s reluctance. Anxious, excitable, and somewhat clumsy, he helped connect the party’s encounter with Thaldren Vainwhisper to an old prophecy about demons, dragons, and unraveling time.",
+      links: ["8881a396-957f-4a40-8708-e15b46e1411d", "balfry-colthum"], published: true, updatedAt: "2026-09-17"
+    },
+    {
       "id": "73b9a360-d853-4664-8d54-fbffc02de78e",
       "type": "npc",
+      "npcStatus": "active",
+      "place": "Mantol Derith",
+      "role": "Curator of Masks",
+      "relationship": "Friendly",
+      "lastSeen": "Session 27",
       "title": "Seraph Vaelor",
       "summary": "Curator of Masks · Mantol Derith",
       "image": "assets/images/seraph-vaelor-session-27.png?v=20260818",
@@ -262,6 +371,11 @@ window.WIKI_DATA = {
     {
       "id": "quibble-sloprin",
       "type": "npc",
+      "npcStatus": "active",
+      "place": "Mantol Derith",
+      "role": "Drider trickster",
+      "relationship": "Complicated",
+      "lastSeen": "Session 29",
       "title": "Quibble Sloprin",
       "summary": "Extravagantly dressed drider",
       "image": "assets/images/quibble-sloprin.png?v=20260818",
@@ -273,6 +387,7 @@ window.WIKI_DATA = {
     {
       "id": "horgar-steelshadow",
       "type": "npc",
+      "directory": false,
       "title": "Horgar Steelshadow",
       "summary": "Duergar patriarch · Droki’s father",
       "image": "assets/images/horgar-steelshadow.png?v=20260820",
@@ -284,6 +399,11 @@ window.WIKI_DATA = {
     {
       "id": "f2166daf-02ac-422f-aff8-752c200f1d3f",
       "type": "npc",
+      "npcStatus": "active",
+      "place": "Outside Mantol Derith",
+      "role": "Elven traveler",
+      "relationship": "Helpful",
+      "lastSeen": "Session 27",
       "title": "Rystia Zav",
       "summary": "Elf traveler · Outside Mantol-Derith",
       "image": "",
