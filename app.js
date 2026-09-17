@@ -7,11 +7,14 @@ const search = document.querySelector('#searchInput');
 const count = document.querySelector('#resultCount');
 const itemFilters = document.querySelector('#itemFilters');
 const itemLedger = document.querySelector('#itemLedger');
+const npcFilters = document.querySelector('#npcFilters');
+const npcDirectory = document.querySelector('#npcDirectory');
 const dialog = document.querySelector('#entryDialog');
 const dialogContent = document.querySelector('#dialogContent');
 const labels = { memory: 'Memory', location: 'Location', npc: 'NPC', faction: 'Faction', lore: 'Lore', quest: 'Quest', item: 'Item', boon: 'Boon', curse: 'Curse', recap: 'Recap' };
 let section = (location.hash.slice(1) || 'home').toLowerCase();
 let itemCategory = 'all';
+let npcStatus = 'all';
 
 function safe(value = '') {
   return String(value).replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
@@ -20,7 +23,7 @@ function published() { return data.entries.filter(entry => entry.published); }
 function filtered() {
   const query = search.value.trim().toLowerCase();
   const types = section === 'home' ? [] : section === 'memories' ? ['memory'] : section === 'boons-curses' ? ['boon', 'curse'] : [section.replace(/s$/, '')];
-  return published().filter(entry => (!types.length || types.includes(entry.type)) && (section !== 'items' || itemCategory === 'all' || entry.category === itemCategory) && (!query || [entry.title, entry.summary, entry.content, entry.type, entry.category].join(' ').toLowerCase().includes(query)));
+  return published().filter(entry => (!types.length || types.includes(entry.type)) && (section !== 'items' || itemCategory === 'all' || entry.category === itemCategory) && (section !== 'npcs' || entry.directory !== false) && (section !== 'npcs' || npcStatus === 'all' || entry.npcStatus === npcStatus) && (!query || [entry.title, entry.summary, entry.content, entry.type, entry.category, entry.npcStatus, entry.place, entry.role, entry.relationship, entry.lastSeen].join(' ').toLowerCase().includes(query)));
 }
 function findEntry(id) { return published().find(entry => entry.id === id); }
 function imageMarkup(entry) { return entry.image ? `<img src="${safe(entry.image)}" alt="${safe(entry.title)}" style="display:block;width:100%;height:100%;object-fit:contain;background:#081014">` : '✦'; }
@@ -44,6 +47,17 @@ function renderItemLedger(entries) {
   itemLedger.innerHTML = `<div class="ledger-heading"><p class="eyebrow">Party inventory</p><h2>The Adventurers’ Ledger</h2><p>Practical records for treasures carried, spent, and survived.</p></div><section class="ledger-section"><h3>Active Inventory</h3>${ledgerTable(active)}</section><section class="ledger-section ledger-archive"><h3>Keepsakes &amp; Past Gear</h3>${ledgerTable(archived)}</section><section class="ledger-section ledger-used"><h3>Used &amp; Expended</h3>${ledgerTable(used)}</section><h3 class="featured-heading">Featured Item Cards</h3>`;
   itemLedger.querySelectorAll('[data-ledger-id]').forEach(button => button.onclick = () => openEntry(button.dataset.ledgerId));
 }
+function npcTable(entries) {
+  if (!entries.length) return '<p class="ledger-empty">No known characters in this section.</p>';
+  return `<div class="ledger-scroll"><table class="ledger-table npc-table"><thead><tr><th>Name</th><th>Last Known Place</th><th>Role / Affiliation</th><th>Party Relationship</th><th>Quick Description</th><th>Last Appeared</th></tr></thead><tbody>${entries.map(entry => `<tr><td><button type="button" data-npc-id="${safe(entry.id)}">${safe(entry.title)}</button></td><td>${safe(entry.place || 'Unknown')}</td><td>${safe(entry.role || 'Unknown')}</td><td><span class="npc-relationship">${safe(entry.relationship || 'Unknown')}</span></td><td>${safe(entry.summary || '—')}</td><td>${safe(entry.lastSeen || 'Unknown')}</td></tr>`).join('')}</tbody></table></div>`;
+}
+function renderNpcDirectory(entries) {
+  const active = entries.filter(entry => entry.npcStatus === 'active');
+  const unknown = entries.filter(entry => entry.npcStatus === 'unknown');
+  const deceased = entries.filter(entry => entry.npcStatus === 'deceased');
+  npcDirectory.innerHTML = `<div class="ledger-heading npc-heading"><p class="eyebrow">People met along the way</p><h2>The Known Faces</h2><p>Names, loyalties, last known whereabouts, and the fates the party has witnessed.</p></div><section class="ledger-section"><h3>Current &amp; Active</h3>${npcTable(active)}</section><section class="ledger-section ledger-unknown"><h3>Missing or Unknown</h3>${npcTable(unknown)}</section><section class="ledger-section ledger-used"><h3>Deceased &amp; Defeated</h3>${npcTable(deceased)}</section><h3 class="featured-heading">Full NPC Entries</h3>`;
+  npcDirectory.querySelectorAll('[data-npc-id]').forEach(button => button.onclick = () => openEntry(button.dataset.npcId));
+}
 function renderHome() {
   const config = data.campaign?.home || {};
   const entries = published().filter(entry => entry.id !== 'welcome-to-the-archive');
@@ -60,11 +74,14 @@ function render() {
   welcome.classList.add('hidden');
   itemFilters.classList.toggle('hidden', section !== 'items');
   itemLedger.classList.toggle('hidden', section !== 'items');
+  npcFilters.classList.toggle('hidden', section !== 'npcs');
+  npcDirectory.classList.toggle('hidden', section !== 'npcs');
   homeDashboard.classList.toggle('hidden', !dashboardMode);
   grid.classList.toggle('hidden', dashboardMode);
   if (dashboardMode) renderHome();
   const entries = filtered();
   if (section === 'items') renderItemLedger(entries);
+  if (section === 'npcs') renderNpcDirectory(entries);
   count.textContent = `${entries.length} ${entries.length === 1 ? 'entry' : 'entries'}`;
   grid.innerHTML = entries.map(entry => `<article class="entry" tabindex="0" role="button" data-id="${safe(entry.id)}"><div class="entry-image" style="height:auto;aspect-ratio:3/2;overflow:hidden">${imageMarkup(entry)}</div><div class="entry-body"><span class="tag">${safe(labels[entry.type] || entry.type)}</span><h2>${safe(entry.title)}</h2><p>${safe(entry.summary || entry.content)}</p><span class="open">Read entry →</span></div></article>`).join('');
   empty.classList.toggle('hidden', entries.length > 0);
@@ -89,6 +106,13 @@ itemFilters.querySelectorAll('[data-item-category]').forEach(button => {
   button.onclick = () => {
     itemCategory = button.dataset.itemCategory;
     itemFilters.querySelectorAll('[data-item-category]').forEach(option => option.classList.toggle('active', option === button));
+    render();
+  };
+});
+npcFilters.querySelectorAll('[data-npc-status]').forEach(button => {
+  button.onclick = () => {
+    npcStatus = button.dataset.npcStatus;
+    npcFilters.querySelectorAll('[data-npc-status]').forEach(option => option.classList.toggle('active', option === button));
     render();
   };
 });
