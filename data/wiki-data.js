@@ -4,15 +4,25 @@ window.WIKI_DATA = {
     title: "Echoes of the Deep",
     subtitle: "A player’s guide to the known world",
     home: {
-      currentEntryId: "session-31-toward-the-tower-of-vengeance",
-      currentEyebrow: "Current chapter · Toward the Tower of Vengeance",
-      currentObjective: "Cross the Darklake aboard the Wayward Gull and reach Eras’s Tower before the demon lords do.",
+      currentEntryId: "session-32-prepare-for-biscuit",
+      currentEyebrow: "Current chapter · Prepare for Biscuit!",
+      currentObjective: "Keep the Wayward Gull afloat and continue across the Darklake toward the Tower of Vengeance.",
       priorityIds: ["ruby-in-the-rough", "73b9a360-d853-4664-8d54-fbffc02de78e", "quibble-sloprin"],
       recentLimit: 6,
       timelineLimit: 3
     }
   },
   entries: [
+    {
+      id: "session-32-prepare-for-biscuit",
+      type: "recap",
+      title: "Session 32 — Prepare for Biscuit!",
+      summary: "The Wayward Gull survives drunken command, a duergar ambush, airborne fish, and a suspiciously kraken-sized thump.",
+      content: "Darlings, let us unfurl the scroll of divine madness, a tale so drenched in liquid courage, questionable seafaring, and dripping-wet heroics it could only be orchestrated by your humble narrator. You danced upon the dark waters like shimmering sprites in a forgotten dream, a beautiful, purple-tinged chaos. Picture Russell Brandt crashing a Prince afterparty on a haunted ferry, and you’ve got our vibe: glam, grimy, and gloriously unhinged. The air crackled with the delicious tension of a thousand unsung ballads.\n\nOur odyssey began with the glorious satyr captain, Thymbris, not at the helm, but face-down on the dock in a blissful, alcoholic slumber. Helexis, bless him, scraped the poor beast onto the deck like a sack of boozy potatoes. Then, as the crew fretted over the lack of wind, our dear alchemist V, in a moment of pure, unadulterated genius, cast Prestidigitation to create a “puff of wind.” The sail flapped with the energy of a dying gnat’s last breath. From the back, a peg-legged leshy bellowed, “We can’t be moving around if you’re just gonna PUFF ON IT!” The sheer, impotent audacity was a masterpiece.\n\nThen entered Clack, the moss-covered autognome “captain” who moves like a rusty can opener. Upon hearing of Biscuit’s Wind Wall spell, he embraced the impending apocalypse. “All hands on deck! PREPARE FOR BISCUIT! HE IS ABOUT TO BLOW!” he shrieked, transforming a simple spellcasting into a world-ending event. Later, after a successful coup, Captain Clack screamed, “Glorious day!”, grew two imaginary inches, yeeted the drunk captain off the wheel, and immediately awarded temporary hit points like he was a casino comp program. This tin can of terror became our new favorite prophet.\n\nOf course, no voyage through the Darklake would be complete without the delicate perfume of Eau de Regret. V, our resident blood hunter human, hucked a Stinking Cloud vial at a group of ambushing duergar and successfully nailed... both boats. Everyone received a generous whiff of “Hobgoblin Hot Yoga.” The enemy captain coughed, called his crew “surface-born idiots,” and retreated like a fart in a thunderstorm. Later, Auntie Brine suctioned V in with a flirtatious forearm grip, purring about “a man who can bleed,” and V promised she’d be “surprised” when he started. The tension alone could patch hulls.\n\nThen came the Gloom Skippers, hungry dentures with feet exploding aboard like gremlins at a sushi buffet. It was fish-flop flamenco time. Knuckle pulled a natural 20 and slurped a skipper whole. No blood. No ceremony. Just a gulp. Later, Clack's hands transformed into cannons. BOOM! It was 80% smoke, 20% bullet, and 100% “Get off my boat!” Robo Captain saved the day. Meanwhile, Biscuit ascended like a purple-clad rock god and split a fish in half. Fishy confetti everywhere. Michelin star murder.\n\nBut the Darklake was not finished with our damp little collection of heroes. Feeling a gentle thump against the hull, V grabbed poor, unsuspecting Helexis, his eyes wide with glorious terror, and whispered, “I think that was a kraken that hit the boat.” He then promptly strutted off to bed, leaving Helexis to deal with the apocalypse. A colossal wave washed over the deck, and the divine Helexis snatched our weedy sea-god Knuckle from a watery doom. Knuckle’s reaction? He shook like a wet dog, showered Helexis in moss, and declared, “Nothing better than a little bit of shower in the morning. Thank you, good sir.” He’s an icon, a living legend.\n\nAnd so, the next morning our battered, damp, strangely competent sailors awoke to another day upon the Darklake. Those among the party gifted with high Survival—Derendil, Nari, V, and Helexis—prepared a hearty breakfast, granting everyone the effects of a long rest. V spent his time on deck watch learning knots and the basics of sailing from Knuckle and Auntie, earning advantage on future seafaring checks. After drunken captains, impotent puffs, duergar ambushes, airborne fish, suspicious krakens, mossy showers, and the glorious ascension of Captain Clack, somehow, impossibly, the voyage continued.",
+      links: ["session-31-toward-the-tower-of-vengeance", "wayward-gull", "thymbris-bent-mast-bramblehorn", "clack-autognome", "knuckle-leshy", "auntie-brine"],
+      published: true,
+      updatedAt: "2026-09-18"
+    },
     {
       id: "session-31-toward-the-tower-of-vengeance",
       type: "recap",
@@ -247,12 +257,36 @@ window.WIKI_DATA = {
     image: "assets/images/gala-masks/derendils Gala. Mask.png?v=full-20260818", links: [], published: true, updatedAt: "2026-08-18"
   },
     {
+      id: "clack-autognome", type: "npc", npcStatus: "active",
+      place: "The Wayward Gull · Darklake", role: "Moss-covered autognome · Acting captain", relationship: "Friendly", lastSeen: "Session 32",
+      title: "Captain Clack",
+      summary: "A moss-covered autognome prophet of chaos whose hands transform into cannons.",
+      content: "Clack moves like a rusty can opener and meets every crisis with apocalyptic enthusiasm. He announced Biscuit’s Wind Wall as though the world were ending, staged a successful coup against the sleeping Thymbris, and proclaimed himself captain. During the Gloom Skipper attack, his hands transformed into smoke-belching cannons and he drove the creatures from the Wayward Gull.",
+      links: ["session-32-prepare-for-biscuit", "wayward-gull"], published: true, updatedAt: "2026-09-18"
+    },
+    {
+      id: "knuckle-leshy", type: "npc", npcStatus: "active",
+      place: "The Wayward Gull · Darklake", role: "Peg-legged leshy sailor", relationship: "Friendly", lastSeen: "Session 32",
+      title: "Knuckle",
+      summary: "A peg-legged, mossy leshy sailor with strong opinions about wind and an alarming appetite.",
+      content: "Knuckle mocked V’s tiny magical puff of wind, helped teach him knots and basic sailing, and swallowed a Gloom Skipper whole during the attack. After Helexis pulled him from the Darklake, Knuckle shook himself dry, showered his rescuer in moss, and thanked him for the morning shower.",
+      links: ["session-32-prepare-for-biscuit", "wayward-gull"], published: true, updatedAt: "2026-09-18"
+    },
+    {
+      id: "auntie-brine", type: "npc", npcStatus: "active",
+      place: "The Wayward Gull · Darklake", role: "Darklake sailor", relationship: "Friendly · Flirtatious with V", lastSeen: "Session 32",
+      title: "Auntie Brine",
+      summary: "A formidable sailor with a powerful grip, a taste for danger, and an interest in V.",
+      content: "Auntie Brine serves aboard the Wayward Gull and helped teach V knots and the fundamentals of sailing. During the voyage she pulled him close with a suctioning forearm grip, expressed an appreciation for a man who can bleed, and received a confident promise that she would be surprised.",
+      links: ["session-32-prepare-for-biscuit", "wayward-gull"], published: true, updatedAt: "2026-09-18"
+    },
+    {
       id: "thymbris-bent-mast-bramblehorn", type: "npc", npcStatus: "active",
-      place: "The Wayward Gull · Darklake docks", role: "Satyr captain", relationship: "Ally", lastSeen: "Session 31",
+      place: "The Wayward Gull · Darklake", role: "Satyr captain", relationship: "Ally", lastSeen: "Session 32",
       title: "Thymbris “Bent Mast” Bramblehorn",
       summary: "An eccentric old satyr captain tempted back onto the Darklake by one final adventure.",
-      content: "A weathered satyr sailor and survivor of shipwrecks, mutinies, marriage, and at least one creature he refuses to name. The party persuaded Thymbris to captain the Wayward Gull across the Darklake with the promise of adventure—and a moonstone.",
-      links: ["session-31-toward-the-tower-of-vengeance", "wayward-gull"], published: true, updatedAt: "2026-09-17"
+      content: "A weathered satyr sailor and survivor of shipwrecks, mutinies, marriage, and at least one creature he refuses to name. The party persuaded Thymbris to captain the Wayward Gull across the Darklake with the promise of adventure—and a moonstone. At the voyage’s beginning, however, he was found asleep face-down on the dock and was later removed from the wheel during Clack’s enthusiastic coup.",
+      links: ["session-31-toward-the-tower-of-vengeance", "session-32-prepare-for-biscuit", "wayward-gull"], published: true, updatedAt: "2026-09-18"
     },
     {
       id: "droki", type: "npc", npcStatus: "deceased",
