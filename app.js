@@ -26,7 +26,7 @@ function filtered() {
   return published().filter(entry => (!types.length || types.includes(entry.type)) && (section !== 'items' || itemCategory === 'all' || entry.category === itemCategory) && (section !== 'npcs' || entry.directory !== false) && (section !== 'npcs' || npcStatus === 'all' || entry.npcStatus === npcStatus) && (!query || [entry.title, entry.summary, entry.content, entry.type, entry.category, entry.npcStatus, entry.place, entry.role, entry.relationship, entry.lastSeen].join(' ').toLowerCase().includes(query)));
 }
 function findEntry(id) { return published().find(entry => entry.id === id); }
-function imageMarkup(entry) { return entry.image ? `<img src="${safe(entry.image)}" alt="${safe(entry.title)}" style="display:block;width:100%;height:100%;object-fit:contain;background:#081014">` : '✦'; }
+function imageMarkup(entry) { return entry.image ? `<img src="${safe(entry.image)}" alt="${safe(entry.title)}" style="display:block;width:100%;height:100%;object-fit:${entry.imageFit === 'cover' ? 'cover' : 'contain'};object-position:${safe(entry.imagePosition || 'center')};background:#081014">` : '✦'; }
 function galleryMarkup(entry) {
   const images = Array.isArray(entry.images) ? entry.images.filter(Boolean) : [];
   return images.length ? `<div style="display:grid;gap:14px;margin-top:24px">${images.map((image, index) => `<img src="${safe(image)}" alt="${safe(entry.title)} map ${index + 2}" style="display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:10px;background:#081014">`).join('')}</div>` : '';
