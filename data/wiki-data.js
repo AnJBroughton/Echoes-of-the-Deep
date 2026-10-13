@@ -4,15 +4,25 @@ window.WIKI_DATA = {
     title: "Echoes of the Deep",
     subtitle: "A player’s guide to the known world",
     home: {
-      currentEntryId: "session-32-prepare-for-biscuit",
-      currentEyebrow: "Current chapter · O Captain my Clack!",
-      currentObjective: "Keep the Wayward Gull afloat and continue across the Darklake toward the Tower of Vengeance.",
+      currentEntryId: "session-33-the-blessed-beach-one",
+      currentEyebrow: "Current chapter · The Blessed Beach One!",
+      currentObjective: "Repair and refloat the Wayward Gull, then continue across the Darklake toward the Tower of Vengeance.",
       priorityIds: ["ruby-in-the-rough", "73b9a360-d853-4664-8d54-fbffc02de78e", "quibble-sloprin"],
       recentLimit: 6,
       timelineLimit: 3
     }
   },
   entries: [
+    {
+      id: "session-33-the-blessed-beach-one",
+      type: "recap",
+      title: "Session 33 — The Blessed Beach One!",
+      summary: "The Wayward Gull becomes a holy bureaucratic shipwreck, Plib meets his goddess, and Thymbris loses both his command and a secret journal.",
+      content: "Behold, my dazzled dungeoneers: your rock-voiced raconteur struts onstage, sequins wet from the Darklake spray, to sing the saga of the Wayward Gull’s most gloriously inconvenient beach day. The set opens with Clack—metallic hands, captain’s grin—belting a sea shanty that could wake krakens and win karaoke, spritzing the crew with Bardic Inspiration (d10, baby). The party chose the shoreline route—less leviathan, more “oops”—and promptly skidded onto a calcified mud shelf with a sound like “a giant biting a dinner plate.” Enter Plib, a kuo-toa cleric in a fabulous robe, anointing the ship as “the blessed beached one” and praying to his goddess, She Who Receives, to sink it into the bureaucratic bog. But Nari, glowing like a divine disco ball, blasted him with a Guiding Bolt, sending Plib into a tizzy. His epiphany? “Maybe they’re doing it wrong!” So he weaponized red tape, literally summoning spectral paperwork to trap our heroes’ feet in the mud.\n\nThe battle descended into glorious chaos: Hellexis dropped a Hypnotic Pattern, turning most of the fish-folk into drooling fans, while V and Clack tag-teamed repairs like a well-oiled machine. Biscuit, bless their inventive heart, turned into a one-person shipyard, hammering their side of the hull back to “mostly boat,” then fired their robot pal’s cannon for 17 force damage, yeeting the cleric five feet like a disgraced tambourine player. V went full foreman with a natural 20 on repairs, then catapulted a tool; the cleric dodged, but a nearby follower ate 11 force and fled, shouting about how “the deep beckons,” which is fish for “I quit.” When a net flew at Biscuit later, Shield popped like a VIP bubble—no entry for flopping fanatics.\n\nJust as things looked grim, a glorious, drunken stumble was heard from the beached ship. It was Thymbris, the one-horned pirate captain, rising like a belligerent phoenix! “What are they doing on land?” he roared, lobbing a bottle of liquid courage—now liquid fire—into the scaly mob. Chaos! Fire! Fish-men squealing! But our pirate wasn’t done. He spotted the priest and, with a crack of his old-school pistol, sent him to meet his watery maker. The cleric looked up, saw the bullet hole, and croaked, “She does beckon me home.” And poof! He was gone.\n\nAs the last of the crispy critters fled, the ever-resourceful V, seeing his chance, sliced himself free from a net and yelled, “Hellexis, I got it for looting!” dragging the cleric’s corpse back for a good old-fashioned pocket-patting. The haul was divine: a pearl necklace that makes you extra-breathy underwater, gold, and a crusty icon to the fish-goddess. While they divvied the spoils, the ship’s resident swamp-hag, Auntie Brine, popped her head over the side, batting her wooden teeth at V and cooing for a “pretty” gift. Quick as a flash, V palmed the necklace, leaving her to pout. This V, I tell ya, he’s got the lookout Knuckle wanting to be his bro and the boat’s lady giving him the winky-stinky eye.\n\nOf course, no victory is complete without a little shipboard drama. Thymbris, now sober enough to be angry, tried to reclaim his captain’s wheel from Clack. “You wrecked my ship!” he slurred. The party, having none of it, basically told him, “Accept it or die, old man.” Defeated, Thymbris agreed to be an advisor, then promptly face-planted on the deck. But wait! As he fell, a tattered journal slipped from his coat. The sneaky V, moving like a shadow, snatched it up. He flipped it open to a page that read, “To my love... I never should have left you.” A drunk with a broken heart and a broken horn? Oh, the plot, like his liver, thickens!",
+      links: ["session-32-prepare-for-biscuit", "wayward-gull", "clack-autognome", "thymbris-bent-mast-bramblehorn", "knuckle-leshy", "auntie-brine", "plib-kuo-toa-cleric"],
+      published: true,
+      updatedAt: "2026-10-13"
+    },
     {
       id: "session-32-prepare-for-biscuit",
       type: "recap",
@@ -258,36 +268,44 @@ window.WIKI_DATA = {
     image: "assets/images/gala-masks/derendils Gala. Mask.png?v=full-20260818", links: [], published: true, updatedAt: "2026-08-18"
   },
     {
+      id: "plib-kuo-toa-cleric", type: "npc", npcStatus: "deceased",
+      place: "Calcified mud shelf · Darklake shore", role: "Kuo-toa cleric of She Who Receives", relationship: "Hostile", lastSeen: "Session 33",
+      title: "Plib",
+      summary: "A fabulously robed kuo-toa cleric who declared the Wayward Gull the blessed beached one.",
+      content: "Plib attempted to dedicate the stranded Wayward Gull to She Who Receives and bury it in sacred bureaucratic mud. He summoned spectral paperwork to bind the party, only to be battered by their counterattack. Thymbris ended the cleric’s revelation with an old pistol; Plib accepted that his goddess beckoned him home and died on the shore.",
+      links: ["session-33-the-blessed-beach-one", "wayward-gull"], published: true, updatedAt: "2026-10-13"
+    },
+    {
       id: "clack-autognome", type: "npc", npcStatus: "active",
-      place: "The Wayward Gull · Darklake", role: "Moss-covered autognome · Acting captain", relationship: "Friendly", lastSeen: "Session 32",
+      place: "The Wayward Gull · Darklake shore", role: "Moss-covered autognome · Captain", relationship: "Friendly", lastSeen: "Session 33",
       title: "Captain Clack",
       summary: "A moss-covered autognome prophet of chaos whose hands transform into cannons.",
-      content: "Clack moves like a rusty can opener and meets every crisis with apocalyptic enthusiasm. He announced Biscuit’s Wind Wall as though the world were ending, staged a successful coup against the sleeping Thymbris, and proclaimed himself captain. During the Gloom Skipper attack, his hands transformed into smoke-belching cannons and he drove the creatures from the Wayward Gull.",
-      links: ["session-32-prepare-for-biscuit", "wayward-gull"], published: true, updatedAt: "2026-09-18"
+      content: "Clack moves like a rusty can opener and meets every crisis with apocalyptic enthusiasm. He announced Biscuit’s Wind Wall as though the world were ending, staged a successful coup against the sleeping Thymbris, and proclaimed himself captain. During the Gloom Skipper attack, his hands transformed into smoke-belching cannons. After the Wayward Gull ran aground, he inspired the crew with a sea shanty, helped V repair the vessel, and successfully defended his command from Thymbris.",
+      links: ["session-32-prepare-for-biscuit", "session-33-the-blessed-beach-one", "wayward-gull"], published: true, updatedAt: "2026-10-13"
     },
     {
       id: "knuckle-leshy", type: "npc", npcStatus: "active",
-      place: "The Wayward Gull · Darklake", role: "Peg-legged leshy sailor", relationship: "Friendly", lastSeen: "Session 32",
+      place: "The Wayward Gull · Darklake shore", role: "Peg-legged leshy lookout", relationship: "Friendly · Wants to be V’s bro", lastSeen: "Session 33",
       title: "Knuckle",
       summary: "A peg-legged, mossy leshy sailor with strong opinions about wind and an alarming appetite.",
-      content: "Knuckle mocked V’s tiny magical puff of wind, helped teach him knots and basic sailing, and swallowed a Gloom Skipper whole during the attack. After Helexis pulled him from the Darklake, Knuckle shook himself dry, showered his rescuer in moss, and thanked him for the morning shower.",
-      links: ["session-32-prepare-for-biscuit", "wayward-gull"], published: true, updatedAt: "2026-09-18"
+      content: "Knuckle mocked V’s tiny magical puff of wind, helped teach him knots and basic sailing, and swallowed a Gloom Skipper whole during the attack. After Helexis pulled him from the Darklake, Knuckle shook himself dry, showered his rescuer in moss, and thanked him for the morning shower. By the time the ship ran aground, the lookout had decided he wanted to be V’s bro.",
+      links: ["session-32-prepare-for-biscuit", "session-33-the-blessed-beach-one", "wayward-gull"], published: true, updatedAt: "2026-10-13"
     },
     {
       id: "auntie-brine", type: "npc", npcStatus: "active",
-      place: "The Wayward Gull · Darklake", role: "Darklake sailor", relationship: "Friendly · Flirtatious with V", lastSeen: "Session 32",
+      place: "The Wayward Gull · Darklake shore", role: "Swamp-hag sailor", relationship: "Friendly · Flirtatious with V", lastSeen: "Session 33",
       title: "Auntie Brine",
       summary: "A formidable sailor with a powerful grip, a taste for danger, and an interest in V.",
-      content: "Auntie Brine serves aboard the Wayward Gull and helped teach V knots and the fundamentals of sailing. During the voyage she pulled him close with a suctioning forearm grip, expressed an appreciation for a man who can bleed, and received a confident promise that she would be surprised.",
-      links: ["session-32-prepare-for-biscuit", "wayward-gull"], published: true, updatedAt: "2026-09-18"
+      content: "Auntie Brine serves aboard the Wayward Gull and helped teach V knots and the fundamentals of sailing. During the voyage she pulled him close with a suctioning forearm grip, expressed an appreciation for a man who can bleed, and received a confident promise that she would be surprised. After the kuo-toa battle, she batted her wooden teeth at V and asked for a pretty gift, but he quietly concealed the pearl necklace.",
+      links: ["session-32-prepare-for-biscuit", "session-33-the-blessed-beach-one", "wayward-gull"], published: true, updatedAt: "2026-10-13"
     },
     {
       id: "thymbris-bent-mast-bramblehorn", type: "npc", npcStatus: "active",
-      place: "The Wayward Gull · Darklake", role: "Satyr captain", relationship: "Ally", lastSeen: "Session 32",
+      place: "The Wayward Gull · Darklake shore", role: "Satyr captain · Reluctant advisor", relationship: "Ally · Disgruntled", lastSeen: "Session 33",
       title: "Thymbris “Bent Mast” Bramblehorn",
       summary: "An eccentric old satyr captain tempted back onto the Darklake by one final adventure.",
-      content: "A weathered satyr sailor and survivor of shipwrecks, mutinies, marriage, and at least one creature he refuses to name. The party persuaded Thymbris to captain the Wayward Gull across the Darklake with the promise of adventure—and a moonstone. At the voyage’s beginning, however, he was found asleep face-down on the dock and was later removed from the wheel during Clack’s enthusiastic coup.",
-      links: ["session-31-toward-the-tower-of-vengeance", "session-32-prepare-for-biscuit", "wayward-gull"], published: true, updatedAt: "2026-09-18"
+      content: "A weathered satyr sailor and survivor of shipwrecks, mutinies, marriage, and at least one creature he refuses to name. The party persuaded Thymbris to captain the Wayward Gull across the Darklake with the promise of adventure—and a moonstone. After being displaced by Clack, he emerged during the kuo-toa attack, hurled a bottle of liquid fire, and shot Plib dead. His attempt to reclaim command failed, leaving him as a reluctant advisor. A tattered journal stolen from his coat hints at a love he regrets abandoning.",
+      links: ["session-31-toward-the-tower-of-vengeance", "session-32-prepare-for-biscuit", "session-33-the-blessed-beach-one", "wayward-gull"], published: true, updatedAt: "2026-10-13"
     },
     {
       id: "droki", type: "npc", npcStatus: "deceased",
