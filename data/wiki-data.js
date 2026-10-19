@@ -4,15 +4,25 @@ window.WIKI_DATA = {
     title: "Echoes of the Deep",
     subtitle: "A player’s guide to the known world",
     home: {
-      currentEntryId: "session-33-the-blessed-beach-one",
-      currentEyebrow: "Current chapter · The Blessed Beach One!",
-      currentObjective: "Repair and refloat the Wayward Gull, then continue across the Darklake toward the Tower of Vengeance.",
+      currentEntryId: "session-34-valn-korr-rises",
+      currentEyebrow: "Current chapter · Val'n Korr Rises",
+      currentObjective: "Survive Val'n Korr’s attack, protect the Wayward Gull, and uncover why Thymbris has sworn revenge.",
       priorityIds: ["ruby-in-the-rough", "73b9a360-d853-4664-8d54-fbffc02de78e", "quibble-sloprin"],
       recentLimit: 6,
       timelineLimit: 3
     }
   },
   entries: [
+    {
+      id: "session-34-valn-korr-rises",
+      type: "recap",
+      title: "Session 34 — Val'n Korr Rises",
+      summary: "Flint Whistle reclaims his identity, Thymbris reveals the grief haunting him, and Val'n Korr rises from the Darklake.",
+      content: "Gather close, you bilge-sniffing degenerates, and pour something strong enough to make good decisions seem insulting, for our heroes once again sailed the Darklake, that vast black puddle where sunlight comes to die and every ripple is legally entitled to contain teeth. Unfortunately, there was one small problem: the bloody boat would not move. Helexisys went searching for oars and found several timber monstrosities capable of either steering a ship or beating a hill giant to death, while Biscuit finally pulled out the party’s lone Scroll of Gale Burst and gave the sails a magical kick in the arse. And thus, with considerably more confidence than wisdom, they pointed their vessel away from the shore and sailed deeper into the Darklake. Because apparently when the Underdark whispers, “perhaps you should stay near land,” this company hears, “cowards go left.”\n\nBelow deck came supper, romance, tragedy, and things with far too many legs. Auntie Brine served a steaming bowl of Black Cap Bilge Stew so dark it looked capable of confessing crimes, while Knuckle presented fried crickets, glowworms, crab bits, and whatever else had been foolish enough to crawl near his skillet. V devoured Brine’s stew with such enthusiasm that Auntie herself decided he might make a fine dessert, curling against the man and murmuring about how she loved them strong like a rock, while V remained blissfully unaware that he was halfway through an Underdark courtship ritual. Across the table, however, old Thymbris found little humor. He spoke of the Widow’s Teeth, the ship he’d lost to duergar steel and fire, and later whispered to Nari of Malisve, the bard he’d loved, the woman he’d left somewhere safe, and the terrible day he returned to find nothing upon the Darklake but splintered timber and her necklace floating in the black. There are wounds whiskey can numb, wounds prayer can soften, and wounds that simply wait for you in the dark when the room grows quiet.\n\nUp on deck, meanwhile, Biscuit was committing the noblest form of wizardry known to rabbitkind: taking something apart without knowing whether it would explode. Clack showed him a buried memory of a blue-skinned tiefling artificer named Tessa Ray, who had built him with tenderness, awakened him with magic, and named him Flint Whistle before someone carried him away in a crate to be sold. So Biscuit opened the poor metal fellow up and went elbow-deep into wires, conduits, arcane cores, and choices one normally prefers to make with a warranty nearby. Two natural twenties later, a white wire was severed, an unstable heart was patched, decades of mechanical abuse were corrected, and the automaton opened his eyes with his memories restored. “Hello, Biscuit, my friend. My name is Flint Whistle.” His core remains imperfect, but he can now perform limited self-repair—and he considers Biscuit a friend to whom he owes a great debt.\n\nNaturally, this touching moment occurred while Thymbris was downstairs promoting Lieutenant Stool, Captain Table, and Admiral Barrel, headbutting a wall, searching for a crewman named Jenkins who apparently does not exist, and conducting the finest naval command briefing ever held by a man barely capable of locating a staircase. V quietly returned the journal he had stolen to Thymbris’s coat, visibly easing the old sailor when he found it. Elsewhere, Prince Derendil stood alone at the bow as memories returned with every mile toward the mysterious tower. He remembered pain within a tower, peaceful glades and fields that felt like home, and a young girl running among tiny white flowers. He could not say whether Araj caused his suffering—but neither could he remember Araj trying to stop it. Biscuit agreed to keep his uncertainty private.\n\nThen, because happiness in the Underdark is merely the appetizer before violence, the lake attacked. Hook-jawed creatures clamped onto the hull. Biscuit took to the air, blinded one with freezing power, and hammered it with fire. Nari hurled enough radiant fury into another to distribute its organs across three postal districts. Helexisys turned one into sanctified seafood. V became something claws were invented to fear, shredded one beast apart, then forced its corpse to swim over and murder its own companion—an act so spectacularly indecent that somewhere a necromancer probably stood and applauded. Derendil hurled bone shards, Thymbris and Knuckle opened fire, and Auntie Brine dedicated a shot to V before missing completely. Love is complicated. Flint Whistle revealed that his arm could transform into a damned blunderbuss, fired twice, missed everything, and calmly concluded, “Must be rusty.”\n\nBut just when the last Hookjaw slipped bleeding beneath the surface, the Darklake began to move. Tentacles hammered the hull. Something vast rose from beneath the black water. Thymbris stared into the face of the creature, and sobriety arrived faster than a tax collector at a dragon’s funeral. Val'n Korr had found them. Thymbris raised his pistol, screamed curses across the water, and swore he would finally have his revenge. The lake churned. The beast rose. And somewhere aboard that ship, Admiral Barrel awaited his orders.",
+      links: ["session-33-the-blessed-beach-one", "wayward-gull", "clack-autognome", "thymbris-bent-mast-bramblehorn", "knuckle-leshy", "auntie-brine", "prince-derendil", "tessa-ray", "valn-korr", "scroll-of-gale-burst"],
+      published: true,
+      updatedAt: "2026-10-19"
+    },
     {
       id: "session-33-the-blessed-beach-one",
       type: "recap",
@@ -116,8 +126,8 @@ window.WIKI_DATA = {
       type: "item",
       category: "consumable",
       holder: "Biscuit / Party",
-      uses: "1 scroll",
-      status: "Available",
+      uses: "Expended",
+      status: "Used",
       title: "Scroll of Gale Burst",
       effect: {
         rarity: "Spell scroll · Purchased for 175 gp",
@@ -278,36 +288,60 @@ window.WIKI_DATA = {
       links: ["session-33-the-blessed-beach-one", "wayward-gull"], published: true, updatedAt: "2026-10-13"
     },
     {
+      id: "valn-korr", type: "npc", npcStatus: "active",
+      place: "Darklake · Beside the Wayward Gull", role: "Colossal tentacled Darklake horror", relationship: "Hostile", lastSeen: "Session 34",
+      title: "Val'n Korr",
+      summary: "A vast tentacled horror whose appearance stripped the drunkenness from Thymbris and replaced it with fury.",
+      content: "Val'n Korr rose from beneath the Darklake after the Hookjaw ambush, shaking the Wayward Gull and hammering its hull with tentacles. Thymbris recognized the creature immediately, sobered at the sight of it, and swore he would finally have his revenge. Whatever history lies between them has not yet been revealed.",
+      links: ["session-34-valn-korr-rises", "thymbris-bent-mast-bramblehorn", "wayward-gull"], published: true, updatedAt: "2026-10-19"
+    },
+    {
+      id: "tessa-ray", type: "npc", npcStatus: "unknown",
+      place: "Unknown", role: "Tiefling artificer · Creator of Flint Whistle", relationship: "Known through Flint’s memory", lastSeen: "Session 34",
+      title: "Tessa Ray",
+      summary: "The blue-skinned tiefling artificer who lovingly built and named Flint Whistle.",
+      content: "Biscuit witnessed Tessa Ray through one of Flint Whistle’s restored memories. She constructed the automaton with obvious care and gave him his true name when she awakened him. The memory ended in violence, after which Flint was sealed in a crate and sold. Her present whereabouts and fate are unknown.",
+      links: ["session-34-valn-korr-rises", "clack-autognome"], published: true, updatedAt: "2026-10-19"
+    },
+    {
+      id: "prince-derendil", type: "npc", npcStatus: "active",
+      place: "The Wayward Gull · Darklake", role: "Quaggoth companion · Self-proclaimed elven prince", relationship: "Party companion", lastSeen: "Session 34",
+      title: "Prince Derendil",
+      summary: "A loyal party companion whose fractured memories are returning as the tower draws nearer.",
+      content: "Derendil remembers pain inside a tower, peaceful glades and small homes that feel like his past, and a young girl running through fields of tiny white flowers. He cannot remember whether Araj caused his suffering, but he also cannot remember Araj trying to stop it. Biscuit has agreed to keep these uncertain memories private.",
+      links: ["session-34-valn-korr-rises", "prince-derendil-quaggoth-mask"], published: true, updatedAt: "2026-10-19"
+    },
+    {
       id: "clack-autognome", type: "npc", npcStatus: "active",
-      place: "The Wayward Gull · Darklake shore", role: "Moss-covered autognome · Captain", relationship: "Friendly", lastSeen: "Session 33",
-      title: "Captain Clack",
-      summary: "A moss-covered autognome prophet of chaos whose hands transform into cannons.",
-      content: "Clack moves like a rusty can opener and meets every crisis with apocalyptic enthusiasm. He announced Biscuit’s Wind Wall as though the world were ending, staged a successful coup against the sleeping Thymbris, and proclaimed himself captain. During the Gloom Skipper attack, his hands transformed into smoke-belching cannons. After the Wayward Gull ran aground, he inspired the crew with a sea shanty, helped V repair the vessel, and successfully defended his command from Thymbris.",
-      links: ["session-32-prepare-for-biscuit", "session-33-the-blessed-beach-one", "wayward-gull"], published: true, updatedAt: "2026-10-13"
+      place: "The Wayward Gull · Darklake", role: "Ancient autognome · Captain", relationship: "Biscuit’s friend · Party ally", lastSeen: "Session 34",
+      title: "Flint Whistle",
+      summary: "The ancient autognome once called Clack, restored to his true identity by Biscuit.",
+      content: "The moss-covered autognome known as Clack is truly Flint Whistle, an ancient construct created with love by the tiefling artificer Tessa Ray. Biscuit repaired his damaged wiring and stabilized his fractured arcane core, restoring his memories and capacity for limited self-repair. Flint now considers Biscuit a friend and believes he owes him a great debt. His core remains imperfect, and his newly revealed blunderbuss arm may need some practice.",
+      links: ["session-32-prepare-for-biscuit", "session-33-the-blessed-beach-one", "session-34-valn-korr-rises", "tessa-ray", "wayward-gull"], published: true, updatedAt: "2026-10-19"
     },
     {
       id: "knuckle-leshy", type: "npc", npcStatus: "active",
-      place: "The Wayward Gull · Darklake shore", role: "Peg-legged leshy lookout", relationship: "Friendly · Wants to be V’s bro", lastSeen: "Session 33",
+      place: "The Wayward Gull · Darklake", role: "Peg-legged leshy lookout", relationship: "Friendly · Wants to be V’s bro", lastSeen: "Session 34",
       title: "Knuckle",
       summary: "A peg-legged, mossy leshy sailor with strong opinions about wind and an alarming appetite.",
       content: "Knuckle mocked V’s tiny magical puff of wind, helped teach him knots and basic sailing, and swallowed a Gloom Skipper whole during the attack. After Helexis pulled him from the Darklake, Knuckle shook himself dry, showered his rescuer in moss, and thanked him for the morning shower. By the time the ship ran aground, the lookout had decided he wanted to be V’s bro.",
-      links: ["session-32-prepare-for-biscuit", "session-33-the-blessed-beach-one", "wayward-gull"], published: true, updatedAt: "2026-10-13"
+      links: ["session-32-prepare-for-biscuit", "session-33-the-blessed-beach-one", "session-34-valn-korr-rises", "wayward-gull"], published: true, updatedAt: "2026-10-19"
     },
     {
       id: "auntie-brine", type: "npc", npcStatus: "active",
-      place: "The Wayward Gull · Darklake shore", role: "Swamp-hag sailor", relationship: "Friendly · Flirtatious with V", lastSeen: "Session 33",
+      place: "The Wayward Gull · Darklake", role: "Swamp-hag sailor · Cook", relationship: "Friendly · Devotedly flirtatious with V", lastSeen: "Session 34",
       title: "Auntie Brine",
       summary: "A formidable sailor with a powerful grip, a taste for danger, and an interest in V.",
       content: "Auntie Brine serves aboard the Wayward Gull and helped teach V knots and the fundamentals of sailing. During the voyage she pulled him close with a suctioning forearm grip, expressed an appreciation for a man who can bleed, and received a confident promise that she would be surprised. After the kuo-toa battle, she batted her wooden teeth at V and asked for a pretty gift, but he quietly concealed the pearl necklace.",
-      links: ["session-32-prepare-for-biscuit", "session-33-the-blessed-beach-one", "wayward-gull"], published: true, updatedAt: "2026-10-13"
+      links: ["session-32-prepare-for-biscuit", "session-33-the-blessed-beach-one", "session-34-valn-korr-rises", "wayward-gull"], published: true, updatedAt: "2026-10-19"
     },
     {
       id: "thymbris-bent-mast-bramblehorn", type: "npc", npcStatus: "active",
-      place: "The Wayward Gull · Darklake shore", role: "Satyr captain · Reluctant advisor", relationship: "Ally · Disgruntled", lastSeen: "Session 33",
+      place: "The Wayward Gull · Darklake", role: "Satyr captain · Reluctant advisor", relationship: "Ally · Seeking revenge", lastSeen: "Session 34",
       title: "Thymbris “Bent Mast” Bramblehorn",
       summary: "An eccentric old satyr captain tempted back onto the Darklake by one final adventure.",
-      content: "A weathered satyr sailor and survivor of shipwrecks, mutinies, marriage, and at least one creature he refuses to name. The party persuaded Thymbris to captain the Wayward Gull across the Darklake with the promise of adventure—and a moonstone. After being displaced by Clack, he emerged during the kuo-toa attack, hurled a bottle of liquid fire, and shot Plib dead. His attempt to reclaim command failed, leaving him as a reluctant advisor. A tattered journal stolen from his coat hints at a love he regrets abandoning.",
-      links: ["session-31-toward-the-tower-of-vengeance", "session-32-prepare-for-biscuit", "session-33-the-blessed-beach-one", "wayward-gull"], published: true, updatedAt: "2026-10-13"
+      content: "A weathered satyr sailor haunted by the loss of the Widow’s Teeth, destroyed by duergar raiders, and by Malisve, the bard he loved and left behind. She later sailed onto the Darklake searching for him; he found only wreckage and her necklace. He carries deep guilt beneath the drinking and absurdity. When Val'n Korr rose beside the Wayward Gull, Thymbris recognized it immediately and swore he would finally have his revenge.",
+      links: ["session-31-toward-the-tower-of-vengeance", "session-32-prepare-for-biscuit", "session-33-the-blessed-beach-one", "session-34-valn-korr-rises", "valn-korr", "wayward-gull"], published: true, updatedAt: "2026-10-19"
     },
     {
       id: "droki", type: "npc", npcStatus: "deceased",
