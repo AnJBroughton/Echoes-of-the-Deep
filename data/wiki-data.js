@@ -4,15 +4,45 @@ window.WIKI_DATA = {
     title: "Echoes of the Deep",
     subtitle: "A player’s guide to the known world",
     home: {
-      currentEntryId: "session-34-valn-korr-rises",
-      currentEyebrow: "Current chapter · Val'n Korr Rises",
-      currentObjective: "Survive Val'n Korr’s attack, protect the Wayward Gull, and uncover why Thymbris has sworn revenge.",
+      currentEntryId: "session-35-we-are-pirates-now",
+      currentEyebrow: "Current chapter · We Are Pirates Now",
+      currentObjective: "Save Deren and face whatever waits inside the Tower of Vengeance.",
       priorityIds: ["ruby-in-the-rough", "73b9a360-d853-4664-8d54-fbffc02de78e", "quibble-sloprin"],
       recentLimit: 6,
       timelineLimit: 3
     }
   },
   entries: [
+    {
+      id: "session-35-we-are-pirates-now",
+      type: "recap",
+      title: "Session 35 — We Are Pirates Now",
+      summary: "The company slays Val'n Korr, loses the Wayward Gull, and reaches the Tower of Vengeance with Deren at death’s door.",
+      content: `Gather close, you beautiful bastards, and keep your cups above the table—for this tale begins wet, gets wetter, and ends with a great deal of desperate clawing. Upon the black bosom of the Darklake sailed our heroes, aboard a boat that had committed the terrible sin of still being in one piece. From the water rose Val'n Korr: eight tentacles, one cavernous mouth, and all the charm of a tax collector climbing into your bath.
+
+It lashed for Nari and V. Nari slipped the blow with the grace of a star dancing between clouds. Stone-touched V took a thump hard enough to rearrange his ancestors, yet stayed free. Biscuit, being a harengon of chaotic brilliance and only a passing acquaintance with caution, fired up his winged boots and flew straight at the beast. Then Nari loosed a radiant strike, and Val'n Korr shuddered like a guilty priest at a brothel window. The company had found its weakness. Helexisys took the discovery as a personal invitation, swore his vow, drew Umbral Edge, and began feeding the monster Divine Smites as though radiant judgment were free ale on a festival night. Each burst burned deeper than steel, and the beast bellowed across the lake like a whale discovering it had sat upon a spear.
+
+The companions opened fire. Thymbris shot boldly. Knuckle shot twice as boldly. Accuracy, alas, declined both invitations. Auntie Brine planted herself beside V and declared that he would not die on her watch—which was either a vow of protection or the most aggressive courtship ritual yet witnessed beneath the earth. Then came Deren: the quaggoth prince with a fractured past, a noble heart, and just enough hope left to make losing him unthinkable. He swelled into a colossal wall of fur and fury, buried bone shards in the creature, sprouted a great draconic tail, and battered Val'n Korr as though collecting a very personal debt.
+
+Val'n Korr answered by shaking the Wayward Gull like dice in a drunkard’s cup. Bodies flew. Nari skidded. Helexisys went overboard, was snatched up by a tentacle, and displayed above the water like the grand prize at a deeply unpleasant fair. Biscuit saw his friend being crushed and hurled a magnificent blast of fire at the monster. It was a splendid spell. Val'n Korr resisted much of it. Helexisys did not. Biscuit flew in to rescue him—and was promptly grabbed as well. Thus the beast held a paladin in one tentacle and an artificer in another, like a tavern brute deciding which fool to throw first.
+
+V answered with claws and blood, carving his Brand of Castigation into the horror and promising that every insult would be returned with interest. Then little Flint Whistle did a very large thing. He leapt from the boat, seized Biscuit, and pulled while his friend kicked free. Both plunged into the Darklake, but Biscuit was saved. Flint’s once-red eyes now shone green as he declared with the pride of a king, “You are my friend. I saved you.” That alone would make a fine song. Unfortunately, the monster was not done ruining the chorus.
+
+It whipped the lake into a crushing wave. V threw himself over Thymbris and helped spare Nari the worst of it. Helexisys vanished from his captor’s grasp in a curl of mist, returned to the battle, and immediately resumed smiting Val'n Korr in places no creature wishes to be smitten. So the beast opened its mouth and tried to eat the entire bloody crew. Most escaped. Helexisys and Knuckle did not. Down they went into the reeking belly, where armor, acid, and dignity began dissolving in equal measure. Knuckle fired his weapons from inside. They misfired. Black powder filled his face while acid chewed at his legs, and still the brave little lunatic promised, “I’m going to get us out!”
+
+Outside, lightning crashed over boat and water. Biscuit rose dripping into the air and answered with thunder. Then V dropped his shield and leapt onto the beast’s face. A tentacle swung for him; V flung blood into its eyes. While Val'n Korr screamed, V seized its jaws and pulled. Muscle strained. Teeth ground. Somewhere in the world, a sensible person chose not to do this. V forced the mouth open. Knuckle crawled into the dim light first, followed by a half-digested but still magnificently angry Helexisys. Knuckle offered V a fist bump and his lasting respect. The paladin offered the beast several new reasons to regret having a stomach.
+
+At last Thymbris found his aim. Shot, flame, and a bottle of good liquor struck Val'n Korr in succession—the final sacrifice proving that even strong drink may attain holiness when properly ignited. Calm amid the carnage, Nari called the constellations into the lightless Underdark. Starlight flowed over the battered company, healing wounds across the field, and then she fired another luminous arrow because mercy has limits. Val'n Korr seized Deren, crushed him in its coils, and flung him into the lake broken and bleeding. Helexisys answered from atop the monster’s back, driving steel and radiant vengeance through its hide until the Darklake flashed.
+
+Knowing death was near, Val'n Korr wrapped all eight tentacles around the Wayward Gull. Wood groaned. Planks split. Then the whole vessel burst apart, dropping heroes, pirates, lovers, fools, and one badly abused drinking supply into the lake. Mortally wounded, the beast tried to flee beneath the wreckage. It had one ragged breath left. V took that breath personally. One final claw tore away the last thread of life, and Val'n Korr sank dead beneath the shattered remains of the ship.
+
+The survivors found shallow water and staggered toward shore—burned, bruised, bloodied, and held together mostly by Nari’s magic and spite. Deren came last. His monstrous tail faded, his great frame shrank back into the quaggoth prince they knew, and blood ran from his eyes and nose as he dragged himself onto the stone. Beyond the beach stood their destination: the Tower of Vengeance, a dark inverted pyramid balanced upon its point like a dagger poised over the world. Deren raised his head long enough to see it. “I think we’ve made it,” he said. “But I don’t know that I will.” Then Prince Derendil collapsed unconscious.
+
+So ended the crossing: Val'n Korr slain, the Wayward Gull reduced to kindling, and the Tower of Vengeance finally in sight. Auntie Brine made certain V noticed how terribly, tragically injured she was. Knuckle insisted that being swallowed had not hurt nearly as much as expected. Flint Whistle sat beside Biscuit, raised a fist, and announced the only reasonable conclusion to the evening: “We are pirates now.” And if that does not deserve another drink, my friends, then neither do any of us.`,
+      links: ["session-34-valn-korr-rises", "valn-korr", "wayward-gull", "prince-derendil", "clack-autognome", "thymbris-bent-mast-bramblehorn", "knuckle-leshy", "auntie-brine"],
+      published: true,
+      updatedAt: "2026-10-26"
+    },
     {
       id: "session-34-valn-korr-rises",
       type: "recap",
@@ -111,17 +141,17 @@ window.WIKI_DATA = {
       category: "quest",
       holder: "Party",
       uses: "Vessel",
-      status: "Active",
+      status: "Destroyed",
       title: "The Wayward Gull",
       effect: {
         rarity: "Darklake vessel · Purchased for 500 gp",
         text: "The fastest of Thymbris’s three vessels. When properly powered by wind, it excels at navigation, riding currents, escaping hazards, and outrunning threats."
       },
-      summary: "A swift Darklake vessel captained by Thymbris “Bent Mast” Bramblehorn.",
-      content: "Purchased and secured for 500 gp, the Wayward Gull was chosen for speed over safety. With Thymbris returned to its helm and enough wind in its sails, the vessel gives the party their best chance of crossing the Darklake ahead of pursuit.",
-      links: ["session-31-toward-the-tower-of-vengeance"],
+      summary: "The party’s swift Darklake vessel, crushed to splinters by Val'n Korr at the end of its final voyage.",
+      content: "Purchased for 500 gp and chosen for speed over safety, the Wayward Gull carried the party across the Darklake to the shore beneath the Tower of Vengeance. In its final assault, Val'n Korr wrapped all eight tentacles around the vessel and crushed it into wreckage, casting everyone into the water.",
+      links: ["session-31-toward-the-tower-of-vengeance", "session-35-we-are-pirates-now", "valn-korr"],
       published: true,
-      updatedAt: "2026-09-17"
+      updatedAt: "2026-10-26"
     },
     {
       id: "scroll-of-gale-burst",
@@ -290,12 +320,12 @@ window.WIKI_DATA = {
       links: ["session-33-the-blessed-beach-one", "wayward-gull"], published: true, updatedAt: "2026-10-13"
     },
     {
-      id: "valn-korr", type: "npc", npcStatus: "active",
-      place: "Darklake · Beside the Wayward Gull", role: "Colossal tentacled Darklake horror", relationship: "Hostile", lastSeen: "Session 34",
+      id: "valn-korr", type: "npc", npcStatus: "deceased",
+      place: "Darklake · Tower of Vengeance shore", role: "Colossal tentacled Darklake horror", relationship: "Defeated enemy", lastSeen: "Session 35",
       title: "Val'n Korr",
-      summary: "A vast tentacled horror whose appearance stripped the drunkenness from Thymbris and replaced it with fury.",
-      content: "Val'n Korr rose from beneath the Darklake after the Hookjaw ambush, shaking the Wayward Gull and hammering its hull with tentacles. Thymbris recognized the creature immediately, sobered at the sight of it, and swore he would finally have his revenge. Whatever history lies between them has not yet been revealed.",
-      links: ["session-34-valn-korr-rises", "thymbris-bent-mast-bramblehorn", "wayward-gull"], published: true, updatedAt: "2026-10-19"
+      summary: "The colossal Darklake horror slain by the party after destroying the Wayward Gull.",
+      content: "Val'n Korr proved vulnerable to radiant power but nearly destroyed the company before falling. It swallowed Helexisys and Knuckle, crushed Deren, called down lightning, and finally shattered the Wayward Gull with all eight tentacles. Mortally wounded and attempting to flee, it was killed by V’s final claw strike and sank beneath the wreckage.",
+      links: ["session-34-valn-korr-rises", "session-35-we-are-pirates-now", "thymbris-bent-mast-bramblehorn", "wayward-gull"], published: true, updatedAt: "2026-10-26"
     },
     {
       id: "tessa-ray", type: "npc", npcStatus: "unknown",
@@ -307,43 +337,43 @@ window.WIKI_DATA = {
     },
     {
       id: "prince-derendil", type: "npc", npcStatus: "active",
-      place: "The Wayward Gull · Darklake", role: "Quaggoth companion · Self-proclaimed elven prince", relationship: "Party companion", lastSeen: "Session 34",
+      place: "Tower of Vengeance shore", role: "Quaggoth companion · Self-proclaimed elven prince", relationship: "Party companion · Critically injured", lastSeen: "Session 35",
       title: "Prince Derendil",
-      summary: "A loyal party companion whose fractured memories are returning as the tower draws nearer.",
-      content: "Derendil remembers pain inside a tower, peaceful glades and small homes that feel like his past, and a young girl running through fields of tiny white flowers. He cannot remember whether Araj caused his suffering, but he also cannot remember Araj trying to stop it. Biscuit has agreed to keep these uncertain memories private.",
-      links: ["session-34-valn-korr-rises", "prince-derendil-quaggoth-mask"], published: true, updatedAt: "2026-10-19"
+      summary: "A loyal companion who reached the Tower of Vengeance gravely wounded and collapsed upon the shore.",
+      content: "Deren fought Val'n Korr in a colossal rage, hurling bone shards and manifesting a draconic tail. The creature later crushed him and flung him into the Darklake. He dragged himself ashore beneath the Tower of Vengeance, said he did not know whether he would survive, and collapsed unconscious. His fractured memories of the tower, Araj, peaceful glades, and a girl among white flowers remain unresolved.",
+      links: ["session-34-valn-korr-rises", "session-35-we-are-pirates-now", "prince-derendil-quaggoth-mask"], published: true, updatedAt: "2026-10-26"
     },
     {
       id: "clack-autognome", type: "npc", npcStatus: "active",
-      place: "The Wayward Gull · Darklake", role: "Ancient autognome · Captain", relationship: "Biscuit’s friend · Party ally", lastSeen: "Session 34",
+      place: "Tower of Vengeance shore", role: "Ancient autognome · Pirate", relationship: "Biscuit’s friend · Party ally", lastSeen: "Session 35",
       title: "Flint Whistle",
       summary: "The ancient autognome once called Clack, restored to his true identity by Biscuit.",
-      content: "The moss-covered autognome known as Clack is truly Flint Whistle, an ancient construct created with love by the tiefling artificer Tessa Ray. Biscuit repaired his damaged wiring and stabilized his fractured arcane core, restoring his memories and capacity for limited self-repair. Flint now considers Biscuit a friend and believes he owes him a great debt. His core remains imperfect, and his newly revealed blunderbuss arm may need some practice.",
-      links: ["session-32-prepare-for-biscuit", "session-33-the-blessed-beach-one", "session-34-valn-korr-rises", "tessa-ray", "wayward-gull"], published: true, updatedAt: "2026-10-19"
+      content: "The moss-covered autognome once known as Clack is truly Flint Whistle, an ancient construct created by the tiefling artificer Tessa Ray. During the battle with Val'n Korr, Flint leapt from the ship and pulled Biscuit free of a tentacle. His eyes now glow green, and he proudly calls Biscuit his friend. After surviving the wreck, Flint declared that they are pirates now.",
+      links: ["session-32-prepare-for-biscuit", "session-33-the-blessed-beach-one", "session-34-valn-korr-rises", "session-35-we-are-pirates-now", "tessa-ray", "wayward-gull"], published: true, updatedAt: "2026-10-26"
     },
     {
       id: "knuckle-leshy", type: "npc", npcStatus: "active",
-      place: "The Wayward Gull · Darklake", role: "Peg-legged leshy lookout", relationship: "Friendly · Wants to be V’s bro", lastSeen: "Session 34",
+      place: "Tower of Vengeance shore", role: "Peg-legged leshy sailor", relationship: "Friendly · Respects V", lastSeen: "Session 35",
       title: "Knuckle",
       summary: "A peg-legged, mossy leshy sailor with strong opinions about wind and an alarming appetite.",
-      content: "Knuckle mocked V’s tiny magical puff of wind, helped teach him knots and basic sailing, and swallowed a Gloom Skipper whole during the attack. After Helexis pulled him from the Darklake, Knuckle shook himself dry, showered his rescuer in moss, and thanked him for the morning shower. By the time the ship ran aground, the lookout had decided he wanted to be V’s bro.",
-      links: ["session-32-prepare-for-biscuit", "session-33-the-blessed-beach-one", "session-34-valn-korr-rises", "wayward-gull"], published: true, updatedAt: "2026-10-19"
+      content: "Knuckle was swallowed whole alongside Helexisys by Val'n Korr and tried to blast free from inside its acid-filled belly. V pried open the creature’s jaws and rescued them, earning Knuckle’s lasting respect and a grateful fist bump. Knuckle survived the destruction of the Wayward Gull and insists that being swallowed did not hurt nearly as much as expected.",
+      links: ["session-32-prepare-for-biscuit", "session-33-the-blessed-beach-one", "session-34-valn-korr-rises", "session-35-we-are-pirates-now", "wayward-gull"], published: true, updatedAt: "2026-10-26"
     },
     {
       id: "auntie-brine", type: "npc", npcStatus: "active",
-      place: "The Wayward Gull · Darklake", role: "Swamp-hag sailor · Cook", relationship: "Friendly · Devotedly flirtatious with V", lastSeen: "Session 34",
+      place: "Tower of Vengeance shore", role: "Swamp-hag sailor · Cook", relationship: "Friendly · Devotedly flirtatious with V", lastSeen: "Session 35",
       title: "Auntie Brine",
       summary: "A formidable sailor with a powerful grip, a taste for danger, and an interest in V.",
-      content: "Auntie Brine serves aboard the Wayward Gull and helped teach V knots and the fundamentals of sailing. During the voyage she pulled him close with a suctioning forearm grip, expressed an appreciation for a man who can bleed, and received a confident promise that she would be surprised. After the kuo-toa battle, she batted her wooden teeth at V and asked for a pretty gift, but he quietly concealed the pearl necklace.",
-      links: ["session-32-prepare-for-biscuit", "session-33-the-blessed-beach-one", "session-34-valn-korr-rises", "wayward-gull"], published: true, updatedAt: "2026-10-19"
+      content: "Auntie Brine remained protectively close to V during the battle with Val'n Korr, declaring that he would not die on her watch. She survived the destruction of the Wayward Gull and reached the shore beneath the Tower of Vengeance, where she made certain V noticed the full tragedy of her injuries.",
+      links: ["session-32-prepare-for-biscuit", "session-33-the-blessed-beach-one", "session-34-valn-korr-rises", "session-35-we-are-pirates-now", "wayward-gull"], published: true, updatedAt: "2026-10-26"
     },
     {
       id: "thymbris-bent-mast-bramblehorn", type: "npc", npcStatus: "active",
-      place: "The Wayward Gull · Darklake", role: "Satyr captain · Reluctant advisor", relationship: "Ally · Seeking revenge", lastSeen: "Session 34",
+      place: "Tower of Vengeance shore", role: "Satyr captain · Reluctant advisor", relationship: "Ally · Avenged", lastSeen: "Session 35",
       title: "Thymbris “Bent Mast” Bramblehorn",
       summary: "An eccentric old satyr captain tempted back onto the Darklake by one final adventure.",
-      content: "A weathered satyr sailor haunted by the loss of the Widow’s Teeth, destroyed by duergar raiders, and by Maelis Vey, the bard he loved and left behind. She later sailed onto the Darklake searching for him; he found only wreckage and her necklace. He carries deep guilt beneath the drinking and absurdity. When Val'n Korr rose beside the Wayward Gull, Thymbris recognized it immediately and swore he would finally have his revenge.",
-      links: ["session-31-toward-the-tower-of-vengeance", "session-32-prepare-for-biscuit", "session-33-the-blessed-beach-one", "session-34-valn-korr-rises", "valn-korr", "wayward-gull"], published: true, updatedAt: "2026-10-19"
+      content: "A weathered satyr sailor haunted by the loss of the Widow’s Teeth and Maelis Vey, the bard he loved and left behind. During the battle with Val'n Korr, Thymbris finally found his aim, striking it with shot, fire, and a flaming bottle. He survived the destruction of the Wayward Gull and reached the Tower of Vengeance shore after the creature fell.",
+      links: ["session-31-toward-the-tower-of-vengeance", "session-32-prepare-for-biscuit", "session-33-the-blessed-beach-one", "session-34-valn-korr-rises", "session-35-we-are-pirates-now", "valn-korr", "wayward-gull"], published: true, updatedAt: "2026-10-26"
     },
     {
       id: "droki", type: "npc", npcStatus: "deceased",
