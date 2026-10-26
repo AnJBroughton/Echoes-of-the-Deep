@@ -18,6 +18,8 @@ window.WIKI_DATA = {
       type: "recap",
       title: "Session 35 — We Are Pirates Now",
       summary: "The company slays Val'n Korr, loses the Wayward Gull, and reaches the Tower of Vengeance with Deren at death’s door.",
+      image: "assets/images/session-35-we-are-pirates-now.jpg?v=20261026",
+      imageFit: "cover",
       content: `Gather close, you beautiful bastards, and keep your cups above the table—for this tale begins wet, gets wetter, and ends with a great deal of desperate clawing. Upon the black bosom of the Darklake sailed our heroes, aboard a boat that had committed the terrible sin of still being in one piece. From the water rose Val'n Korr: eight tentacles, one cavernous mouth, and all the charm of a tax collector climbing into your bath.
 
 It lashed for Nari and V. Nari slipped the blow with the grace of a star dancing between clouds. Stone-touched V took a thump hard enough to rearrange his ancestors, yet stayed free. Biscuit, being a harengon of chaotic brilliance and only a passing acquaintance with caution, fired up his winged boots and flew straight at the beast. Then Nari loosed a radiant strike, and Val'n Korr shuddered like a guilty priest at a brothel window. The company had found its weakness. Helexisys took the discovery as a personal invitation, swore his vow, drew Umbral Edge, and began feeding the monster Divine Smites as though radiant judgment were free ale on a festival night. Each burst burned deeper than steel, and the beast bellowed across the lake like a whale discovering it had sat upon a spear.
