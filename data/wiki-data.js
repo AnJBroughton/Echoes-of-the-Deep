@@ -4,15 +4,45 @@ window.WIKI_DATA = {
     title: "Echoes of the Deep",
     subtitle: "A player’s guide to the known world",
     home: {
-      currentEntryId: "session-35-we-are-pirates-now",
-      currentEyebrow: "Current chapter · We Are Pirates Now",
-      currentObjective: "Save Deren and face whatever waits inside the Tower of Vengeance.",
-      priorityIds: ["ruby-in-the-rough", "73b9a360-d853-4664-8d54-fbffc02de78e", "quibble-sloprin"],
+      currentEntryId: "session-36-wet-warded-level-13",
+      currentEyebrow: "Current chapter · Wet, Warded, and Level 13",
+      currentObjective: "Choose the first component for Araz’s banishment talisman and begin the hunt with Thymbris.",
+      priorityIds: ["banishment-talisman-components", "prince-derendil", "ruby-in-the-rough", "73b9a360-d853-4664-8d54-fbffc02de78e"],
       recentLimit: 6,
       timelineLimit: 3
     }
   },
   entries: [
+    {
+      id: "session-36-wet-warded-level-13",
+      type: "recap",
+      title: "Session 36 — Wet, Warded, and Level 13",
+      summary: "The party reaches Araz’s tower, uncovers Deren’s past, accepts an indecently difficult shopping list, and advances to Level 13.",
+      content: `Gather close, you damp little legends, and wring the Darklake from your undergarments, for our tale begins upon a shore littered with wreckage, wounded dignity, and the sad remains of a perfectly serviceable boat. Prince Deren lay broken beneath the Tower of Vengeance until Nari poured seventy points of sixth-level healing into his enormous furry frame and Helexisys followed with hands so restorative that the bard has been expressly forbidden from describing the scene. Deren’s flesh mended, but something deeper remained torn. The shore felt familiar, and the memories behind his eyes were beginning to knock.
+
+The survivors made camp. V searched the wreckage and recovered neither shield nor crossbow, proving that the Darklake takes trophies and has appalling taste. Flint Whistle stood guard with his eyes burning red, Helexisys joined the watch after his trance, and Biscuit slept beside Deren. In the quiet, the prince confessed that he could not remember ever having friends before them. Friendship, it seems, is simply a warm body beside you in the dark who does not steal your boots.
+
+Morning arrived bearing Auntie Brine’s Mermaid Tidal Chowder, five temporary hit points, and several ingredients best left unidentified. Helexisys followed breakfast with an inspiring speech so nourishing it raised the company to sixteen temporary hit points and contained markedly fewer organs. V received a replacement crossbow and twenty bolts, then attempted something far more dangerous than armed combat: romance. With the stealth of a burglar and the courage of a frightened adolescent, he slipped Nari a star-carved stone box containing a protective necklace. In stone-giant custom, the gift carried romantic intent. Nari understood, accepted it quietly, and spared him the agony of speaking aloud. An hour later the magical box became an ordinary rock, much like V whenever feelings enter the room.
+
+At the Tower of Vengeance, a muted-red dragonborn named Orthus guarded the entrance. He reacted sharply to Deren’s name and admitted only the core party and their prince. Flint, Thymbris, Auntie Brine, and Knuckle remained outside, where Thymbris immediately investigated whether the waiting area served drinks. Before the heroes could enjoy the tower’s hospitality, Orthus revealed a final gift from Val'n Korr: everyone the creature had grappled or swallowed—Biscuit, V, Helexisys, and Deren—carried parasitic seeds destined to burst into newborn horrors. The cure was a burning alchemical salve, administered with all the tenderness of scraping barnacles from a hull. Some treatments hurt more than others. Every treatment hurt enough.
+
+Beyond layers of ancient wards waited Araz, a scarred drow archmage of impossible age, excellent robes, shimmering drinks, and the legendary restraint required to watch Biscuit swallow an expensive vintage in one gulp and immediately request another. His courtesy did not soften the truth. Once a respected surface archmage, Araz opposed the tyrant Cleave and was exiled. Queen Merith later gave him sanctuary and entrusted him with the education of her young son. When Cleave attacked and slaughtered the king, queen, and princess, Araz saved the surviving prince by transforming him into a quaggoth. The spell hid the boy—but fractured his memories, damaged his identity, and eventually left him wandering the Underdark as the Deren the party knows.
+
+Araz had searched for him ever since. Worse, or perhaps merely more awkwardly, the archmage admitted that he had bent time, chance, and travel to guide the company toward the tower. He chose them because they had chosen to save Deren when abandoning him would have been easier. V touched the tower’s history through grim psychometry and found tragedy, fear, and an archmage clinging to the safety of his wards. Araz appeared sincere. Everyone remained sensibly suspicious. Ancient drow may manipulate your entire journey, but comfortable chairs do wonders for moral ambiguity.
+
+Then came the matter of the Abyss. Lolth, Araz explained, is manipulating the demon lords’ arrival. Cleave believes himself the master of the ritual, yet is another piece on the Spider Queen’s board, hoping to bind a demon lord and steal enough power to become a god. Demogorgon is nearing full manifestation, while the presence of the demon lords twists time, magic, spirits, and sanity throughout the Underdark. Ilsa is no demon lord, but a powerful and arrogant pawn of Cleave—and Araz believes the party can defeat her if properly prepared. Some men confront their insecurities. Others summon the Abyss and demand worship.
+
+Araz offered Deren the chance to restore his memories, his sanity, and perhaps even his elven form. The ritual might alter or erase everything he remembers of the party. For once, no one made the choice for him. His friends promised that whatever face or form emerged, he would always have a place beside them. Deren chose to remain with Araz and attempt the restoration. No bawdy joke belongs here. The prince broke our hearts, and even the tavern fell quiet.
+
+Naturally, grief was followed by shopping—though Araz’s list was less “bread and lamp oil” and more “items that get sensible adventurers killed.” To forge a talisman capable of gathering and banishing the demon lords, he requires an intact unhatched purple worm egg; the central eye of a beholder; six feathers, each from a different angel; the heart of a goristro; thirteen timmasks grown in the footprints of a marilith, balor, or goristro; blood or ichor from a true demon lord; and Cleave’s grimoire. When the pieces are assembled, the party must still wound or defeat a true demon lord so Araz can complete the banishment. The worm egg must remain intact. Please handle the enormous egg-shaped object gently and stop smirking.
+
+Before departure, the company chose one ally to accompany the hunt. Flint Whistle offered tireless vigilance but could not safely fall in battle. Auntie Brine and Knuckle offered healing and the sort of mutual devotion that turns every injury into a family emergency. Thymbris offered protection, a daily Bless, and the tactical unpredictability of a tavern chair thrown by fate itself. Naturally, they chose the drunk. Biscuit preferred Flint and promised consequences if Thymbris’s antics got anyone hurt.
+
+Thus the heroes reached Level 13: parasites burned out, a prince entrusted to an ancient archmage, one suspiciously romantic rock exchanged, and seven impossible components waiting somewhere in the dark. Raise your cups to broken ships, mended princes, burning salves, enormous eggs, and the poor fool assigned to keep Thymbris sober. The Tower of Vengeance stands behind them. The hunt begins ahead.`,
+      links: ["session-35-we-are-pirates-now", "araz", "prince-derendil", "thymbris-bent-mast-bramblehorn", "clack-autognome", "auntie-brine", "knuckle-leshy", "banishment-talisman-components"],
+      published: true,
+      updatedAt: "2026-11-03"
+    },
     {
       id: "session-35-we-are-pirates-now",
       type: "recap",
@@ -90,6 +120,26 @@ So ended the crossing: Val'n Korr slain, the Wayward Gull reduced to kindling, a
       links: ["session-30-only-the-opening-act", "last-breath-reliquary", "drokis-hat", "blue-catapult-stone", "crown-of-the-lesser-tyrant", "wayward-gull", "scroll-of-gale-burst", "scrolls-of-water-walking", "marble-game-set", "phantasmal-heart", "gravesilver-signet"],
       published: true,
       updatedAt: "2026-09-09"
+    },
+    {
+      id: "banishment-talisman-components",
+      type: "quest",
+      title: "Components of the Banishment Talisman",
+      summary: "Gather seven impossible components so Araz can forge a talisman capable of gathering and banishing the demon lords.",
+      content: `Status: Active
+
+☐ An intact, unhatched purple worm egg
+☐ The central eye of a beholder
+☐ Six feathers from six different angels
+☐ The heart of a goristro
+☐ Thirteen timmasks grown in the footprints of a marilith, balor, or goristro
+☐ Blood or ichor from a true demon lord
+☐ Cleave’s grimoire
+
+Once the components are assembled, the party must wound or defeat a true demon lord while the others are gathered so Araz can complete the banishment. The party has not yet chosen which component to pursue first.`,
+      links: ["session-36-wet-warded-level-13", "araz"],
+      published: true,
+      updatedAt: "2026-11-03"
     },
     {
       id: "drokis-hat",
@@ -330,6 +380,15 @@ So ended the crossing: Val'n Korr slain, the Wayward Gull reduced to kindling, a
       links: ["session-34-valn-korr-rises", "session-35-we-are-pirates-now", "thymbris-bent-mast-bramblehorn", "wayward-gull"], published: true, updatedAt: "2026-10-26"
     },
     {
+      id: "araz", type: "npc", npcStatus: "active",
+      place: "Tower of Vengeance", role: "Ancient drow archmage · Deren’s former tutor", relationship: "Cautious ally", lastSeen: "Session 36",
+      title: "Araz",
+      summary: "A scarred, ancient drow archmage who saved Deren, guided the party toward his tower, and now seeks to banish the demon lords.",
+      image: "assets/images/araz.jpg?v=20261103",
+      content: "Araz is an ancient, scarred drow archmage who dwells behind the formidable wards of the Tower of Vengeance. He received the party with impeccable courtesy, comfortable furniture, and shimmering drinks. Long ago, he was a respected surface archmage who opposed the tyrannical mage Cleave and was exiled. Queen Merith later sheltered him and made him tutor to her young son. When Cleave killed the royal family, Araz transformed the surviving prince into a quaggoth to hide and save him. The spell damaged the boy’s memories and identity, creating the Deren the party knows. Araz searched for him for years and admits to bending time, chance, and travel to guide the party toward the tower after they chose to protect Deren. He now offers to restore Deren and has tasked the party with gathering the components for a talisman capable of banishing the demon lords. Though his account appears sincere, the party remains appropriately cautious.",
+      links: ["session-36-wet-warded-level-13", "prince-derendil", "banishment-talisman-components"], published: true, updatedAt: "2026-11-03"
+    },
+    {
       id: "tessa-ray", type: "npc", npcStatus: "unknown",
       place: "Unknown", role: "Tiefling artificer · Creator of Flint Whistle", relationship: "Known through Flint’s memory", lastSeen: "Session 34",
       title: "Tessa Ray",
@@ -339,43 +398,43 @@ So ended the crossing: Val'n Korr slain, the Wayward Gull reduced to kindling, a
     },
     {
       id: "prince-derendil", type: "npc", npcStatus: "active",
-      place: "Tower of Vengeance shore", role: "Quaggoth companion · Self-proclaimed elven prince", relationship: "Party companion · Critically injured", lastSeen: "Session 35",
+      place: "Tower of Vengeance · With Araz", role: "Quaggoth prince · Royal survivor", relationship: "Beloved companion · Undergoing restoration", lastSeen: "Session 36",
       title: "Prince Derendil",
-      summary: "A loyal companion who reached the Tower of Vengeance gravely wounded and collapsed upon the shore.",
-      content: "Deren fought Val'n Korr in a colossal rage, hurling bone shards and manifesting a draconic tail. The creature later crushed him and flung him into the Darklake. He dragged himself ashore beneath the Tower of Vengeance, said he did not know whether he would survive, and collapsed unconscious. His fractured memories of the tower, Araj, peaceful glades, and a girl among white flowers remain unresolved.",
-      links: ["session-34-valn-korr-rises", "session-35-we-are-pirates-now", "prince-derendil-quaggoth-mask"], published: true, updatedAt: "2026-10-26"
+      summary: "The lost royal heir saved by Araz’s transformation, now attempting to reclaim his memories, sanity, and elven form.",
+      content: "Deren was the young royal prince entrusted to Araz before Cleave’s attack destroyed his family. To hide and save him, Araz transformed the prince into a quaggoth, but the spell fractured his memories and identity. After the party healed him and learned the truth, Araz offered a restoration that may recover his memories, sanity, and perhaps his elven form—but might alter or erase his memories of the party. Assured that he would always have a place with them, Deren chose to remain with Araz and begin the process.",
+      links: ["session-34-valn-korr-rises", "session-35-we-are-pirates-now", "session-36-wet-warded-level-13", "araz", "prince-derendil-quaggoth-mask"], published: true, updatedAt: "2026-11-03"
     },
     {
       id: "clack-autognome", type: "npc", npcStatus: "active",
-      place: "Tower of Vengeance shore", role: "Ancient autognome · Pirate", relationship: "Biscuit’s friend · Party ally", lastSeen: "Session 35",
+      place: "Tower of Vengeance", role: "Ancient autognome · Pirate", relationship: "Biscuit’s friend · Party ally", lastSeen: "Session 36",
       title: "Flint Whistle",
       summary: "The ancient autognome once called Clack, restored to his true identity by Biscuit.",
       content: "The moss-covered autognome once known as Clack is truly Flint Whistle, an ancient construct created by the tiefling artificer Tessa Ray. During the battle with Val'n Korr, Flint leapt from the ship and pulled Biscuit free of a tentacle. His eyes now glow green, and he proudly calls Biscuit his friend. After surviving the wreck, Flint declared that they are pirates now.",
-      links: ["session-32-prepare-for-biscuit", "session-33-the-blessed-beach-one", "session-34-valn-korr-rises", "session-35-we-are-pirates-now", "tessa-ray", "wayward-gull"], published: true, updatedAt: "2026-10-26"
+      links: ["session-32-prepare-for-biscuit", "session-33-the-blessed-beach-one", "session-34-valn-korr-rises", "session-35-we-are-pirates-now", "session-36-wet-warded-level-13", "tessa-ray", "wayward-gull"], published: true, updatedAt: "2026-11-03"
     },
     {
       id: "knuckle-leshy", type: "npc", npcStatus: "active",
-      place: "Tower of Vengeance shore", role: "Peg-legged leshy sailor", relationship: "Friendly · Respects V", lastSeen: "Session 35",
+      place: "Tower of Vengeance", role: "Peg-legged leshy sailor", relationship: "Friendly · Respects V", lastSeen: "Session 36",
       title: "Knuckle",
       summary: "A peg-legged, mossy leshy sailor with strong opinions about wind and an alarming appetite.",
       content: "Knuckle was swallowed whole alongside Helexisys by Val'n Korr and tried to blast free from inside its acid-filled belly. V pried open the creature’s jaws and rescued them, earning Knuckle’s lasting respect and a grateful fist bump. Knuckle survived the destruction of the Wayward Gull and insists that being swallowed did not hurt nearly as much as expected.",
-      links: ["session-32-prepare-for-biscuit", "session-33-the-blessed-beach-one", "session-34-valn-korr-rises", "session-35-we-are-pirates-now", "wayward-gull"], published: true, updatedAt: "2026-10-26"
+      links: ["session-32-prepare-for-biscuit", "session-33-the-blessed-beach-one", "session-34-valn-korr-rises", "session-35-we-are-pirates-now", "session-36-wet-warded-level-13", "wayward-gull"], published: true, updatedAt: "2026-11-03"
     },
     {
       id: "auntie-brine", type: "npc", npcStatus: "active",
-      place: "Tower of Vengeance shore", role: "Swamp-hag sailor · Cook", relationship: "Friendly · Devotedly flirtatious with V", lastSeen: "Session 35",
+      place: "Tower of Vengeance", role: "Swamp-hag sailor · Cook", relationship: "Friendly · Devotedly flirtatious with V", lastSeen: "Session 36",
       title: "Auntie Brine",
       summary: "A formidable sailor with a powerful grip, a taste for danger, and an interest in V.",
       content: "Auntie Brine remained protectively close to V during the battle with Val'n Korr, declaring that he would not die on her watch. She survived the destruction of the Wayward Gull and reached the shore beneath the Tower of Vengeance, where she made certain V noticed the full tragedy of her injuries.",
-      links: ["session-32-prepare-for-biscuit", "session-33-the-blessed-beach-one", "session-34-valn-korr-rises", "session-35-we-are-pirates-now", "wayward-gull"], published: true, updatedAt: "2026-10-26"
+      links: ["session-32-prepare-for-biscuit", "session-33-the-blessed-beach-one", "session-34-valn-korr-rises", "session-35-we-are-pirates-now", "session-36-wet-warded-level-13", "wayward-gull"], published: true, updatedAt: "2026-11-03"
     },
     {
       id: "thymbris-bent-mast-bramblehorn", type: "npc", npcStatus: "active",
-      place: "Tower of Vengeance shore", role: "Satyr captain · Reluctant advisor", relationship: "Ally · Avenged", lastSeen: "Session 35",
+      place: "Traveling with the party", role: "Satyr captain · Defensive companion", relationship: "Selected party ally", lastSeen: "Session 36",
       title: "Thymbris “Bent Mast” Bramblehorn",
       summary: "An eccentric old satyr captain tempted back onto the Darklake by one final adventure.",
-      content: "A weathered satyr sailor haunted by the loss of the Widow’s Teeth and Maelis Vey, the bard he loved and left behind. During the battle with Val'n Korr, Thymbris finally found his aim, striking it with shot, fire, and a flaming bottle. He survived the destruction of the Wayward Gull and reached the Tower of Vengeance shore after the creature fell.",
-      links: ["session-31-toward-the-tower-of-vengeance", "session-32-prepare-for-biscuit", "session-33-the-blessed-beach-one", "session-34-valn-korr-rises", "session-35-we-are-pirates-now", "valn-korr", "wayward-gull"], published: true, updatedAt: "2026-10-26"
+      content: "A weathered satyr sailor haunted by the loss of the Widow’s Teeth and Maelis Vey, the bard he loved and left behind. After reaching the Tower of Vengeance, the party selected Thymbris to accompany their hunt for the talisman components. His presence bolsters nearby allies’ defenses and he can invoke Bless, though his drunken behavior remains tactically unpredictable. Biscuit preferred Flint Whistle and has promised consequences if Thymbris gets anyone hurt.",
+      links: ["session-31-toward-the-tower-of-vengeance", "session-32-prepare-for-biscuit", "session-33-the-blessed-beach-one", "session-34-valn-korr-rises", "session-35-we-are-pirates-now", "session-36-wet-warded-level-13", "valn-korr", "wayward-gull", "banishment-talisman-components"], published: true, updatedAt: "2026-11-03"
     },
     {
       id: "droki", type: "npc", npcStatus: "deceased",
