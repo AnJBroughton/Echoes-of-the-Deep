@@ -18,6 +18,8 @@ window.WIKI_DATA = {
       type: "recap",
       title: "Session 36 — Wet, Warded, and Level 13",
       summary: "The party reaches Araz’s tower, uncovers Deren’s past, accepts an indecently difficult shopping list, and advances to Level 13.",
+      image: "assets/images/session-36-wet-warded-level-13.jpg?v=20261103",
+      imageFit: "cover",
       content: `Gather close, you damp little legends, and wring the Darklake from your undergarments, for our tale begins upon a shore littered with wreckage, wounded dignity, and the sad remains of a perfectly serviceable boat. Prince Deren lay broken beneath the Tower of Vengeance until Nari poured seventy points of sixth-level healing into his enormous furry frame and Helexisys followed with hands so restorative that the bard has been expressly forbidden from describing the scene. Deren’s flesh mended, but something deeper remained torn. The shore felt familiar, and the memories behind his eyes were beginning to knock.
 
 The survivors made camp. V searched the wreckage and recovered neither shield nor crossbow, proving that the Darklake takes trophies and has appalling taste. Flint Whistle stood guard with his eyes burning red, Helexisys joined the watch after his trance, and Biscuit slept beside Deren. In the quiet, the prince confessed that he could not remember ever having friends before them. Friendship, it seems, is simply a warm body beside you in the dark who does not steal your boots.
