@@ -18,6 +18,8 @@ window.WIKI_DATA = {
       type: "recap",
       title: "Session 37 — Thymbris Apologizes to the Cavern",
       summary: "The party enters the Wormwrithings with a magical rat, an unreliable satyr, and two impossible trophies on its shopping list.",
+      image: "assets/images/session-37-thymbris-apologizes-to-the-cavern.jpg?v=20261110",
+      imageFit: "cover",
       content: `Gather close, you glittering denizens of the deep, for our heroes began this chapter with the most radical strategy ever proposed by adventurers hunting demon lords: they slept first. They woke in Araz’s tower to a breakfast seasoned with homesickness—swamp biscuits for Biscuit, apples for Nari, and familiar comforts for everyone else, though history has mercifully misplaced the owners. Araz offered custom rooms, drow-silk piwafi cloaks, and protective amulets before unveiling the morning’s modest errands: steal an intact purple worm egg from the Wormwrithings and, since they were already shopping among nightmares, pluck the central eye from a beholder.
 
 Before departure came the least glamorous rite of heroism: reducing the payroll. Most of the surviving crew were sent back toward Mantol Derith by boat. Thymbris, already paid and therefore tragically nonrefundable, received the stirring new command to “earn your keep.” Auntie Brine gave V a farewell kiss with enough spikes to qualify as light weapon damage. Knuckle and Helexisys exchanged a warrior’s fist bump. Biscuit hugged Flint Whistle, then took to the air and hovered fifty feet above Thymbris, demonstrating both affection and excellent tactical judgment.
@@ -31,7 +33,7 @@ In the Oblivion, the party chose the left-hand passage and discovered an Umber H
 The next performance began with cultists arguing in the dark over offerings to their demon lord, Laugus. Biscuit understood their Abyssal. Everyone else heard reptilian gibberish with strong committee-meeting energy. The party crept closer until Thymbris stepped squarely into sludge and apologized to the entire cavern. Troglodytes arrived, sent forward by Hislat, and the tunnels erupted into violence. V answered with blood-fueled strikes. A lucky doubloon helped turn aside the creatures’ stench. Biscuit filled the passage with killing cold, Nari followed with an Ice Knife and arrow, and Thymbris contributed a flaming “juggalug Molotov,” sacrificing more alcohol upon the altar of questionable tactics.
 
 Four troglodytes died. The survivors fled back along the route the party had used, carrying terror, stench, and presumably a very poor review of the entertainment. Somewhere behind the heroes, another purple worm was indicated but remained unseen. Ahead waited cultists, Laugus, Hislat, and whatever else calls the Wormwrithings home. The party still needs an intact egg, a beholder’s eye, and a better plan for keeping Thymbris quiet. Two of those goals may actually be possible.`,
-      links: ["session-36-wet-warded-level-13", "araz", "thymbris-bent-mast-bramblehorn", "polly-ethereal-ranger", "clack-autognome", "auntie-brine", "knuckle-leshy", "banishment-talisman-components"],
+      links: ["session-36-wet-warded-level-13", "araz", "thymbris-bent-mast-bramblehorn", "polly-ethereal-ranger", "clack-autognome", "auntie-brine", "knuckle-leshy", "banishment-talisman-components", "widows-teeth-lucky-doubloon"],
       published: true,
       updatedAt: "2026-11-10"
     },
@@ -164,6 +166,24 @@ The party entered the Wormwrithings to pursue the egg and beholder eye together.
 
 Once the components are assembled, the party must wound or defeat a true demon lord while the others are gathered so Araz can complete the banishment.`,
       links: ["session-36-wet-warded-level-13", "session-37-thymbris-apologizes-to-the-cavern", "araz"],
+      published: true,
+      updatedAt: "2026-11-10"
+    },
+    {
+      id: "widows-teeth-lucky-doubloon",
+      type: "item",
+      category: "relic",
+      holder: "Party · Everyone except Biscuit",
+      uses: "1 each · After a failed roll",
+      status: "Carried",
+      title: "Widow’s Teeth Lucky Doubloons",
+      effect: {
+        rarity: "Enchanted sailor’s charm · Recharge unknown",
+        text: "After a bad roll, the bearer can call upon the doubloon’s luck to reroll it. The exact limits of the charm have not yet been confirmed."
+      },
+      summary: "Old doubloons from the Widow’s Teeth, carried as lucky charms by everyone except Biscuit.",
+      content: "Before entering the Wormwrithings, Thymbris distributed old doubloons from the Widow’s Teeth as lucky charms. Each member of the party carries one except Biscuit, who rejected his coin, dropped it into the dirt, and spat on it. Nari’s doubloon grew warm in her hand, and Thymbris explained that a bearer could invoke a coin after a bad roll to reroll it. The exact limits and recharge of the charms have not yet been confirmed.",
+      links: ["session-37-thymbris-apologizes-to-the-cavern", "thymbris-bent-mast-bramblehorn"],
       published: true,
       updatedAt: "2026-11-10"
     },
