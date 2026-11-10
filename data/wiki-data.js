@@ -4,15 +4,37 @@ window.WIKI_DATA = {
     title: "Echoes of the Deep",
     subtitle: "A player’s guide to the known world",
     home: {
-      currentEntryId: "session-36-wet-warded-level-13",
-      currentEyebrow: "Current chapter · Wet, Warded, and Level 13",
-      currentObjective: "Choose the first component for Araz’s banishment talisman and begin the hunt with Thymbris.",
+      currentEntryId: "session-37-thymbris-apologizes-to-the-cavern",
+      currentEyebrow: "Current chapter · Thymbris Apologizes to the Cavern",
+      currentObjective: "Find an intact purple worm egg and a beholder’s central eye in the Wormwrithings—preferably before Thymbris alerts everything else.",
       priorityIds: ["banishment-talisman-components", "prince-derendil", "ruby-in-the-rough", "73b9a360-d853-4664-8d54-fbffc02de78e"],
       recentLimit: 6,
       timelineLimit: 3
     }
   },
   entries: [
+    {
+      id: "session-37-thymbris-apologizes-to-the-cavern",
+      type: "recap",
+      title: "Session 37 — Thymbris Apologizes to the Cavern",
+      summary: "The party enters the Wormwrithings with a magical rat, an unreliable satyr, and two impossible trophies on its shopping list.",
+      content: `Gather close, you glittering denizens of the deep, for our heroes began this chapter with the most radical strategy ever proposed by adventurers hunting demon lords: they slept first. They woke in Araz’s tower to a breakfast seasoned with homesickness—swamp biscuits for Biscuit, apples for Nari, and familiar comforts for everyone else, though history has mercifully misplaced the owners. Araz offered custom rooms, drow-silk piwafi cloaks, and protective amulets before unveiling the morning’s modest errands: steal an intact purple worm egg from the Wormwrithings and, since they were already shopping among nightmares, pluck the central eye from a beholder.
+
+Before departure came the least glamorous rite of heroism: reducing the payroll. Most of the surviving crew were sent back toward Mantol Derith by boat. Thymbris, already paid and therefore tragically nonrefundable, received the stirring new command to “earn your keep.” Auntie Brine gave V a farewell kiss with enough spikes to qualify as light weapon damage. Knuckle and Helexisys exchanged a warrior’s fist bump. Biscuit hugged Flint Whistle, then took to the air and hovered fifty feet above Thymbris, demonstrating both affection and excellent tactical judgment.
+
+Thymbris distributed old doubloons from the Widow’s Teeth as lucky charms. Nari accepted hers, and the coin warmed in her hand with the promise of turning one future disaster into a reroll. Biscuit rejected his with such conviction that it struck the dirt and received a ceremonial coating of rabbit spit. Somewhere, the spirit of maritime tradition quietly requested a transfer.
+
+Then came Polly: an ethereal rat-like ranger able to scout, spy, and sneak where steel and fire would only make introductions awkward. She cannot fight, but Thymbris immediately adopted her in the only language he understands. “You ain’t a bird, but you are my buddy,” he declared, proving that even a magical rat may receive the sentimental encore of a drunken rock ballad. With blessings, protection, and healing promised by those remaining at the tower, the company stepped through a swirling portal into a dripping cavern webbed with dark tunnel mouths. One traveler wisely waited to see whether everyone else would enter first. Experience is merely cowardice with better branding.
+
+In the Oblivion, the party chose the left-hand passage and discovered an Umber Hulk shortly after Thymbris’s attempt at stealth achieved the acoustic character of a collapsing brewery. His pistol jammed. Biscuit’s Fire Bolt missed. Nari’s Guiding Bolt did not. Helexisys struck with a critical blow and a smite large enough to make the creature reconsider both tunneling and religion, while another hero accepted an opportunity attack to seize better ground. Thymbris finally outlined the burrowing brute with Faerie Fire, then rescued a disastrous pistol attempt by insulting his ex-wife so viciously that the Umber Hulk suffered twelve points of emotional damage. Biscuit ended the affair with Shatter through his turtle-headed staff, filling the cavern with acid, fragments, and the distant rumble of a purple worm that had heard dinner being announced.
+
+The next performance began with cultists arguing in the dark over offerings to their demon lord, Laugus. Biscuit understood their Abyssal. Everyone else heard reptilian gibberish with strong committee-meeting energy. The party crept closer until Thymbris stepped squarely into sludge and apologized to the entire cavern. Troglodytes arrived, sent forward by Hislat, and the tunnels erupted into violence. V answered with blood-fueled strikes. A lucky doubloon helped turn aside the creatures’ stench. Biscuit filled the passage with killing cold, Nari followed with an Ice Knife and arrow, and Thymbris contributed a flaming “juggalug Molotov,” sacrificing more alcohol upon the altar of questionable tactics.
+
+Four troglodytes died. The survivors fled back along the route the party had used, carrying terror, stench, and presumably a very poor review of the entertainment. Somewhere behind the heroes, another purple worm was indicated but remained unseen. Ahead waited cultists, Laugus, Hislat, and whatever else calls the Wormwrithings home. The party still needs an intact egg, a beholder’s eye, and a better plan for keeping Thymbris quiet. Two of those goals may actually be possible.`,
+      links: ["session-36-wet-warded-level-13", "araz", "thymbris-bent-mast-bramblehorn", "polly-ethereal-ranger", "clack-autognome", "auntie-brine", "knuckle-leshy", "banishment-talisman-components"],
+      published: true,
+      updatedAt: "2026-11-10"
+    },
     {
       id: "session-36-wet-warded-level-13",
       type: "recap",
@@ -128,20 +150,22 @@ So ended the crossing: Val'n Korr slain, the Wayward Gull reduced to kindling, a
       type: "quest",
       title: "Components of the Banishment Talisman",
       summary: "Gather seven impossible components so Araz can forge a talisman capable of gathering and banishing the demon lords.",
-      content: `Status: Active
+      content: `Status: Active — Expedition underway in the Wormwrithings
 
-☐ An intact, unhatched purple worm egg
-☐ The central eye of a beholder
+☐ An intact, unhatched purple worm egg — Current target in the Wormwrithings
+☐ The central eye of a beholder — Current target in the Wormwrithings
 ☐ Six feathers from six different angels
 ☐ The heart of a goristro
 ☐ Thirteen timmasks grown in the footprints of a marilith, balor, or goristro
 ☐ Blood or ichor from a true demon lord
 ☐ Cleave’s grimoire
 
-Once the components are assembled, the party must wound or defeat a true demon lord while the others are gathered so Araz can complete the banishment. The party has not yet chosen which component to pursue first.`,
-      links: ["session-36-wet-warded-level-13", "araz"],
+The party entered the Wormwrithings to pursue the egg and beholder eye together. They have encountered an Umber Hulk, cultists devoted to Laugus, troglodytes sent by Hislat, and signs of a nearby purple worm.
+
+Once the components are assembled, the party must wound or defeat a true demon lord while the others are gathered so Araz can complete the banishment.`,
+      links: ["session-36-wet-warded-level-13", "session-37-thymbris-apologizes-to-the-cavern", "araz"],
       published: true,
-      updatedAt: "2026-11-03"
+      updatedAt: "2026-11-10"
     },
     {
       id: "drokis-hat",
@@ -382,13 +406,21 @@ Once the components are assembled, the party must wound or defeat a true demon l
       links: ["session-34-valn-korr-rises", "session-35-we-are-pirates-now", "thymbris-bent-mast-bramblehorn", "wayward-gull"], published: true, updatedAt: "2026-10-26"
     },
     {
+      id: "polly-ethereal-ranger", type: "npc", npcStatus: "active",
+      place: "The Oblivion · Wormwrithings", role: "Ethereal rat-like ranger · Scout", relationship: "Party companion", lastSeen: "Session 37",
+      title: "Polly",
+      summary: "An ethereal, rat-like ranger who can scout and spy but cannot fight.",
+      content: "Polly joined the expedition at Araz’s tower as a specialized scout. She can move ahead of the party, observe threats, and gather information, but cannot participate in combat. Thymbris immediately accepted her as his buddy despite noting that she is not a bird, beginning what may become the Underdark’s strangest sentimental rock ballad.",
+      links: ["session-37-thymbris-apologizes-to-the-cavern", "araz", "thymbris-bent-mast-bramblehorn"], published: true, updatedAt: "2026-11-10"
+    },
+    {
       id: "araz", type: "npc", npcStatus: "active",
-      place: "Tower of Vengeance", role: "Ancient drow archmage · Deren’s former tutor", relationship: "Cautious ally", lastSeen: "Session 36",
+      place: "Tower of Vengeance", role: "Ancient drow archmage · Deren’s former tutor", relationship: "Cautious ally · Quest patron", lastSeen: "Session 37",
       title: "Araz",
       summary: "A scarred, ancient drow archmage who saved Deren, guided the party toward his tower, and now seeks to banish the demon lords.",
       image: "assets/images/araz.jpg?v=20261103",
       content: "Araz is an ancient, scarred drow archmage who dwells behind the formidable wards of the Tower of Vengeance. He received the party with impeccable courtesy, comfortable furniture, and shimmering drinks. Long ago, he was a respected surface archmage who opposed the tyrannical mage Cleave and was exiled. Queen Merith later sheltered him and made him tutor to her young son. When Cleave killed the royal family, Araz transformed the surviving prince into a quaggoth to hide and save him. The spell damaged the boy’s memories and identity, creating the Deren the party knows. Araz searched for him for years and admits to bending time, chance, and travel to guide the party toward the tower after they chose to protect Deren. He now offers to restore Deren and has tasked the party with gathering the components for a talisman capable of banishing the demon lords. Though his account appears sincere, the party remains appropriately cautious.",
-      links: ["session-36-wet-warded-level-13", "prince-derendil", "banishment-talisman-components"], published: true, updatedAt: "2026-11-03"
+      links: ["session-36-wet-warded-level-13", "session-37-thymbris-apologizes-to-the-cavern", "prince-derendil", "banishment-talisman-components"], published: true, updatedAt: "2026-11-10"
     },
     {
       id: "tessa-ray", type: "npc", npcStatus: "unknown",
@@ -408,35 +440,35 @@ Once the components are assembled, the party must wound or defeat a true demon l
     },
     {
       id: "clack-autognome", type: "npc", npcStatus: "active",
-      place: "Tower of Vengeance", role: "Ancient autognome · Pirate", relationship: "Biscuit’s friend · Party ally", lastSeen: "Session 36",
+      place: "Returning toward Mantol Derith", role: "Ancient autognome · Pirate", relationship: "Biscuit’s friend · Party ally", lastSeen: "Session 37",
       title: "Flint Whistle",
       summary: "The ancient autognome once called Clack, restored to his true identity by Biscuit.",
-      content: "The moss-covered autognome once known as Clack is truly Flint Whistle, an ancient construct created by the tiefling artificer Tessa Ray. During the battle with Val'n Korr, Flint leapt from the ship and pulled Biscuit free of a tentacle. His eyes now glow green, and he proudly calls Biscuit his friend. After surviving the wreck, Flint declared that they are pirates now.",
-      links: ["session-32-prepare-for-biscuit", "session-33-the-blessed-beach-one", "session-34-valn-korr-rises", "session-35-we-are-pirates-now", "session-36-wet-warded-level-13", "tessa-ray", "wayward-gull"], published: true, updatedAt: "2026-11-03"
+      content: "The moss-covered autognome once known as Clack is truly Flint Whistle, an ancient construct created by the tiefling artificer Tessa Ray. During the battle with Val'n Korr, Flint leapt from the ship and pulled Biscuit free of a tentacle. Before the Wormwrithings expedition, Biscuit hugged Flint farewell as most of the surviving crew departed toward Mantol Derith by boat.",
+      links: ["session-32-prepare-for-biscuit", "session-33-the-blessed-beach-one", "session-34-valn-korr-rises", "session-35-we-are-pirates-now", "session-36-wet-warded-level-13", "session-37-thymbris-apologizes-to-the-cavern", "tessa-ray", "wayward-gull"], published: true, updatedAt: "2026-11-10"
     },
     {
       id: "knuckle-leshy", type: "npc", npcStatus: "active",
-      place: "Tower of Vengeance", role: "Peg-legged leshy sailor", relationship: "Friendly · Respects V", lastSeen: "Session 36",
+      place: "Returning toward Mantol Derith", role: "Peg-legged leshy sailor", relationship: "Friendly · Respects V", lastSeen: "Session 37",
       title: "Knuckle",
       summary: "A peg-legged, mossy leshy sailor with strong opinions about wind and an alarming appetite.",
-      content: "Knuckle was swallowed whole alongside Helexisys by Val'n Korr and tried to blast free from inside its acid-filled belly. V pried open the creature’s jaws and rescued them, earning Knuckle’s lasting respect and a grateful fist bump. Knuckle survived the destruction of the Wayward Gull and insists that being swallowed did not hurt nearly as much as expected.",
-      links: ["session-32-prepare-for-biscuit", "session-33-the-blessed-beach-one", "session-34-valn-korr-rises", "session-35-we-are-pirates-now", "session-36-wet-warded-level-13", "wayward-gull"], published: true, updatedAt: "2026-11-03"
+      content: "Knuckle was swallowed whole alongside Helexisys by Val'n Korr and later rescued when V forced open the creature’s jaws. Before departing toward Mantol Derith with the reduced crew, Knuckle exchanged a warrior’s fist bump with Helexisys.",
+      links: ["session-32-prepare-for-biscuit", "session-33-the-blessed-beach-one", "session-34-valn-korr-rises", "session-35-we-are-pirates-now", "session-36-wet-warded-level-13", "session-37-thymbris-apologizes-to-the-cavern", "wayward-gull"], published: true, updatedAt: "2026-11-10"
     },
     {
       id: "auntie-brine", type: "npc", npcStatus: "active",
-      place: "Tower of Vengeance", role: "Swamp-hag sailor · Cook", relationship: "Friendly · Devotedly flirtatious with V", lastSeen: "Session 36",
+      place: "Returning toward Mantol Derith", role: "Swamp-hag sailor · Cook", relationship: "Friendly · Devotedly flirtatious with V", lastSeen: "Session 37",
       title: "Auntie Brine",
       summary: "A formidable sailor with a powerful grip, a taste for danger, and an interest in V.",
-      content: "Auntie Brine remained protectively close to V during the battle with Val'n Korr, declaring that he would not die on her watch. She survived the destruction of the Wayward Gull and reached the shore beneath the Tower of Vengeance, where she made certain V noticed the full tragedy of her injuries.",
-      links: ["session-32-prepare-for-biscuit", "session-33-the-blessed-beach-one", "session-34-valn-korr-rises", "session-35-we-are-pirates-now", "session-36-wet-warded-level-13", "wayward-gull"], published: true, updatedAt: "2026-11-03"
+      content: "Auntie Brine remained protectively close to V during the battle with Val'n Korr. Before departing toward Mantol Derith with the reduced crew, she gave V a farewell kiss sharp enough to remind him of her even after the bleeding stopped.",
+      links: ["session-32-prepare-for-biscuit", "session-33-the-blessed-beach-one", "session-34-valn-korr-rises", "session-35-we-are-pirates-now", "session-36-wet-warded-level-13", "session-37-thymbris-apologizes-to-the-cavern", "wayward-gull"], published: true, updatedAt: "2026-11-10"
     },
     {
       id: "thymbris-bent-mast-bramblehorn", type: "npc", npcStatus: "active",
-      place: "Traveling with the party", role: "Satyr captain · Defensive companion", relationship: "Selected party ally", lastSeen: "Session 36",
+      place: "The Oblivion · Wormwrithings", role: "Satyr captain · Defensive companion", relationship: "Selected party ally · Stealth liability", lastSeen: "Session 37",
       title: "Thymbris “Bent Mast” Bramblehorn",
       summary: "An eccentric old satyr captain tempted back onto the Darklake by one final adventure.",
-      content: "A weathered satyr sailor haunted by the loss of the Widow’s Teeth and Maelis Vey, the bard he loved and left behind. After reaching the Tower of Vengeance, the party selected Thymbris to accompany their hunt for the talisman components. His presence bolsters nearby allies’ defenses and he can invoke Bless, though his drunken behavior remains tactically unpredictable. Biscuit preferred Flint Whistle and has promised consequences if Thymbris gets anyone hurt.",
-      links: ["session-31-toward-the-tower-of-vengeance", "session-32-prepare-for-biscuit", "session-33-the-blessed-beach-one", "session-34-valn-korr-rises", "session-35-we-are-pirates-now", "session-36-wet-warded-level-13", "valn-korr", "wayward-gull", "banishment-talisman-components"], published: true, updatedAt: "2026-11-03"
+      content: "A weathered satyr sailor haunted by the loss of the Widow’s Teeth and Maelis Vey. Thymbris accompanied the party into the Wormwrithings after handing out enchanted doubloons from his lost ship. His stealth has proven catastrophic, but his Faerie Fire, flaming bottles, vicious mockery, and defensive presence remain useful. He has also enthusiastically adopted Polly as his new buddy.",
+      links: ["session-31-toward-the-tower-of-vengeance", "session-32-prepare-for-biscuit", "session-33-the-blessed-beach-one", "session-34-valn-korr-rises", "session-35-we-are-pirates-now", "session-36-wet-warded-level-13", "session-37-thymbris-apologizes-to-the-cavern", "polly-ethereal-ranger", "valn-korr", "wayward-gull", "banishment-talisman-components"], published: true, updatedAt: "2026-11-10"
     },
     {
       id: "droki", type: "npc", npcStatus: "deceased",
