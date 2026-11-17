@@ -4,15 +4,35 @@ window.WIKI_DATA = {
     title: "Echoes of the Deep",
     subtitle: "A player’s guide to the known world",
     home: {
-      currentEntryId: "session-37-thymbris-apologizes-to-the-cavern",
-      currentEyebrow: "Current chapter · Thymbris Apologizes to the Cavern",
-      currentObjective: "Find an intact purple worm egg and a beholder’s central eye in the Wormwrithings—preferably before Thymbris alerts everything else.",
+      currentEntryId: "session-38-scorched-nudist-colony",
+      currentEyebrow: "Current chapter · The Scorched Nudist Colony",
+      currentObjective: "Find Haneh, survive the worm nursery, and secure an intact purple worm egg before the fleeing Fomorian returns with its mother.",
       priorityIds: ["banishment-talisman-components", "prince-derendil", "ruby-in-the-rough", "73b9a360-d853-4664-8d54-fbffc02de78e"],
       recentLimit: 6,
       timelineLimit: 3
     }
   },
   entries: [
+    {
+      id: "session-38-scorched-nudist-colony",
+      type: "recap",
+      title: "Session 38 — The Scorched Nudist Colony",
+      summary: "A drow hunter leads the party into a purple worm nursery, where stealth dies loudly and nearly everything else catches fire.",
+      content: `Gather close, cave-crawlers, for the night began in worm-carved tunnels with vanished troglodytes, an unseen stranger, and a baritone voice promising deaths too horrible to imagine. Nari listened closely and caught the trick: the terrifying man in the darkness was, in fact, a woman disguising her voice. Biscuit spotted the mage-armored figure behind a barricade and negotiated peace with the comforting observation that her missing mother was “probably dead.” Thus did the party meet Haneh Halin, a drow hunter searching for both her mother and the purple worm eggs the woman had been contracted to retrieve.
+
+Haneh immediately proved herself the expedition’s most practical member by pointing out the thirty-foot drop directly ahead. Pitons and elven rope won the vote over Biscuit’s offer of “little turtle wings,” although the descent still tried to claim Nari and Helexisys before Biscuit’s Feather Fall returned dignity to their landings. Below, Haneh announced that they had reached a worm nursery. Noise, light, and combat could wake the egg-protectors—or worse, the mother worms. Biscuit absorbed this warning, lit a pebble, bowled it down the northern passage, abandoned the party’s veil of silence, flew off alone, was bitten by bats, and got slapped from the air by a troglodyte. There are plans, my friends, and then there are Biscuit plans.
+
+Cornered by troglodytes and giant spiders, Biscuit answered with Riv’s flamethrower and a freezing blast. Helexisys followed with a fourth-level Fireball, converting the ice into steam and the stealth operation into a public festival. A furious Fomorian lumbered into the fight bellowing, “Save the eggs, Max Archam!” and tore a stone from the wall for a twenty-two-damage greeting. More spiders and troglodytes piled in. Thymbris blessed V and Helexisys, misfired his pistol, and made certain Biscuit heard, “Hey, mate, you’re a good guy, even if you don’t like me!” V then crushed a spider with a glorious critical hit and followed it with a natural one, because fortune prefers comedy to consistency.
+
+Biscuit, surrounded and apparently delighted, declared, “This is what we live for,” and kept the chamber cooking. A thunderous teleporting attack killed a troglodyte and a spider, but its report carried three hundred feet through the nursery and summoned another giant. Nari answered with Firestorm. Helexisys added starlight and yet another Fireball. Between the flames, the melting ice, and the egg-guardians’ rapidly disappearing clothing, the purple worm nursery became the Underdark’s first scorched nudist colony—admission free, survival not guaranteed.
+
+The wardrobe crisis worsened when a Fomorian struck V and a spider webbed Biscuit. The rabbit tore free, burned the spider, and flew onto its back with the enthusiasm of a man mounting a horse that desperately wished to file a complaint. V asked the giants in Undercommon whether the eggs were worth their lives. “They are our precious,” came the answer. “They’re worth everything.” V and Nari brought one Fomorian down, and its death collapsed part of the ceiling in a thirty-six-damage shower of stone. V attempted to send the dead giant back into battle, but the corpse rolled a natural one, swung its club at destiny, and fell over. Even necromancy cannot repair poor form.
+
+Helexisys ended the exchange with one final Fireball. The surviving Fomorian fled into the darkness, shouting that it would find its mother and warning that the intruders wanted the babies. The party now stands battered inside a scorched worm nursery, surrounded by burned troglodytes, fallen stone, and the consequences of every noise Biscuit has ever considered making. Haneh is somewhere among the rubble. The worm—and perhaps several more—remains unseen. The intact egg has not yet been found, the beholder still has both eyes, and a furious giant is running to tell its mother. At least no one can accuse the company of entering quietly and leaving no impression.`,
+      links: ["session-37-thymbris-apologizes-to-the-cavern", "haneh-halin", "thymbris-bent-mast-bramblehorn", "banishment-talisman-components"],
+      published: true,
+      updatedAt: "2026-11-17"
+    },
     {
       id: "session-37-thymbris-apologizes-to-the-cavern",
       type: "recap",
@@ -152,9 +172,9 @@ So ended the crossing: Val'n Korr slain, the Wayward Gull reduced to kindling, a
       type: "quest",
       title: "Components of the Banishment Talisman",
       summary: "Gather seven impossible components so Araz can forge a talisman capable of gathering and banishing the demon lords.",
-      content: `Status: Active — Expedition underway in the Wormwrithings
+      content: `Status: Active — Inside a purple worm nursery in the Wormwrithings
 
-☐ An intact, unhatched purple worm egg — Current target in the Wormwrithings
+☐ An intact, unhatched purple worm egg — Immediate target in the nursery
 ☐ The central eye of a beholder — Current target in the Wormwrithings
 ☐ Six feathers from six different angels
 ☐ The heart of a goristro
@@ -162,12 +182,12 @@ So ended the crossing: Val'n Korr slain, the Wayward Gull reduced to kindling, a
 ☐ Blood or ichor from a true demon lord
 ☐ Cleave’s grimoire
 
-The party entered the Wormwrithings to pursue the egg and beholder eye together. They have encountered an Umber Hulk, cultists devoted to Laugus, troglodytes sent by Hislat, and signs of a nearby purple worm.
+The party entered the Wormwrithings to pursue the egg and beholder eye together. Guided by the drow hunter Haneh Halin, they descended into a purple worm nursery and fought troglodytes, giant spiders, and Fomorians protecting the eggs. One Fomorian escaped to warn its mother. Haneh’s location among the rubble is currently unknown, and no intact egg has yet been secured.
 
 Once the components are assembled, the party must wound or defeat a true demon lord while the others are gathered so Araz can complete the banishment.`,
-      links: ["session-36-wet-warded-level-13", "session-37-thymbris-apologizes-to-the-cavern", "araz"],
+      links: ["session-36-wet-warded-level-13", "session-37-thymbris-apologizes-to-the-cavern", "session-38-scorched-nudist-colony", "haneh-halin", "araz"],
       published: true,
-      updatedAt: "2026-11-10"
+      updatedAt: "2026-11-17"
     },
     {
       id: "widows-teeth-lucky-doubloon",
@@ -426,6 +446,14 @@ Once the components are assembled, the party must wound or defeat a true demon l
       links: ["session-34-valn-korr-rises", "session-35-we-are-pirates-now", "thymbris-bent-mast-bramblehorn", "wayward-gull"], published: true, updatedAt: "2026-10-26"
     },
     {
+      id: "haneh-halin", type: "npc", npcStatus: "unknown",
+      place: "Purple worm nursery · Wormwrithings", role: "Drow hunter · Spelunker", relationship: "Cautious ally · Guide", lastSeen: "Session 38",
+      title: "Haneh Halin",
+      summary: "An experienced drow hunter searching the Wormwrithings for her missing mother and purple worm eggs.",
+      content: "Haneh first warned the party away by telepathically disguising her voice as a threatening baritone. Once Biscuit found her behind a rubble barricade, she negotiated peacefully and revealed that she was searching for her missing mother, who had taken a contract to retrieve purple worm eggs. Haneh proved to be an experienced and sincere spelunker, warning the party about dangerous drops and the sensitivity of the worm nursery to light, noise, and combat. During the battle with the egg-guardians, she disappeared somewhere among the rubble. Her current condition and exact location are unknown.",
+      links: ["session-38-scorched-nudist-colony", "banishment-talisman-components"], published: true, updatedAt: "2026-11-17"
+    },
+    {
       id: "polly-ethereal-ranger", type: "npc", npcStatus: "active",
       place: "The Oblivion · Wormwrithings", role: "Ethereal rat-like ranger · Scout", relationship: "Party companion", lastSeen: "Session 37",
       title: "Polly",
@@ -484,11 +512,11 @@ Once the components are assembled, the party must wound or defeat a true demon l
     },
     {
       id: "thymbris-bent-mast-bramblehorn", type: "npc", npcStatus: "active",
-      place: "The Oblivion · Wormwrithings", role: "Satyr captain · Defensive companion", relationship: "Selected party ally · Stealth liability", lastSeen: "Session 37",
+      place: "Purple worm nursery · Wormwrithings", role: "Satyr captain · Defensive companion", relationship: "Selected party ally · Stealth liability", lastSeen: "Session 38",
       title: "Thymbris “Bent Mast” Bramblehorn",
       summary: "An eccentric old satyr captain tempted back onto the Darklake by one final adventure.",
-      content: "A weathered satyr sailor haunted by the loss of the Widow’s Teeth and Maelis Vey. Thymbris accompanied the party into the Wormwrithings after handing out enchanted doubloons from his lost ship. His stealth has proven catastrophic, but his Faerie Fire, flaming bottles, vicious mockery, and defensive presence remain useful. He has also enthusiastically adopted Polly as his new buddy.",
-      links: ["session-31-toward-the-tower-of-vengeance", "session-32-prepare-for-biscuit", "session-33-the-blessed-beach-one", "session-34-valn-korr-rises", "session-35-we-are-pirates-now", "session-36-wet-warded-level-13", "session-37-thymbris-apologizes-to-the-cavern", "polly-ethereal-ranger", "valn-korr", "wayward-gull", "banishment-talisman-components"], published: true, updatedAt: "2026-11-10"
+      content: "A weathered satyr sailor haunted by the loss of the Widow’s Teeth and Maelis Vey. Thymbris accompanied the party into the Wormwrithings after handing out enchanted doubloons from his lost ship. In the worm nursery, he blessed V and Helexisys, misfired his pistol, encouraged Biscuit despite their hostility, and rescued a disastrous shot by insulting his ex-wife so viciously that an Umber Hulk suffered for it. His stealth remains catastrophic, but his support is proving useful.",
+      links: ["session-31-toward-the-tower-of-vengeance", "session-32-prepare-for-biscuit", "session-33-the-blessed-beach-one", "session-34-valn-korr-rises", "session-35-we-are-pirates-now", "session-36-wet-warded-level-13", "session-37-thymbris-apologizes-to-the-cavern", "session-38-scorched-nudist-colony", "polly-ethereal-ranger", "valn-korr", "wayward-gull", "banishment-talisman-components"], published: true, updatedAt: "2026-11-17"
     },
     {
       id: "droki", type: "npc", npcStatus: "deceased",
