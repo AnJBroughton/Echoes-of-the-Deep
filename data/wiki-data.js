@@ -18,6 +18,8 @@ window.WIKI_DATA = {
       type: "recap",
       title: "Session 38 — The Scorched Nudist Colony",
       summary: "A drow hunter leads the party into a purple worm nursery, where stealth dies loudly and nearly everything else catches fire.",
+      image: "assets/images/session-38-scorched-nudist-colony.jpg?v=20261117",
+      imageFit: "cover",
       content: `Gather close, cave-crawlers, for the night began in worm-carved tunnels with vanished troglodytes, an unseen stranger, and a baritone voice promising deaths too horrible to imagine. Nari listened closely and caught the trick: the terrifying man in the darkness was, in fact, a woman disguising her voice. Biscuit spotted the mage-armored figure behind a barricade and negotiated peace with the comforting observation that her missing mother was “probably dead.” Thus did the party meet Haneh Halin, a drow hunter searching for both her mother and the purple worm eggs the woman had been contracted to retrieve.
 
 Haneh immediately proved herself the expedition’s most practical member by pointing out the thirty-foot drop directly ahead. Pitons and elven rope won the vote over Biscuit’s offer of “little turtle wings,” although the descent still tried to claim Nari and Helexisys before Biscuit’s Feather Fall returned dignity to their landings. Below, Haneh announced that they had reached a worm nursery. Noise, light, and combat could wake the egg-protectors—or worse, the mother worms. Biscuit absorbed this warning, lit a pebble, bowled it down the northern passage, abandoned the party’s veil of silence, flew off alone, was bitten by bats, and got slapped from the air by a troglodyte. There are plans, my friends, and then there are Biscuit plans.
