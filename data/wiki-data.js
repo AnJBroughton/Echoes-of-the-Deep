@@ -755,6 +755,20 @@ Once the components are assembled, the party must wound or defeat a true demon l
       "updatedAt": "2026-08-18"
     },
     {
+      "id": "trial-of-ten-eyes",
+      "type": "encounter",
+      "title": "The Trial of the Ten Eyes",
+      "summary": "An immersive three-part beholder trial of observation, memory, and forbidden history.",
+      "image": "",
+      "content": "Karazikar’s tenfold seal waits beneath the Wormwrithings. Rotate ancient eye mechanisms, restore scattered memories, invoke magical clues, and reconstruct the history the beholder tried to erase.\n\nOpen Player View for fullscreen screen sharing. Progress is saved in this browser.",
+      "launch": "encounter.html?id=trial-of-ten-eyes",
+      "playerView": "encounter.html?id=trial-of-ten-eyes&view=player",
+      "backup": "encounters/trial-of-ten-eyes-player.html",
+      "links": [],
+      "published": true,
+      "updatedAt": "2026-11-24"
+    },
+    {
       "id": "curse-of-the-unsavory-hunger",
       "type": "curse",
       "title": "Curse of the Unsavory Hunger",

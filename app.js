@@ -11,7 +11,7 @@ const npcFilters = document.querySelector('#npcFilters');
 const npcDirectory = document.querySelector('#npcDirectory');
 const dialog = document.querySelector('#entryDialog');
 const dialogContent = document.querySelector('#dialogContent');
-const labels = { memory: 'Memory', location: 'Location', npc: 'NPC', faction: 'Faction', lore: 'Lore', quest: 'Quest', item: 'Item', boon: 'Boon', curse: 'Curse', recap: 'Recap' };
+const labels = { memory: 'Memory', location: 'Location', npc: 'NPC', faction: 'Faction', lore: 'Lore', quest: 'Quest', item: 'Item', boon: 'Boon', curse: 'Curse', encounter: 'Interactive Encounter', recap: 'Recap' };
 let section = (location.hash.slice(1) || 'home').toLowerCase();
 let itemCategory = 'all';
 let npcStatus = 'all';
@@ -65,7 +65,7 @@ function renderHome() {
   const priorities = (config.priorityIds || []).map(findEntry).filter(Boolean);
   const recent = newest(entries.filter(entry => entry !== current), config.recentLimit || 6);
   const timeline = newest(entries.filter(entry => entry.type === 'recap'), config.timelineLimit || 3);
-  homeDashboard.innerHTML = `${current ? `<section class="home-current"><div class="home-current-image">${imageMarkup(current)}</div><div class="home-current-copy"><p class="eyebrow">${safe(config.currentEyebrow || 'Current chapter')}</p><h2>${safe(current.title)}</h2><p>${safe(current.summary || '')}</p><p class="objective"><strong>What comes next</strong><br>${safe(config.currentObjective || '')}</p><button class="button" type="button" data-home-id="${safe(current.id)}">Read the latest recap</button></div></section>` : ''}<section class="home-section"><h2>Latest discoveries</h2><div class="home-cards">${recent.map(homeCard).join('')}</div></section>${priorities.length ? `<section class="home-section"><h2>Party priorities</h2><div class="home-cards">${priorities.map(homeCard).join('')}</div></section>` : ''}<section class="home-section"><h2>Explore the archive</h2><div class="home-categories"><a href="#locations">Locations</a><a href="#npcs">NPCs</a><a href="#recaps">Session Recaps</a><a href="#quests">Quests</a><a href="#items">Items</a><a href="#boons-curses">Boons &amp; Curses</a><a href="#factions">Factions</a><a href="#memories">Memories</a></div></section>${timeline.length ? `<section class="home-section"><h2>Campaign timeline</h2><div class="home-cards">${timeline.map(homeCard).join('')}</div></section>` : ''}`;
+  homeDashboard.innerHTML = `${current ? `<section class="home-current"><div class="home-current-image">${imageMarkup(current)}</div><div class="home-current-copy"><p class="eyebrow">${safe(config.currentEyebrow || 'Current chapter')}</p><h2>${safe(current.title)}</h2><p>${safe(current.summary || '')}</p><p class="objective"><strong>What comes next</strong><br>${safe(config.currentObjective || '')}</p><button class="button" type="button" data-home-id="${safe(current.id)}">Read the latest recap</button></div></section>` : ''}<section class="home-section"><h2>Latest discoveries</h2><div class="home-cards">${recent.map(homeCard).join('')}</div></section>${priorities.length ? `<section class="home-section"><h2>Party priorities</h2><div class="home-cards">${priorities.map(homeCard).join('')}</div></section>` : ''}<section class="home-section"><h2>Explore the archive</h2><div class="home-categories"><a href="#locations">Locations</a><a href="#npcs">NPCs</a><a href="#recaps">Session Recaps</a><a href="#quests">Quests</a><a href="#items">Items</a><a href="#boons-curses">Boons &amp; Curses</a><a href="#encounters">Interactive Encounters</a><a href="#factions">Factions</a><a href="#memories">Memories</a></div></section>${timeline.length ? `<section class="home-section"><h2>Campaign timeline</h2><div class="home-cards">${timeline.map(homeCard).join('')}</div></section>` : ''}`;
   homeDashboard.querySelectorAll('[data-home-id]').forEach(card => card.onclick = () => openEntry(card.dataset.homeId));
 }
 function render() {
@@ -96,6 +96,9 @@ function openEntry(id) {
   dialogContent.innerHTML = `<div class="dialog-image" style="height:auto;aspect-ratio:3/2;overflow:hidden">${imageMarkup(entry)}</div><div class="dialog-body"><span class="tag">${safe(labels[entry.type] || entry.type)}</span><h2>${safe(entry.title)}</h2><p class="summary">${safe(entry.summary)}</p><div class="content">${safe(entry.content)}</div>${galleryMarkup(entry)}${related.length ? `<div class="links">${related.map(item => `<button data-link="${safe(item.id)}">${safe(item.title)}</button>`).join('')}</div>` : ''}</div>`;
   if (entry.effect) {
     dialogContent.querySelector('.content').insertAdjacentHTML('afterend', `<section class="item-effect" aria-label="Effect"><h3>Effect</h3><p class="effect-rarity">${safe(entry.effect.rarity)}</p><p>${safe(entry.effect.text)}</p></section>`);
+  }
+  if (entry.type === 'encounter') {
+    dialogContent.querySelector('.dialog-body').insertAdjacentHTML('beforeend', `<section class="encounter-actions" aria-label="Encounter views"><h3>Begin the encounter</h3><p>Open Player View for fullscreen screen sharing.</p><a href="${safe(entry.playerView || `${entry.launch}&view=player`)}">Launch Player View</a>${entry.backup ? `<a class="secondary wide" href="${safe(entry.backup)}" download>Download Player-Only Backup</a>` : ''}</section>`);
   }
   dialogContent.querySelectorAll('[data-link]').forEach(button => button.onclick = () => openEntry(button.dataset.link));
   dialog.showModal();

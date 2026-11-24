@@ -1,16 +1,33 @@
 # Echoes of the Deep — Player Wiki
 
-A spoiler-safe campaign reference for the players of **Echoes of the Deep**.
+A campaign reference and interactive encounter platform for **Echoes of the Deep**.
 
 ## Safety model
 
-This repository is player-facing. Never place DM notes, hidden motives, unrevealed encounters, secret treasure, or undiscovered clues here.
+This is a public, player-only wiki. Do not commit DM notes, solutions, or offline bundles that contain them.
+
+Keep DM material outside this repository.
 
 The site reads `data/wiki-data.js`. Only entries with `published: true` appear.
 
 ## Sections
 
-Memories, Locations, NPCs, Factions, Lore, Quests, Items, and Session Recaps.
+Memories, Locations, NPCs, Factions, Quests, Items, Boons & Curses, Interactive Encounters, and Session Recaps.
+
+## Interactive encounters
+
+`encounter.html` is a reusable player shell. It selects a player-safe definition from `data/encounters-player.js` using the `id` query parameter.
+
+- Player: `encounter.html?id=trial-of-ten-eyes&view=player`
+- Standalone: `encounters/trial-of-ten-eyes-player.html`
+
+Progress is stored in this browser and synchronized across Player View tabs. New encounters can reuse the same stage renderer.
+
+Regenerate standalone encounter files with:
+
+```sh
+node scripts/build-encounter-backups.mjs
+```
 
 ## Images
 

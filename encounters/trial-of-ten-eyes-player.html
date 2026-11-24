@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Standalone interactive encounter: The Trial of the Ten Eyes">
+  <title>The Trial of the Ten Eyes · Echoes of the Deep</title>
+  <style>:root {
+  --void:#05070a;
+  --deep:#091015;
+  --panel:#101a20;
+  --panel-soft:#152229;
+  --ink:#eee8da;
+  --muted:#aaa28f;
+  --line:#34454d;
+  --gold:#d6b45f;
+  --arcane:#a86cff;
+  --danger:#d95a68;
+  --success:#64c7a5;
+  --shadow:0 24px 80px #000b;
+}
+*{box-sizing:border-box}
+html,body{min-height:100%;margin:0;background:var(--void);color:var(--ink)}
+body{font:16px/1.55 Georgia,"Times New Roman",serif;overflow-x:hidden}
+button,a{font:inherit}
+button{color:inherit}
+.encounter-shell{min-height:100vh;background:
+  radial-gradient(circle at 50% 38%,#6d3b9840 0 12%,transparent 36%),
+  radial-gradient(circle at 50% 50%,#152e38 0,transparent 55%),
+  linear-gradient(160deg,#05070a,#091217 54%,#05070a)}
+.encounter-shell::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.2;background-image:
+  linear-gradient(30deg,#ffffff08 1px,transparent 1px),linear-gradient(150deg,#ffffff05 1px,transparent 1px);background-size:44px 44px}
+.encounter-topbar{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:12px;min-height:62px;padding:10px 18px;border-bottom:1px solid #ffffff18;background:#05090dd9;backdrop-filter:blur(18px)}
+.encounter-topbar .brand{display:flex;align-items:center;gap:10px;margin-right:auto;color:var(--ink);text-decoration:none}
+.brand-mark{display:grid;width:34px;height:34px;place-items:center;border:1px solid #d6b45f66;border-radius:50%;color:var(--gold);box-shadow:0 0 25px #d6b45f33}
+.brand-copy{display:grid;line-height:1.1}.brand-copy small{color:var(--muted);font:700 9px/1.2 system-ui;letter-spacing:.16em;text-transform:uppercase}.brand-copy strong{font-size:14px}
+.mode-badge{padding:6px 10px;border:1px solid #a86cff66;border-radius:999px;color:#d9c2ff;background:#a86cff16;font:800 10px system-ui;letter-spacing:.12em;text-transform:uppercase}
+.top-button,.link-button,.primary-button,.secondary-button,.danger-button{padding:9px 13px;border:1px solid var(--line);border-radius:9px;background:#101b20;color:var(--ink);font:700 12px system-ui;cursor:pointer;text-decoration:none}
+.top-button:hover,.link-button:hover,.secondary-button:hover{border-color:var(--gold);color:var(--gold)}
+.primary-button{border-color:#d6b45faa;background:linear-gradient(135deg,#d6b45f33,#5e4621);color:#fff4cf;box-shadow:0 8px 24px #0006}
+.primary-button:hover{filter:brightness(1.15)}
+.danger-button{border-color:#d95a6880;background:#d95a6818;color:#ffabb4}
+.encounter-layout{display:grid;grid-template-columns:minmax(0,1fr);min-height:calc(100vh - 62px)}
+.dm-mode .encounter-layout{grid-template-columns:minmax(0,1fr) 380px}
+.player-stage{position:relative;display:flex;min-width:0;flex-direction:column;padding:clamp(18px,3vw,42px)}
+.encounter-hero{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:24px;max-width:1200px;width:100%;margin:0 auto 24px}
+.eyebrow{margin:0 0 7px;color:var(--gold);font:800 10px system-ui;letter-spacing:.22em;text-transform:uppercase}
+.encounter-hero h1{margin:0;font:500 clamp(34px,6vw,72px)/.98 Georgia,serif;letter-spacing:-.03em;text-shadow:0 8px 30px #000}
+.encounter-hero .subtitle{max-width:700px;margin:14px 0 0;color:var(--muted);font-size:17px}
+.progress-orbit{display:flex;gap:8px;padding-top:8px}.progress-eye{display:grid;width:42px;height:42px;place-items:center;border:1px solid var(--line);border-radius:50%;background:#0a1116;color:var(--muted);font:800 11px system-ui}.progress-eye.active{border-color:var(--gold);color:var(--gold);box-shadow:0 0 26px #d6b45f44}.progress-eye.complete{border-color:var(--success);color:var(--success);background:#64c7a514}
+.encounter-board{position:relative;max-width:1200px;width:100%;margin:auto;overflow:hidden;border:1px solid #d6b45f40;border-radius:24px;background:linear-gradient(145deg,#15232ae8,#080d11f2);box-shadow:var(--shadow)}
+.encounter-board::before{content:"";position:absolute;inset:-2px;pointer-events:none;border-radius:24px;background:radial-gradient(circle at 50% 0,#a86cff28,transparent 36%)}
+.stage-heading{position:relative;padding:28px 30px 20px;border-bottom:1px solid #ffffff12;text-align:center}.stage-heading .stage-number{display:inline-block;margin-bottom:7px;color:var(--arcane);font:800 11px system-ui;letter-spacing:.2em;text-transform:uppercase}.stage-heading h2{margin:0;font:500 clamp(28px,4vw,44px)/1.1 Georgia,serif}.stage-heading .kicker{margin:8px 0 0;color:var(--gold);font-style:italic}.stage-content{position:relative;padding:clamp(20px,4vw,42px)}
+.prompt{max-width:780px;margin:0 auto 20px;color:#d9d4c8;text-align:center;font-size:18px}.inscription{max-width:880px;margin:0 auto 28px;padding:18px 22px;border:1px solid #a86cff4d;border-radius:14px;background:#a86cff0d;color:#dccbff;text-align:center;font-style:italic;box-shadow:inset 0 0 35px #a86cff0d}
+.beholder-seal{position:relative;width:min(230px,44vw);aspect-ratio:1;margin:0 auto 26px;border:1px solid #d6b45f42;border-radius:50%;background:radial-gradient(circle,#d9aaff 0 4%,#5e3478 5% 14%,#10151a 15% 28%,#7f4f2340 29% 44%,#06090c 45%);box-shadow:0 0 70px #a86cff38,inset 0 0 45px #000}
+.beholder-seal::before{content:"";position:absolute;inset:24%;border:3px solid #d6b45f88;border-radius:50% 10% 50% 10%;transform:rotate(45deg);box-shadow:0 0 28px #d6b45f55}
+.beholder-seal::after{content:"KARAZIKAR WATCHES";position:absolute;inset:auto 0 16%;color:#ffffff77;font:800 8px system-ui;letter-spacing:.2em;text-align:center}
+.eye-grid{display:grid;grid-template-columns:repeat(5,minmax(105px,1fr));gap:12px;max-width:900px;margin:0 auto 26px}
+.eye-rotor{position:relative;min-height:126px;padding:12px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(160deg,#17252c,#0a1014);cursor:pointer;transition:.18s}.eye-rotor:hover{border-color:var(--gold);transform:translateY(-2px)}.eye-rotor.aligned{border-color:#64c7a588;background:#64c7a50d}.eye-glyph{display:block;color:var(--gold);font-size:22px}.stone-eye{position:relative;width:66px;height:38px;margin:7px auto;border:2px solid #9e8a63;border-radius:70% 12%;background:#d9c89a1f;transform:rotate(45deg);box-shadow:inset 0 0 14px #000}.pupil{position:absolute;left:50%;top:50%;width:12px;height:21px;margin:-10px 0 0 -6px;border-radius:50%;background:var(--arcane);box-shadow:0 0 15px var(--arcane);transform-origin:50% 50%;transition:.25s}.eye-meta{display:grid;gap:2px;text-align:center}.eye-meta strong{font-size:13px}.eye-meta small{color:var(--muted);font:700 10px system-ui;text-transform:uppercase}
+.stage-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:24px}.feedback{max-width:860px;margin:20px auto 0;padding:14px 18px;border:1px solid #ffffff18;border-radius:12px;background:#05090d99;color:var(--muted);text-align:center}.feedback.success{border-color:#64c7a566;color:#a5f1d8;background:#64c7a510}.feedback.error{border-color:#d95a6866;color:#ffc3c8;background:#d95a6810}.feedback.hint{border-color:#a86cff66;color:#dfcaff;background:#a86cff10}
+.magic-row{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin-top:18px}.magic-button{padding:8px 12px;border:1px solid #a86cff45;border-radius:999px;background:#a86cff0d;color:#d7c1ff;font:700 11px system-ui;cursor:pointer}.magic-button:hover,.magic-button.used{border-color:var(--arcane);background:#a86cff20}
+.shard-workspace{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:22px;max-width:1000px;margin:auto}.shard-tray,.pedestal-field{padding:18px;border:1px solid #ffffff12;border-radius:16px;background:#060b0f88}.workspace-title{margin:0 0 14px;color:var(--muted);font:800 10px system-ui;letter-spacing:.16em;text-transform:uppercase}.shards{display:grid;gap:10px}.memory-shard{display:grid;grid-template-columns:42px 1fr;align-items:center;gap:10px;width:100%;padding:10px;border:1px solid var(--line);border-radius:12px;background:#132027;text-align:left;cursor:grab}.memory-shard:hover,.memory-shard.selected{border-color:var(--arcane);background:#a86cff16}.memory-shard.placed{opacity:.5}.memory-shard .glyph{display:grid;width:38px;height:38px;place-items:center;border-radius:9px;background:#0005;color:var(--gold);font-size:23px}.memory-shard small{display:block;color:var(--muted)}
+.pedestals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.pedestal{min-height:112px;padding:12px;border:1px dashed #65747c;border-radius:12px;background:linear-gradient(#111c22,#0b1216);cursor:pointer;text-align:center}.pedestal:hover,.pedestal.dragover{border-color:var(--gold);background:#d6b45f0d}.pedestal .pedestal-glyph{color:#7e8c93;font-size:26px}.pedestal strong{display:block;font-size:13px}.pedestal .placed-shard{display:inline-flex;align-items:center;gap:7px;margin-top:8px;padding:6px 9px;border:1px solid #a86cff66;border-radius:999px;background:#a86cff18;color:#e5d7ff;font-size:12px}
+.sequence-display{display:flex;min-height:74px;align-items:center;justify-content:center;gap:10px;max-width:680px;margin:0 auto 20px;padding:12px;border:1px solid #ffffff17;border-radius:14px;background:#05090d80}.sequence-slot{display:grid;width:52px;height:52px;place-items:center;border:1px dashed #637078;border-radius:50%;color:#627078;font-size:25px}.sequence-slot.filled{border-style:solid;border-color:var(--gold);color:var(--gold);background:#d6b45f0f;box-shadow:0 0 20px #d6b45f22}.symbol-grid{display:grid;grid-template-columns:repeat(5,minmax(90px,1fr));gap:10px;max-width:800px;margin:auto}.symbol-button{padding:14px 8px;border:1px solid var(--line);border-radius:12px;background:#101a20;cursor:pointer}.symbol-button:hover{border-color:var(--arcane);background:#a86cff12}.symbol-button .glyph{display:block;color:var(--gold);font-size:25px}.symbol-button small{color:var(--muted)}
+.lore-reveal{max-width:900px;margin:24px auto 0;padding:18px 22px;border-left:3px solid var(--success);border-radius:0 12px 12px 0;background:#64c7a50d}.lore-reveal strong{display:block;margin-bottom:5px;color:var(--success);font:800 10px system-ui;letter-spacing:.14em;text-transform:uppercase}
+.completion{padding:clamp(35px,8vw,90px) 30px;text-align:center}.completion-mark{display:grid;width:130px;height:130px;margin:0 auto 24px;place-items:center;border:1px solid var(--gold);border-radius:50%;background:radial-gradient(circle,#a86cff55,#091015 65%);color:var(--gold);font-size:58px;box-shadow:0 0 80px #a86cff55}.completion h2{margin:0;font-size:clamp(34px,5vw,58px)}.completion p{max-width:700px;margin:16px auto;color:var(--muted);font-size:18px}.unlock-banner{display:inline-block;margin-top:18px;padding:12px 18px;border:1px solid #64c7a566;border-radius:999px;color:#b6f4df;background:#64c7a512;font:800 11px system-ui;letter-spacing:.12em;text-transform:uppercase}
+.dm-panel{position:sticky;top:62px;height:calc(100vh - 62px);overflow:auto;border-left:1px solid var(--line);background:#091116f7;box-shadow:-16px 0 45px #0008}.dm-panel-inner{padding:20px}.dm-panel h2{margin:4px 0 14px;font-size:25px}.dm-panel h3{margin:22px 0 9px;color:var(--gold);font-size:17px}.dm-note{padding:12px;border:1px solid #a86cff45;border-radius:10px;background:#a86cff0d;color:#d8c5fb;font-size:13px}.dm-controls{display:grid;grid-template-columns:1fr 1fr;gap:8px}.dm-controls .wide{grid-column:1/-1}.dm-stage-list{display:grid;gap:7px}.dm-stage-button{padding:10px;border:1px solid var(--line);border-radius:9px;background:#101b20;text-align:left;cursor:pointer}.dm-stage-button.active{border-color:var(--gold);color:var(--gold)}.dm-stage-button.complete::after{content:" ✓";color:var(--success)}.solution-box{padding:12px;border:1px solid #d6b45f55;border-radius:10px;background:#d6b45f0b;color:#f0dca5;font-size:13px}.check-table{width:100%;border-collapse:collapse;font-size:12px}.check-table td{padding:7px;border-bottom:1px solid #ffffff12;vertical-align:top}.check-table td:first-child{width:85px;color:var(--gold);font-weight:700}.hint-buttons{display:grid;gap:7px}.hint-buttons button{text-align:left}.dm-lore{padding-left:18px;color:var(--muted);font-size:13px}
+.directory{display:grid;min-height:100vh;place-items:center;padding:30px}.directory-card{max-width:760px;padding:38px;border:1px solid var(--line);border-radius:20px;background:var(--panel);box-shadow:var(--shadow)}.directory-card h1{margin:0 0 12px;font-size:44px}.directory-list{display:grid;gap:12px;margin-top:24px}.directory-link{display:block;padding:18px;border:1px solid var(--line);border-radius:12px;color:var(--ink);text-decoration:none}.directory-link:hover{border-color:var(--gold)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:1050px){.dm-mode .encounter-layout{grid-template-columns:1fr}.dm-panel{position:relative;top:auto;height:auto;border-top:1px solid var(--line);border-left:0}.eye-grid{grid-template-columns:repeat(5,minmax(85px,1fr))}}
+@media(max-width:760px){.encounter-topbar{flex-wrap:wrap}.brand-copy small{display:none}.encounter-hero{grid-template-columns:1fr}.progress-orbit{order:-1}.eye-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.shard-workspace{grid-template-columns:1fr}.symbol-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.pedestals{grid-template-columns:1fr}.player-stage{padding:16px}.stage-content{padding:18px}.encounter-hero h1{font-size:38px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+  <div id="encounterRoot" class="encounter-shell" aria-live="polite"></div>
+  <script>window.ECHOES_OFFLINE_DEFAULT_ID="trial-of-ten-eyes";</script>
+  <script>// Player-safe interactive encounter definitions.
+// Do not include private notes or plaintext solutions.
+window.ECHOES_ENCOUNTERS = {
+  version: 1,
+  encounters: [
+    {
+      id: "trial-of-ten-eyes",
+      title: "The Trial of the Ten Eyes",
+      subtitle: "An interactive beholder puzzle",
+      antagonist: "Karazikar the Beholder",
+      introduction: "Ten dead eyes wake in the stone. Somewhere beyond them, Karazikar is already watching.",
+      theme: {
+        accent: "#d6b45f",
+        arcane: "#a86cff",
+        danger: "#d95a68"
+      },
+      magicInteractions: [
+        {
+          id: "detect-magic",
+          label: "Detect Magic",
+          icon: "✦",
+          response: "Threads of divination connect every eye to the central seal. The magic reacts to intention, not force."
+        },
+        {
+          id: "radiant-light",
+          label: "Offer Radiant Light",
+          icon: "☼",
+          response: "The nearest pupils contract. For one breath, old scratches flare along the mechanism like a hidden constellation."
+        },
+        {
+          id: "deep-speech",
+          label: "Speak in Deep Speech",
+          icon: "◉",
+          response: "A voice answers from inside the walls: ‘To be seen is to be owned. To be remembered is to endure.’"
+        }
+      ],
+      stages: [
+        {
+          id: "ring-of-gazes",
+          number: "I",
+          type: "rotors",
+          title: "The Ring of Gazes",
+          kicker: "Ten eyes. Four directions. One judgment.",
+          prompt: "Rotate each stone eye until the tenfold gaze obeys the inscription, then invoke the seal.",
+          clue: "Star and Crown look skyward. Fang and Web seek the setting dark. Flame, Horn, and Key greet the rising fire. Moon, Tide, and Chain watch the roots below.",
+          directions: ["North", "East", "South", "West"],
+          eyes: [
+            { id: "crown", label: "Crown", glyph: "♛" },
+            { id: "fang", label: "Fang", glyph: "⌁" },
+            { id: "flame", label: "Flame", glyph: "♨" },
+            { id: "tide", label: "Tide", glyph: "≋" },
+            { id: "chain", label: "Chain", glyph: "∞" },
+            { id: "moon", label: "Moon", glyph: "☾" },
+            { id: "key", label: "Key", glyph: "⚿" },
+            { id: "horn", label: "Horn", glyph: "♈" },
+            { id: "web", label: "Web", glyph: "✣" },
+            { id: "star", label: "Star", glyph: "✦" }
+          ],
+          answerHash: "7ca4f566",
+          success: "The ten pupils lock into place. The central seal opens like an eyelid, revealing a memory trapped in amber light.",
+          lore: "Karazikar did not build the Ten Eyes to watch intruders. He built them to decide which memories were permitted to survive."
+        },
+        {
+          id: "burden-of-memory",
+          number: "II",
+          type: "placements",
+          title: "The Burden of Memory",
+          kicker: "Every tyrant chooses where history rests.",
+          prompt: "Place each memory shard upon the pedestal that completes its meaning.",
+          clue: "Rule sits above. Hunger gathers at the feast. Fire remembers the pyre. Betrayal knows its own reflection. Silence keeps the grave.",
+          shards: [
+            { id: "crown", label: "Rule", glyph: "♛", color: "gold" },
+            { id: "fang", label: "Hunger", glyph: "⌁", color: "red" },
+            { id: "flame", label: "Fire", glyph: "♨", color: "amber" },
+            { id: "dagger", label: "Betrayal", glyph: "†", color: "violet" },
+            { id: "moon", label: "Silence", glyph: "☾", color: "blue" }
+          ],
+          pedestals: [
+            { id: "throne", label: "The Empty Throne", glyph: "♜" },
+            { id: "feast", label: "The Last Feast", glyph: "◒" },
+            { id: "pyre", label: "The Black Pyre", glyph: "△" },
+            { id: "mirror", label: "The Unkind Mirror", glyph: "◇" },
+            { id: "grave", label: "The Nameless Grave", glyph: "▱" }
+          ],
+          answerHash: "26b7996d",
+          success: "The shards sink into the pedestals. Five scenes bloom across the chamber, each showing Karazikar erasing a different version of his defeat.",
+          lore: "Five witnesses survived Karazikar’s first fall: a ruler, a flame-bearer, a betrayer, a mourner, and the silence that kept their names."
+        },
+        {
+          id: "tenfold-answer",
+          number: "III",
+          type: "sequence",
+          title: "The Tenfold Answer",
+          kicker: "History opens only for those who name its witnesses.",
+          prompt: "Select four sigils in the order that records Karazikar’s first ending.",
+          clue: "First came the ruler who defied him. Then the fire that scarred him. Third, the reflection that betrayed him. Last, the grave that could not hold his name.",
+          length: 4,
+          symbols: [
+            { id: "crown", label: "Crown", glyph: "♛" },
+            { id: "fang", label: "Fang", glyph: "⌁" },
+            { id: "flame", label: "Flame", glyph: "♨" },
+            { id: "tide", label: "Tide", glyph: "≋" },
+            { id: "chain", label: "Chain", glyph: "∞" },
+            { id: "moon", label: "Moon", glyph: "☾" },
+            { id: "key", label: "Key", glyph: "⚿" },
+            { id: "horn", label: "Horn", glyph: "♈" },
+            { id: "mirror", label: "Mirror", glyph: "◇" },
+            { id: "grave", label: "Grave", glyph: "▱" }
+          ],
+          answerHash: "a236b997",
+          success: "All ten eyes close. A final doorway irises open, and Karazikar’s laughter rolls through the stone.",
+          lore: "Karazikar survived because his name remained inside the story of his defeat. The Trial preserves the very history he tried to destroy."
+        }
+      ],
+      completion: {
+        title: "The Trial Is Witnessed",
+        text: "The seal yields. The party has reconstructed the memory Karazikar tried to erase, and the path beyond the Ten Eyes stands open.",
+        unlock: "Unlocked: The Vault of the Severed Gaze"
+      }
+    }
+  ]
+};
+</script>
+  <script>(function () {
+  "use strict";
+
+  const root = document.getElementById("encounterRoot");
+  const params = new URLSearchParams(window.location.search);
+  const catalog = window.ECHOES_ENCOUNTERS?.encounters || [];
+  const encounterId = params.get("id") || window.ECHOES_OFFLINE_DEFAULT_ID || "";
+  const encounter = catalog.find((item) => item.id === encounterId);
+  const storageKey = encounter ? `echoes.encounter.${encounter.id}.player.v2` : "";
+  const channel = encounter && "BroadcastChannel" in window
+    ? new BroadcastChannel(`echoes-encounter-player-v2-${encounter.id}`)
+    : null;
+  let state = encounter ? loadState() : null;
+
+  function escapeHTML(value) {
+    return String(value ?? "")
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#039;");
+  }
+
+  function defaultState() {
+    return {
+      stageIndex: 0,
+      completedStages: [],
+      rotations: Array(encounter?.stages?.[0]?.eyes?.length || 10).fill(0),
+      placements: {},
+      selectedShard: null,
+      sequence: [],
+      interactions: [],
+      feedback: null,
+      revealedHint: 0,
+      loreUnlocked: [],
+      attempts: {},
+      completed: false,
+      updatedAt: Date.now()
+    };
+  }
+
+  function normalizeState(candidate) {
+    const base = defaultState();
+    const next = { ...base, ...(candidate || {}) };
+    next.stageIndex = Math.max(0, Math.min(encounter.stages.length - 1, Number(next.stageIndex) || 0));
+    next.completedStages = Array.isArray(next.completedStages) ? next.completedStages : [];
+    next.rotations = Array.isArray(next.rotations) ? next.rotations : base.rotations;
+    next.placements = next.placements && typeof next.placements === "object" ? next.placements : {};
+    next.sequence = Array.isArray(next.sequence) ? next.sequence : [];
+    next.interactions = Array.isArray(next.interactions) ? next.interactions : [];
+    next.loreUnlocked = Array.isArray(next.loreUnlocked) ? next.loreUnlocked : [];
+    next.attempts = next.attempts && typeof next.attempts === "object" ? next.attempts : {};
+    return next;
+  }
+
+  function loadState() {
+    try {
+      return normalizeState(JSON.parse(localStorage.getItem(storageKey)));
+    } catch (_error) {
+      return defaultState();
+    }
+  }
+
+  function saveState({ broadcast = true } = {}) {
+    state.updatedAt = Date.now();
+    localStorage.setItem(storageKey, JSON.stringify(state));
+    if (broadcast && channel) channel.postMessage(state);
+  }
+
+  function commit(mutator) {
+    mutator(state);
+    saveState();
+    render();
+  }
+
+  function answerHash(value) {
+    let hash = 0x811c9dc5;
+    for (const character of value) {
+      hash ^= character.charCodeAt(0);
+      hash = Math.imul(hash, 0x01000193);
+    }
+    return (hash >>> 0).toString(16).padStart(8, "0");
+  }
+
+  function viewURL(view) {
+    const url = new URL(window.location.href);
+    url.searchParams.set("id", encounter.id);
+    url.searchParams.set("view", view);
+    return url.href;
+  }
+
+  function directoryURL() {
+    if (window.ECHOES_OFFLINE_DEFAULT_ID) return viewURL("player");
+    return "index.html#encounters";
+  }
+
+  function renderDirectory() {
+    document.title = "Interactive Encounters · Echoes of the Deep";
+    root.innerHTML = `
+      <main class="directory">
+        <section class="directory-card">
+          <p class="eyebrow">Echoes of the Deep</p>
+          <h1>Interactive Encounters</h1>
+          <p>Choose an encounter to begin. Progress is saved in this browser.</p>
+          <div class="directory-list">
+            ${catalog.map((item) => `
+              <a class="directory-link" href="?id=${encodeURIComponent(item.id)}&view=player">
+                <strong>${escapeHTML(item.title)}</strong><br>
+                <small>${escapeHTML(item.subtitle)}</small>
+              </a>`).join("") || "<p>No encounters are available.</p>"}
+          </div>
+          <p><a class="link-button" href="index.html#encounters">Return to the wiki</a></p>
+        </section>
+      </main>`;
+  }
+
+  function topbarMarkup() {
+    return `
+      <header class="encounter-topbar">
+        <a class="brand" href="${escapeHTML(directoryURL())}">
+          <span class="brand-mark" aria-hidden="true">◉</span>
+          <span class="brand-copy"><small>Echoes of the Deep</small><strong>Interactive Encounters</strong></span>
+        </a>
+        <span class="mode-badge">Player View</span>
+        <button class="top-button" data-action="fullscreen">Full Screen</button>
+      </header>`;
+  }
+
+  function progressMarkup() {
+    return encounter.stages.map((stage, index) => {
+      const complete = state.completedStages.includes(stage.id);
+      const active = index === state.stageIndex && !state.completed;
+      return `<span class="progress-eye${complete ? " complete" : ""}${active ? " active" : ""}" title="${escapeHTML(stage.title)}">${complete ? "✓" : stage.number}</span>`;
+    }).join("");
+  }
+
+  function feedbackMarkup() {
+    if (!state.feedback) return "";
+    return `<div class="feedback ${escapeHTML(state.feedback.type || "")}" role="status">${escapeHTML(state.feedback.text)}</div>`;
+  }
+
+  function magicMarkup() {
+    return `<div class="magic-row" aria-label="Magical interactions">
+      ${encounter.magicInteractions.map((item) => `
+        <button class="magic-button${state.interactions.includes(item.id) ? " used" : ""}" data-magic="${escapeHTML(item.id)}">
+          <span aria-hidden="true">${escapeHTML(item.icon)}</span> ${escapeHTML(item.label)}
+        </button>`).join("")}
+    </div>`;
+  }
+
+  function stageHeadingMarkup(stage) {
+    return `<header class="stage-heading">
+      <span class="stage-number">Challenge ${escapeHTML(stage.number)}</span>
+      <h2>${escapeHTML(stage.title)}</h2>
+      <p class="kicker">${escapeHTML(stage.kicker)}</p>
+    </header>`;
+  }
+
+  function stageFooterMarkup(stage) {
+    const complete = state.completedStages.includes(stage.id);
+    return `
+      ${feedbackMarkup()}
+      ${complete ? `<aside class="lore-reveal"><strong>Recovered Lore</strong>${escapeHTML(stage.lore)}</aside>` : ""}
+      ${magicMarkup()}
+      <div class="stage-actions">
+        ${complete
+          ? `<button class="primary-button" data-action="continue">${state.stageIndex === encounter.stages.length - 1 ? "Open the Final Seal" : "Continue to the Next Challenge"}</button>`
+          : '<button class="primary-button" data-action="invoke">Invoke the Seal</button>'}
+      </div>`;
+  }
+
+  function rotorsMarkup(stage) {
+    return `
+      ${stageHeadingMarkup(stage)}
+      <div class="stage-content">
+        <p class="prompt">${escapeHTML(stage.prompt)}</p>
+        <blockquote class="inscription">${escapeHTML(stage.clue)}</blockquote>
+        <div class="beholder-seal" aria-hidden="true"></div>
+        <div class="eye-grid">
+          ${stage.eyes.map((eye, index) => {
+            const rotation = Number(state.rotations[index]) || 0;
+            return `<button class="eye-rotor" data-rotate="${index}" aria-label="Rotate ${escapeHTML(eye.label)} eye. Currently facing ${stage.directions[rotation]}">
+              <span class="eye-glyph" aria-hidden="true">${escapeHTML(eye.glyph)}</span>
+              <span class="stone-eye" aria-hidden="true"><span class="pupil" style="transform:rotate(${rotation * 90}deg) translateY(-8px)"></span></span>
+              <span class="eye-meta"><strong>${escapeHTML(eye.label)}</strong><small>${escapeHTML(stage.directions[rotation])}</small></span>
+            </button>`;
+          }).join("")}
+        </div>
+        ${stageFooterMarkup(stage)}
+      </div>`;
+  }
+
+  function shardForPedestal(pedestalId) {
+    return Object.entries(state.placements).find(([, placedOn]) => placedOn === pedestalId)?.[0] || null;
+  }
+
+  function placementsMarkup(stage) {
+    return `
+      ${stageHeadingMarkup(stage)}
+      <div class="stage-content">
+        <p class="prompt">${escapeHTML(stage.prompt)}</p>
+        <blockquote class="inscription">${escapeHTML(stage.clue)}</blockquote>
+        <div class="shard-workspace">
+          <section class="shard-tray"><h3 class="workspace-title">Memory Shards</h3><div class="shards">
+            ${stage.shards.map((shard) => {
+              const placed = Boolean(state.placements[shard.id]);
+              return `<button class="memory-shard${state.selectedShard === shard.id ? " selected" : ""}${placed ? " placed" : ""}" draggable="true" data-shard="${escapeHTML(shard.id)}">
+                <span class="glyph" aria-hidden="true">${escapeHTML(shard.glyph)}</span>
+                <span><strong>${escapeHTML(shard.label)}</strong><small>${placed ? `Placed: ${escapeHTML(state.placements[shard.id])}` : "Select or drag this shard"}</small></span>
+              </button>`;
+            }).join("")}
+          </div></section>
+          <section class="pedestal-field"><h3 class="workspace-title">Stone Pedestals</h3><div class="pedestals">
+            ${stage.pedestals.map((pedestal) => {
+              const shardId = shardForPedestal(pedestal.id);
+              const shard = stage.shards.find((item) => item.id === shardId);
+              return `<button class="pedestal" data-pedestal="${escapeHTML(pedestal.id)}">
+                <span class="pedestal-glyph" aria-hidden="true">${escapeHTML(pedestal.glyph)}</span>
+                <strong>${escapeHTML(pedestal.label)}</strong>
+                ${shard ? `<span class="placed-shard">${escapeHTML(shard.glyph)} ${escapeHTML(shard.label)}</span>` : ""}
+              </button>`;
+            }).join("")}
+          </div></section>
+        </div>
+        <div class="stage-actions"><button class="secondary-button" data-action="clear-placements">Clear the Pedestals</button></div>
+        ${stageFooterMarkup(stage)}
+      </div>`;
+  }
+
+  function sequenceMarkup(stage) {
+    return `
+      ${stageHeadingMarkup(stage)}
+      <div class="stage-content">
+        <p class="prompt">${escapeHTML(stage.prompt)}</p>
+        <blockquote class="inscription">${escapeHTML(stage.clue)}</blockquote>
+        <div class="sequence-display" aria-label="Selected sequence">
+          ${Array.from({ length: stage.length }, (_, index) => {
+            const symbol = stage.symbols.find((item) => item.id === state.sequence[index]);
+            return `<span class="sequence-slot${symbol ? " filled" : ""}" title="${symbol ? escapeHTML(symbol.label) : `Position ${index + 1}`}">${symbol ? escapeHTML(symbol.glyph) : index + 1}</span>`;
+          }).join("")}
+        </div>
+        <div class="symbol-grid">
+          ${stage.symbols.map((symbol) => `<button class="symbol-button" data-symbol="${escapeHTML(symbol.id)}"><span class="glyph" aria-hidden="true">${escapeHTML(symbol.glyph)}</span><small>${escapeHTML(symbol.label)}</small></button>`).join("")}
+        </div>
+        <div class="stage-actions"><button class="secondary-button" data-action="undo-symbol">Undo</button><button class="secondary-button" data-action="clear-sequence">Clear</button></div>
+        ${stageFooterMarkup(stage)}
+      </div>`;
+  }
+
+  function currentStageMarkup() {
+    if (state.completed) {
+      return `<div class="completion">
+        <div class="completion-mark" aria-hidden="true">◉</div>
+        <p class="eyebrow">Karazikar’s Record Restored</p>
+        <h2>${escapeHTML(encounter.completion.title)}</h2>
+        <p>${escapeHTML(encounter.completion.text)}</p>
+        <span class="unlock-banner">${escapeHTML(encounter.completion.unlock)}</span>
+        <div class="stage-actions"><button class="secondary-button" data-action="review">Review the Trial</button></div>
+      </div>`;
+    }
+    const stage = encounter.stages[state.stageIndex];
+    if (stage.type === "rotors") return rotorsMarkup(stage);
+    if (stage.type === "placements") return placementsMarkup(stage);
+    return sequenceMarkup(stage);
+  }
+
+
+  function render() {
+    if (!encounter) return renderDirectory();
+    document.title = `${encounter.title} · Echoes of the Deep`;
+    root.className = "encounter-shell player-mode";
+    root.style.setProperty("--gold", encounter.theme?.accent || "#d6b45f");
+    root.style.setProperty("--arcane", encounter.theme?.arcane || "#a86cff");
+    root.style.setProperty("--danger", encounter.theme?.danger || "#d95a68");
+    root.innerHTML = `${topbarMarkup()}<div class="encounter-layout">
+      <main class="player-stage">
+        <header class="encounter-hero">
+          <div><p class="eyebrow">${escapeHTML(encounter.antagonist)}</p><h1>${escapeHTML(encounter.title)}</h1><p class="subtitle">${escapeHTML(encounter.introduction)}</p></div>
+          <div class="progress-orbit" aria-label="Encounter progress">${progressMarkup()}</div>
+        </header>
+        <section class="encounter-board">${currentStageMarkup()}</section>
+      </main>
+    </div>`;
+    bindEvents();
+  }
+
+  function serializeCurrent(stage) {
+    if (stage.type === "rotors") return state.rotations.slice(0, stage.eyes.length).join(",");
+    if (stage.type === "placements") return stage.pedestals.map((pedestal) => `${pedestal.id}:${shardForPedestal(pedestal.id) || ""}`).join("|");
+    return state.sequence.join(",");
+  }
+
+  function invokeSeal() {
+    const stage = encounter.stages[state.stageIndex];
+    if (answerHash(serializeCurrent(stage)) === stage.answerHash) {
+      commit((next) => {
+        if (!next.completedStages.includes(stage.id)) next.completedStages.push(stage.id);
+        if (!next.loreUnlocked.includes(stage.id)) next.loreUnlocked.push(stage.id);
+        next.feedback = { type: "success", text: stage.success };
+      });
+      return;
+    }
+    commit((next) => {
+      next.attempts[stage.id] = (next.attempts[stage.id] || 0) + 1;
+      next.feedback = { type: "error", text: "The mechanism rejects the answer. Stone grinds against stone, and the ten eyes open wider." };
+      if (stage.type === "sequence") next.sequence = [];
+    });
+  }
+
+  function continueEncounter() {
+    if (state.stageIndex >= encounter.stages.length - 1) {
+      commit((next) => { next.completed = true; next.feedback = null; });
+    } else {
+      commit((next) => { next.stageIndex += 1; next.feedback = null; next.revealedHint = 0; });
+    }
+  }
+
+  function placeShard(shardId, pedestalId) {
+    const stage = encounter.stages[state.stageIndex];
+    if (!stage.shards.some((item) => item.id === shardId)) return;
+    commit((next) => {
+      for (const [otherShard, location] of Object.entries(next.placements)) {
+        if (location === pedestalId) delete next.placements[otherShard];
+      }
+      next.placements[shardId] = pedestalId;
+      next.selectedShard = null;
+      next.feedback = null;
+    });
+  }
+
+
+  function bindEvents() {
+    root.querySelectorAll("[data-rotate]").forEach((button) => button.addEventListener("click", () => {
+      const index = Number(button.dataset.rotate);
+      commit((next) => { next.rotations[index] = ((next.rotations[index] || 0) + 1) % 4; next.feedback = null; });
+    }));
+    root.querySelectorAll("[data-magic]").forEach((button) => button.addEventListener("click", () => {
+      const interaction = encounter.magicInteractions.find((item) => item.id === button.dataset.magic);
+      if (!interaction) return;
+      commit((next) => {
+        if (!next.interactions.includes(interaction.id)) next.interactions.push(interaction.id);
+        next.feedback = { type: "hint", text: interaction.response };
+      });
+    }));
+    root.querySelectorAll("[data-shard]").forEach((button) => {
+      button.addEventListener("click", () => commit((next) => { next.selectedShard = button.dataset.shard; next.feedback = null; }));
+      button.addEventListener("dragstart", (event) => event.dataTransfer.setData("text/plain", button.dataset.shard));
+    });
+    root.querySelectorAll("[data-pedestal]").forEach((button) => {
+      button.addEventListener("dragover", (event) => { event.preventDefault(); button.classList.add("dragover"); });
+      button.addEventListener("dragleave", () => button.classList.remove("dragover"));
+      button.addEventListener("drop", (event) => { event.preventDefault(); placeShard(event.dataTransfer.getData("text/plain"), button.dataset.pedestal); });
+      button.addEventListener("click", () => { if (state.selectedShard) placeShard(state.selectedShard, button.dataset.pedestal); });
+    });
+    root.querySelectorAll("[data-symbol]").forEach((button) => button.addEventListener("click", () => {
+      const stage = encounter.stages[state.stageIndex];
+      if (state.sequence.length >= stage.length) return;
+      commit((next) => { next.sequence.push(button.dataset.symbol); next.feedback = null; });
+    }));
+    root.querySelectorAll("[data-action]").forEach((button) => button.addEventListener("click", async () => {
+      const action = button.dataset.action;
+      if (action === "invoke") invokeSeal();
+      if (action === "continue") continueEncounter();
+      if (action === "clear-placements") commit((next) => { next.placements = {}; next.selectedShard = null; next.feedback = null; });
+      if (action === "undo-symbol") commit((next) => { next.sequence.pop(); next.feedback = null; });
+      if (action === "clear-sequence") commit((next) => { next.sequence = []; next.feedback = null; });
+      if (action === "review") commit((next) => { next.completed = false; next.stageIndex = 0; next.feedback = null; });
+      if (action === "fullscreen") {
+        if (!document.fullscreenElement) await document.documentElement.requestFullscreen?.();
+        else await document.exitFullscreen?.();
+      }
+    }));
+  }
+
+  if (channel) {
+    channel.addEventListener("message", (event) => {
+      if (!event.data || event.data.updatedAt <= state.updatedAt) return;
+      state = normalizeState(event.data);
+      saveState({ broadcast: false });
+      render();
+    });
+  }
+  window.addEventListener("storage", (event) => {
+    if (event.key !== storageKey || !event.newValue) return;
+    try {
+      const incoming = normalizeState(JSON.parse(event.newValue));
+      if (incoming.updatedAt > state.updatedAt) { state = incoming; render(); }
+    } catch (_error) { /* Ignore malformed external state. */ }
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>
