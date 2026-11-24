@@ -4,15 +4,33 @@ window.WIKI_DATA = {
     title: "Echoes of the Deep",
     subtitle: "A player’s guide to the known world",
     home: {
-      currentEntryId: "session-38-scorched-nudist-colony",
-      currentEyebrow: "Current chapter · The Scorched Nudist Colony",
-      currentObjective: "Find Haneh, survive the worm nursery, and secure an intact purple worm egg before the fleeing Fomorian returns with its mother.",
+      currentEntryId: "session-39-the-nursery-dinner-bell",
+      currentEyebrow: "Current chapter · The Nursery’s Dinner Bell",
+      currentObjective: "Bring the intact purple worm egg back to Araz’s tower, then follow Zora’s map toward Karazikar in the Vast Oblivion.",
       priorityIds: ["banishment-talisman-components", "prince-derendil", "ruby-in-the-rough", "73b9a360-d853-4664-8d54-fbffc02de78e"],
       recentLimit: 6,
       timelineLimit: 3
     }
   },
   entries: [
+    {
+      id: "session-39-the-nursery-dinner-bell",
+      type: "recap",
+      title: "Session 39 — The Nursery’s Dinner Bell",
+      summary: "The party steals a purple worm egg, opens an exit with a dying roper, and leaves with a map to Karazikar and a new contact.",
+      content: `Step right up, cave-crawlers! Our heroes began battered, with spider pulp behind them and purple worm eggs still ahead. Old Girl came back empty-handed to ask, “Are they gone?” One look at the enormous Fomorian and she reminded the company that noise attracts trouble. Biscuit had already investigated the place to the tune of a 25, but no roll could answer the eternal adventurer’s question: take a breather, or find a worse place to need one?
+
+Haneh led them to a cavern strung with football-sized purple eggs, each bundle wrapped in webbing that hummed like a plucked string. Biscuit sized up a mature egg on a dirty 20, and the company debated flying, climbing, Feather Fall, Thunder Step, and a protective hamster wheel. Thunder Step needed a destination they could actually see, so the left-hand clutch won the dubious honor of a climb: three DC 15 checks, two good rolls, and a final pair of twelves. The climber took four points of piercing damage near the top but reached the clutch. Biscuit’s Flash of Genius boosted the removal check to 21, and the egg came free. Then the whole bloody nursery rang its dinner bell. Webs thrummed, doors slammed, and purple gas came rolling in.
+
+Thymbris charged a roper, rolled a natural one on the chaos table, and somehow got a sea shanty. Nonsense though it was, the chorus gave nearby attacks advantage, and V turned that musical opportunity into 71 damage. Nari struck with Flame Blade, the gas kept demanding poison saves, and Helexisys tried brute force on the sealed exit. Thymbris lit the roper with Faerie Fire amid a swirl of drink vessels. V then killed it and aimed its final headbutt squarely into the wall. The wall broke. The exit opened. The roper’s last job, after a lifetime spent pretending to be rock, was to prove it could also knock rock down.
+
+The brood wretches still wanted their nursery back. Nari caught two in Grasping Vines while the others shielded the eggs; by the end, both eggs were intact. Among brittle bones and fresher bodies, V helped Haneh pull her badly wounded mother, Zora, from beneath the rubble and corpses. Haneh had covered her mouth against the poison. The party gave Haneh one egg and kept the other. Zora, in turn, offered a map and a route to Karazikar, a beholder in the Vast Oblivion.
+
+At the portal, Haneh pressed a coin into V’s hand marked “The Dark Hunters Call.” And so the band headed back toward Araz’s Tower of Vengeance with one intact egg, one beholder map, and one new contact. For their next number, all they need is an eye. I’m sure its owner will be positively delighted to hear it.`,
+      links: ["session-38-scorched-nudist-colony", "haneh-halin", "banishment-talisman-components", "purple-worm-egg", "dark-hunters-call", "map-of-the-oblivium"],
+      published: true,
+      updatedAt: "2026-11-24"
+    },
     {
       id: "session-38-scorched-nudist-colony",
       type: "recap",
@@ -174,22 +192,46 @@ So ended the crossing: Val'n Korr slain, the Wayward Gull reduced to kindling, a
       type: "quest",
       title: "Components of the Banishment Talisman",
       summary: "Gather seven impossible components so Araz can forge a talisman capable of gathering and banishing the demon lords.",
-      content: `Status: Active — Inside a purple worm nursery in the Wormwrithings
+      content: `Status: Active — Purple worm egg secured; the company is heading back toward Araz’s tower
 
-☐ An intact, unhatched purple worm egg — Immediate target in the nursery
-☐ The central eye of a beholder — Current target in the Wormwrithings
+☑ An intact, unhatched purple worm egg — Acquired in Session 39; the party kept one intact egg
+☐ The central eye of a beholder — Zora’s map points toward Karazikar in the Vast Oblivion
 ☐ Six feathers from six different angels
 ☐ The heart of a goristro
 ☐ Thirteen timmasks grown in the footprints of a marilith, balor, or goristro
 ☐ Blood or ichor from a true demon lord
 ☐ Cleave’s grimoire
 
-The party entered the Wormwrithings to pursue the egg and beholder eye together. Guided by the drow hunter Haneh Halin, they descended into a purple worm nursery and fought troglodytes, giant spiders, and Fomorians protecting the eggs. One Fomorian escaped to warn its mother. Haneh’s location among the rubble is currently unknown, and no intact egg has yet been secured.
+The party recovered two intact eggs from the purple worm nursery, gave one to Haneh Halin, and kept the other for Araz. After Haneh and V found her wounded mother, Zora, she provided a map and a route to the beholder. The beholder’s eye has not yet been acquired.
 
 Once the components are assembled, the party must wound or defeat a true demon lord while the others are gathered so Araz can complete the banishment.`,
-      links: ["session-36-wet-warded-level-13", "session-37-thymbris-apologizes-to-the-cavern", "session-38-scorched-nudist-colony", "haneh-halin", "araz"],
+      links: ["session-36-wet-warded-level-13", "session-37-thymbris-apologizes-to-the-cavern", "session-38-scorched-nudist-colony", "session-39-the-nursery-dinner-bell", "purple-worm-egg", "map-of-the-oblivium", "haneh-halin", "araz"],
       published: true,
-      updatedAt: "2026-11-17"
+      updatedAt: "2026-11-24"
+    },
+    {
+      id: "purple-worm-egg", type: "item", category: "quest",
+      title: "Purple Worm Egg", holder: "Party", uses: "Talisman component", status: "Acquired",
+      summary: "One intact, unhatched egg secured for Araz’s Banishment Talisman.",
+      content: "The party carried two intact eggs out of the nursery in Session 39, gave one to Haneh Halin, and kept the other for Araz. It must remain intact and unhatched.",
+      links: ["banishment-talisman-components", "session-39-the-nursery-dinner-bell"],
+      published: true, updatedAt: "2026-11-24"
+    },
+    {
+      id: "dark-hunters-call", type: "item", category: "quest",
+      title: "Dark Hunters Call", holder: "V", uses: "—", status: "Carried",
+      summary: "A coin inscribed “The Dark Hunters Call,” given to V by Haneh Halin.",
+      content: "Haneh handed the coin to V at the portal after the escape from the purple worm nursery. Its exact function has not been established.",
+      links: ["haneh-halin", "session-39-the-nursery-dinner-bell"],
+      published: true, updatedAt: "2026-11-24"
+    },
+    {
+      id: "map-of-the-oblivium", type: "item", category: "quest",
+      title: "Map of the Oblivium", holder: "Party", uses: "Navigation", status: "Carried",
+      summary: "Zora’s map provides a route to Karazikar the Beholder in the Vast Oblivion.",
+      content: "Zora offered the party this map after Haneh and V found her wounded in the nursery. It points toward the party’s next talisman component: the central eye of a beholder.",
+      links: ["banishment-talisman-components", "session-39-the-nursery-dinner-bell"],
+      published: true, updatedAt: "2026-11-24"
     },
     {
       id: "widows-teeth-lucky-doubloon",
@@ -448,12 +490,12 @@ Once the components are assembled, the party must wound or defeat a true demon l
       links: ["session-34-valn-korr-rises", "session-35-we-are-pirates-now", "thymbris-bent-mast-bramblehorn", "wayward-gull"], published: true, updatedAt: "2026-10-26"
     },
     {
-      id: "haneh-halin", type: "npc", npcStatus: "unknown",
-      place: "Purple worm nursery · Wormwrithings", role: "Drow hunter · Spelunker", relationship: "Cautious ally · Guide", lastSeen: "Session 38",
+      id: "haneh-halin", type: "npc", npcStatus: "active",
+      place: "Nursery exit portal · Wormwrithings", role: "Drow hunter · Spelunker", relationship: "Ally · Guide", lastSeen: "Session 39",
       title: "Haneh Halin",
-      summary: "An experienced drow hunter searching the Wormwrithings for her missing mother and purple worm eggs.",
-      content: "Haneh first warned the party away by telepathically disguising her voice as a threatening baritone. Once Biscuit found her behind a rubble barricade, she negotiated peacefully and revealed that she was searching for her missing mother, who had taken a contract to retrieve purple worm eggs. Haneh proved to be an experienced and sincere spelunker, warning the party about dangerous drops and the sensitivity of the worm nursery to light, noise, and combat. During the battle with the egg-guardians, she disappeared somewhere among the rubble. Her current condition and exact location are unknown.",
-      links: ["session-38-scorched-nudist-colony", "banishment-talisman-components"], published: true, updatedAt: "2026-11-17"
+      summary: "A drow hunter who guided the party through the purple worm nursery and found her wounded mother, Zora.",
+      content: "Haneh first warned the party away by telepathically disguising her voice as a threatening baritone. Once Biscuit found her behind a rubble barricade, she explained that she was seeking her mother, who had taken a contract to retrieve purple worm eggs. Haneh guided the party to the egg clutches and, with V’s help, found Zora wounded beneath the rubble. The party gave Haneh an intact egg, and she gave V the Dark Hunters Call coin at the portal.",
+      links: ["session-38-scorched-nudist-colony", "session-39-the-nursery-dinner-bell", "banishment-talisman-components", "dark-hunters-call"], published: true, updatedAt: "2026-11-24"
     },
     {
       id: "polly-ethereal-ranger", type: "npc", npcStatus: "active",
